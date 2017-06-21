@@ -3,13 +3,7 @@ layout: post
 status: publish
 published: true
 title: How To Use Chai 4 Canary
-author:
-  display_name: Edd Yerburgh
-  login: admin
-  email: edward.yerburgh@gmail.com
-  url: ''
-author_login: admin
-author_email: edward.yerburgh@gmail.com
+description: Use Chai 4 Canary today!
 wordpress_id: 393
 wordpress_url: http://www.coding123.org/?p=393
 date: '2016-12-16 10:55:58 +0000'

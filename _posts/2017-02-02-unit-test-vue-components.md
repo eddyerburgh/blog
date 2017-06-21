@@ -3,13 +3,7 @@ layout: post
 status: publish
 published: true
 title: How to unit test Vue components
-author:
-  display_name: Edd Yerburgh
-  login: admin
-  email: edward.yerburgh@gmail.com
-  url: ''
-author_login: admin
-author_email: edward.yerburgh@gmail.com
+description: Learn how to unit test Vue components. This tutorial walks you through how to set up a Vue test environment and how to write tests for Vue components.
 wordpress_id: 404
 wordpress_url: http://www.coding123.org/?p=404
 date: '2017-02-02 12:27:33 +0000'

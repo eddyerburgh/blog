@@ -3,13 +3,7 @@ layout: post
 status: publish
 published: true
 title: Templating with Vanilla JS
-author:
-  display_name: Edd Yerburgh
-  login: admin
-  email: edward.yerburgh@gmail.com
-  url: ''
-author_login: admin
-author_email: edward.yerburgh@gmail.com
+description: It's easy to do templating with Vanilla JS. In this tutorial I will show you how, no need to load Handlbars.js every time you need to template JavaScript.
 wordpress_id: 269
 wordpress_url: http://www.coding123.org/?p=269
 date: '2016-04-20 12:31:36 +0000'

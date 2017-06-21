@@ -3,13 +3,7 @@ layout: post
 status: publish
 published: true
 title: Create a Responsive Bar Chart with D3.js
-author:
-  display_name: Edd Yerburgh
-  login: admin
-  email: edward.yerburgh@gmail.com
-  url: ''
-author_login: admin
-author_email: edward.yerburgh@gmail.com
+description: This tutorial shows you how to create a responsive bar chart using D3.js. The trick is using CSS and SVG attributes to avoid re rendering on resize!
 wordpress_id: 260
 wordpress_url: http://www.coding123.org/?p=260
 date: '2016-04-12 22:00:55 +0000'

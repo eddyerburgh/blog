@@ -3,13 +3,7 @@ layout: post
 status: publish
 published: true
 title: Stub dependencies in Vue unit tests
-author:
-  display_name: eddyerburgh
-  login: eddyerburgh
-  email: edward.yerburgh@gmail.com
-  url: ''
-author_login: eddyerburgh
-author_email: edward.yerburgh@gmail.com
+description: Learn how to stub dependencies in Vue unit tests. This tutorial walks through 2 different ways of passing stubs to dependencies in unit tests.
 wordpress_id: 472
 wordpress_url: https://www.coding123.org/?p=472
 date: '2017-05-07 17:47:43 +0000'

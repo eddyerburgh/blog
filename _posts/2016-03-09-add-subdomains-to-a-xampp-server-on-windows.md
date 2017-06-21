@@ -3,6 +3,7 @@ layout: post
 status: publish
 published: true
 title: Add Subdomains to a XAMPP Server On Windows
+description: Learn how to add subdomains to a XAMMP server. Follow these simple steps to  quickly add a new subdomain to your local XAMPP server!
 author:
   display_name: Edd Yerburgh
   login: admin

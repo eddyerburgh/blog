@@ -3,6 +3,7 @@ layout: post
 status: publish
 published: true
 title: Run JavaScript When Media Queries are Active
+description: Surefire way to run JavaScript only when CSS media queries are active. Don't let your JavaScript lag behind your CSS - bulletproof your JavaScript
 author:
   display_name: Edd Yerburgh
   login: admin

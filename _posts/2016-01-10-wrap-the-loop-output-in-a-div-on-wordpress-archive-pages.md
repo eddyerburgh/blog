@@ -3,14 +3,7 @@ layout: post
 status: publish
 published: true
 title: Wrap the Loop Output in a Div on WordPress Archives
-author:
-  display_name: Edd Yerburgh
-  login: admin
-  email: edward.yerburgh@gmail.com
-  url: ''
-author_login: admin
-author_email: edward.yerburgh@gmail.com
-wordpress_id: 10
+description: Learn how to wrap the WordPress loop output in divs with a column layout
 wordpress_url: http://www.read-stuff.com/?p=4
 date: '2016-01-10 21:30:45 +0000'
 date_gmt: '2016-01-10 21:30:45 +0000'

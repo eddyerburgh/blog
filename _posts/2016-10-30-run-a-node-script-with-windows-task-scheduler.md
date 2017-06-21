@@ -3,13 +3,7 @@ layout: post
 status: publish
 published: true
 title: Run a Node Script With Windows Task Scheduler
-author:
-  display_name: Edd Yerburgh
-  login: admin
-  email: edward.yerburgh@gmail.com
-  url: ''
-author_login: admin
-author_email: edward.yerburgh@gmail.com
+description: Run a node script with windows task scheduler. Using git Bash and windows task scheduler we will see how to automatically run a node script on Windows.
 wordpress_id: 358
 wordpress_url: http://www.coding123.org/?p=358
 date: '2016-10-30 21:07:02 +0000'

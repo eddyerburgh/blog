@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Mock Vuex in Vue unit tests
+description: Learn how to mock Vuex in Vue unit tests. This tutorial shows you how to mock Vuex actions and gettters used in your Vue components.
 ---
+
 Vuex is a great way to manage state in a Vue app. For any serious app, you want tests, so in this tutorial we'll see how to mock Vuex in Vue unit tests.
 
 *Note: This tutorial assumes you understand Vuex and how to unit test Vue components. If you don't, check out <a href="https://www.coding123.org/unit-test-vue-components/">How to unit test Vue components</a>*

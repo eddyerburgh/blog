@@ -3,13 +3,7 @@ layout: post
 status: publish
 published: true
 title: Make a Responsive Tic Tac Toe Board with CSS
-author:
-  display_name: Edd Yerburgh
-  login: admin
-  email: edward.yerburgh@gmail.com
-  url: ''
-author_login: admin
-author_email: edward.yerburgh@gmail.com
+description: Learn how to make a responsive tic tac toe board with CSS and HTML. This tutorial walks you through the process of making responsive squares for your board.
 wordpress_id: 294
 wordpress_url: http://www.coding123.org/?p=294
 date: '2016-04-29 20:16:52 +0000'

@@ -3,6 +3,7 @@ layout: post
 status: publish
 published: true
 title: Validate an RGB or RGBA Value in JavaScript
+description: Validate an RGB or RGBA value in JavaScript using regex! Grab this simple function and pass it your value to check whether it is a valid rgb/a value.
 author:
   display_name: Edd Yerburgh
   login: admin

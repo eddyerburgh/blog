@@ -3,13 +3,7 @@ layout: post
 status: publish
 published: true
 title: How to Build a Customizable Responsive Grid with SASS
-author:
-  display_name: Edd Yerburgh
-  login: admin
-  email: edward.yerburgh@gmail.com
-  url: ''
-author_login: admin
-author_email: edward.yerburgh@gmail.com
+description: Create a customizable responsive grid with SASS. Learn the formula for a twelve column grid and how to use calculations to create a customizable grid
 wordpress_id: 40
 wordpress_url: http://www.eddyerburgh.com/?p=40
 date: '2016-01-28 22:45:30 +0000'
