@@ -16,7 +16,7 @@ comments: []
 ---
 It seems like every landing page has elements bouncing into view as you scroll down. Most people use <a href="https://daneden.github.io/animate.css/" target="newwindow">Animate.CSS</a> and <a href="http://mynameismatthieu.com/WOW/" target="newwindow">Wow.JS</a> to achieve the effect. In this tutorial we'll learn how to animate elements when scrolled into view with native JS and a bit of CSS.
 
-<img class="aligncenter wp-image-305 size-full" src="http://ec2-52-42-182-165.us-west-2.compute.amazonaws.com/blog/wp-content/uploads/2016/05/ezgif.com-video-to-gif.gif" alt="Animate on scroll with vanilla JS" width="960" height="347" />
+<img class="aligncenter wp-image-305 size-full" src="/assets/2016/05/ezgif.com-video-to-gif.gif" alt="Animate on scroll with vanilla JS" width="960" height="347" />
 
 ## The Problem
 
@@ -29,7 +29,7 @@ There are two steps to animating on scroll:
 
 For the CSS we use the <a href="https://developer.mozilla.org/en/docs/Web/CSS/animation" target="newwindow">animation property</a>. This property allows us to animate properties of an element. For example, animating a div from opacity 0 to opacity 1. With the animation property this will transition smoothly from opacity 0 to 1, giving the appearance of fading in.
 
-<a href="http://ec2-52-42-182-165.us-west-2.compute.amazonaws.com/blog/wp-content/uploads/2016/05/ezgif.com-crop.gif"><img class="aligncenter size-full wp-image-310" src="http://ec2-52-42-182-165.us-west-2.compute.amazonaws.com/blog/wp-content/uploads/2016/05/ezgif.com-crop.gif" alt="Fade in with CSS animation" width="638" height="268" /></a>
+<a href="/assets/2016/05/ezgif.com-crop.gif"><img class="aligncenter size-full wp-image-310" src="/assets/2016/05/ezgif.com-crop.gif" alt="Fade in with CSS animation" width="638" height="268" /></a>
 
 For our example, let's look at fading the element in and making it appear to grow.
 

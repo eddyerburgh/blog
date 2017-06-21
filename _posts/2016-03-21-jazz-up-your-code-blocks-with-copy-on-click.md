@@ -18,7 +18,7 @@ comments: []
 
 In this tutorial, we'll add copy on click functionality to all code blocks on a page.
 
-[caption id="attachment_184" align="aligncenter" width="300"]<a href="http://ec2-52-42-182-165.us-west-2.compute.amazonaws.com/blog/wp-content/uploads/2016/03/clicktocopy.png" rel="attachment wp-att-184"><img class="wp-image-184 size-medium" src="http://www.eddyerburgh.com/wp-content/uploads/2016/03/clicktocopy-300x92.png" alt="copy on click tooltip" width="300" height="92" /></a> What we're making[/caption]
+[caption id="attachment_184" align="aligncenter" width="300"]<a href="/assets/2016/03/clicktocopy.png" rel="attachment wp-att-184"><img class="wp-image-184 size-medium" src="http://www.eddyerburgh.com/wp-content/uploads/2016/03/clicktocopy-300x92.png" alt="copy on click tooltip" width="300" height="92" /></a> What we're making[/caption]
 
 Click the code block below to see it in action.
 

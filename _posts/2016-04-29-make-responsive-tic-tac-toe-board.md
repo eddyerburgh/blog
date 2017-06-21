@@ -17,7 +17,7 @@ comments: []
 
 In this tutorial we are going to make a responsive tic tac toe board with an HTML table. The final product will look like this:
 
-<img class="wp-image-295 size-medium aligncenter" src="http://ec2-52-42-182-165.us-west-2.compute.amazonaws.com/blog/wp-content/uploads/2016/04/tic-tac-toe-board-300x300.png" alt="Responsive Tic Tac Toe Board Being Played" width="300" height="300" />
+<img class="wp-image-295 size-medium aligncenter" src="/assets/2016/04/tic-tac-toe-board-300x300.png" alt="Responsive Tic Tac Toe Board Being Played" width="300" height="300" />
 
 Let's go.
 
@@ -78,7 +78,7 @@ So far so good, but we need some height! This is where the magic happens. We cre
 
 So because all our widths are set as percentages, we have responsive tic tac toe board. We can see how it resizes with the borders added:
 
-<img class="wp-image-296 size-medium aligncenter" src="http://ec2-52-42-182-165.us-west-2.compute.amazonaws.com/blog/wp-content/uploads/2016/04/responsive-tic-tac-toe-300x283.gif" alt="Responsive Tic Tac Toe Board Being Resized" width="300" height="283" />
+<img class="wp-image-296 size-medium aligncenter" src="/assets/2016/04/responsive-tic-tac-toe-300x283.gif" alt="Responsive Tic Tac Toe Board Being Resized" width="300" height="283" />
 
 ## Adding the Borders
 
