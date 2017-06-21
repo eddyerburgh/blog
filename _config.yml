@@ -1,0 +1,22 @@
+# Dependencies
+markdown: redcarpet
+rouge: true
+
+# Permalinks
+permalink: pretty
+
+# Setup
+title: Edd Yerburgh
+tagline: 'Software Engineer'
+url: https://eddyerburgh.me
+
+author:
+  name: 'Edd Yerburgh'
+  url: https://github.com/eddyerburgh
+
+paginate: 5
+
+# Custom vars
+version: 2.0.0
+
+plugins: [jekyll-paginate]
