@@ -3,7 +3,7 @@ markdown: redcarpet
 rouge: true
 
 # Permalinks
-permalink: pretty
+permalink: /:categories/:title.html
 
 # Setup
 title: Edd Yerburgh
