@@ -46,39 +46,40 @@ Let's look at the code.
 ```js
 // Array of objects to pass to template
 var people = [
-  { "name" : "Ted", "age": "34" , "image": "http://example1.jpg", "favorite": "yes" },
-  { "name" : "Marshall", "age": "35", "image": "http://example2.jpg" },
-  { "name" : "Barney", "age": "34", "image": "http://example3.jpg" },
-];
+    { 'name': 'Ted', 'age': '34', 'image': 'http://example1.jpg', 'favorite': 'yes' },
+    { 'name': 'Marshall', 'age': '35', 'image': 'http://example2.jpg' },
+    { 'name': 'Barney', 'age': '34', 'image': 'http://example3.jpg' }
+]
 // The template script HTML content
-var template = document.getElementById( "my-template" ).innerHTML
-var anchor = document.createElement('span');
+var template = document.getElementById('my-template').innerHTML
+var anchor = document.createElement('span')
 // Loop through each object in the people array and create an
 // element based on #my-template HTML
-people.forEach( function( person ) {
-  // Create element containing the HTML included in #my-template
-  var el = document.createElement('div');
-  el.innerHTML = template;
+people.forEach(function (person) {
+    // Create element containing the HTML included in #my-template
+  var el = document.createElement('div')
+  el.innerHTML = template
   console.log(el)
-  // Add content to elements idefntified by class name
-  el.getElementsByClassName( "name" )[0].appendChild( document.createTextNode( person.name ));
-  el.getElementsByClassName( "age" )[0].appendChild( document.createTextNode( person.name ));
-  // Add src to image
-  el.getElementsByClassName( "image" )[0].setAttribute( "src", person.image );
-  // Adds value if a property exists and removes the parent p tag that
-  // if the property does not exist.
-  if ( person.favorite ) {
-    el.getElementsByClassName( "yes" )[0].appendChild( document.createTextNode( person.favorite ));
+    // Add content to elements idefntified by class name
+  el.getElementsByClassName('name')[0].appendChild(document.createTextNode(person.name))
+  el.getElementsByClassName('age')[0].appendChild(document.createTextNode(person.name))
+    // Add src to image
+  el.getElementsByClassName('image')[0].setAttribute('src', person.image)
+    // Adds value if a property exists and removes the parent p tag that
+    // if the property does not exist.
+  if (person.favorite) {
+    el.getElementsByClassName('yes')[0].appendChild(document.createTextNode(person.favorite))
   } else {
-    el.getElementsByClassName( "favorite" )[0].remove();
+    el.getElementsByClassName('favorite')[0].remove()
   }
-  // Add element to anchor, to be rendered when loop has finished
-  // This is used to avoid unnecesary document reflow
-  anchor.appendChild( el );
-});
+    // Add element to anchor, to be rendered when loop has finished
+    // This is used to avoid unnecesary document reflow
+  anchor.appendChild(el)
+})
 // Add anchor to DOM
-document.getElementById( "list" ).appendChild( anchor );</code>
-</pre>
+document.getElementById('list').appendChild(anchor)
+```
+
 ### HTML
 <pre class=""><code class="html"><!-- the element we append to -->
 <div id="list"></div>

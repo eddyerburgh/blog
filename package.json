@@ -1,0 +1,17 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "personal blog",
+  "repository": "git@github.com:eddyerburgh/blog.git",
+  "author": "Edd Yerburgh <edward.yerburgh@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --ext md _posts --fix"
+  },
+  "devDependencies": {
+    "eslint": "3",
+    "eslint-plugin-markdown": "^1.0.0-beta.6",
+    "eslint-plugin-react": "^7.1.0",
+    "eslint-plugin-vue-libs": "^1.2.0"
+  }
+}

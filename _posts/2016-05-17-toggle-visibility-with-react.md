@@ -44,35 +44,37 @@ Let's look at the code:
 
 ```jsx
 class Parent extends React.Component {
-  constructor() {
-    super();
+  constructor () {
+    super()
     this.state = {
-      isHidden: true,
-    };
+      isHidden: true
+    }
   }
-  toggleHidden() {
+  toggleHidden () {
     this.setState({
-      isHidden: !this.state.isHidden,
-    });
+      isHidden: !this.state.isHidden
+    })
   }
-  render() {
+  render () {
     return (
-<div>
-        <button onClick={::this.toggleHidden} >
+      <div>
+        <button onClick={this.toggleHidden.bind(this)} >
           Click to show modal
         </button>
         {!this.state.isHidden && <Child />}
       </div>
-    );
+    )
   }
 }
+
 const Child = () => (
-<div className="modal">
+<div className='modal'>
       Hello, World!
   </div>
-);
-const app = document.getElementById('app');
-ReactDOM.render(Parent, app);
+)
+
+const app = document.getElementById('app')
+ReactDOM.render(Parent, app)
 ```
 
 **Note:** this code is using ES6 and ES7 features. You'll need to run it through a transpiler like <a rel="noopener" href="https://babeljs.io/" target="newwindow">Babel</a>.
@@ -83,7 +85,7 @@ We have two components - a Parent component and a Child component. The Child com
 
 We set the initial state of the Parent component to include the property isHidden, and set the value to true. This means the conditional statement in the render function ill return as false, and the child Component won't be rendered.
 
-Then we have a toggleHidden function. It toggles isHidden between true and false. In this example, this function will fire when the button is pressed, but you can attach it to whatever you want. Often you'll need to pass it to a child component as a prop. One thing you might notice is the use of double colons (::). This is a fancy ES7 way of binding this to the Parent component.
+Then we have a toggleHidden function. It toggles isHidden between true and false. In this example, this function will fire when the button is pressed, but you can attach it to whatever you want. Often you'll need to pass it to a child component as a prop.
 
 So once our toggleHidden function is fired, the state will update and render will be rerun. If isHidden is false, the Child component will be output in the JSX and rendered in the DOM.
 

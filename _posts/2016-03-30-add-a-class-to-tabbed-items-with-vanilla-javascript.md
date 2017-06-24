@@ -29,27 +29,27 @@ To see my solution in action, press tab.
 
 ```js
 // Function to a Add Class to Tabbed Items
-(function(){
-	document.addEventListener( 'keyup', function ( e ) {
-	// Run function to remove class of previous element
-	removeClass();
-	// Focussed element
-    var el = document.activeElement;
-    // Add tabbed class to focussed element
-    el.className += " tabbed";
-    // Run remove class, assing this element as previousEl
-    removeClass( el );
-}, true );
-var previousEl;
+(function () {
+  document.addEventListener('keyup', function (e) {
+        // Run function to remove class of previous element
+    removeClass()
+        // Focussed element
+    var el = document.activeElement
+        // Add tabbed class to focussed element
+    el.className += ' tabbed'
+        // Run remove class, assing this element as previousEl
+    removeClass(el)
+  }, true)
+  var previousEl
 // Changes prevEl and removes the tabbed class
-function removeClass( e ) {
-	if ( arguments.length === 0 && previousEl !== undefined ) {
-		previousEl.className = previousEl.className.replace( " tabbed", "" );
-	} else {
-		// Assign current element as prevEl
-		previousEl = e;
-	}
-}
+  function removeClass (e) {
+    if (arguments.length === 0 && previousEl !== undefined) {
+      previousEl.className = previousEl.className.replace(' tabbed', '')
+    } else {
+            // Assign current element as prevEl
+      previousEl = e
+    }
+  }
 })()
 ```
 

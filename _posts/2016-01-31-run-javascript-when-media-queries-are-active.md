@@ -37,7 +37,7 @@ So how can we do that? Easy. We tie our JavaScript to a CSS property that is onl
 When my (min-width:700px) media query is not active, .menu-toggle will be set to display: block. Once the (min-width:700px) media rule is activated .menu-toggle will be set to display: none. So to run the code for my menu toggle, I simply check if .menu-toggle has the property display: block.
 
 ```javascript
-if (jQuery(".menu-toggle").css("dispaly") == "block" ) {
+if (jQuery('.menu-toggle').css('display') === 'block') {
     // Code to be executed
 }
 ```

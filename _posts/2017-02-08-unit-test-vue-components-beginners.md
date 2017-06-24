@@ -28,13 +28,15 @@ Unit tests are a way to automatically check that our code does what it's meant t
 For example, here is an add function:
 
 ```js
-function add(a, b) {
-  return a + b;
-}</code>
-</pre>
+function add (a, b) {
+  return a + b
+}
+```
 We want to test that it does what we expect (return a sum of both parameters). We can write a function that throws an error if add() does not return the sum of a and b.
-<pre class=""><code class="javascript">function test() {
-  if(add(1,2) !== 3) {
+
+```js
+function test () {
+  if (add(1, 2) !== 3) {
     throw new Error('add should return sum of both parameters')
   }
 }
@@ -53,14 +55,15 @@ To explain the benefits of unit tests, let's go back to our example.
 We'll add a subtract function, and add a test in our test function:
 
 ```js
-function subtract(a, b) {
-  return a - b;
+function subtract (a, b) {
+  return a - b
 }
-function test() {
-  if(add(1,2) !== 3) {
+
+function test () {
+  if (add(1, 2) !== 3) {
     throw new Error('add should return sum of both parameters')
   }
-  if(subtract(2, 1) !== 1) {
+  if (subtract(2, 1) !== 1) {
     throw new Error('subtract should return the difference of both parameters')
   }
 }
@@ -108,11 +111,11 @@ Mocha is a *test framework*. You define tests in a file and run them from the co
 Earlier we were testing two functions in our one test function:
 
 ```js
-function test() {
-  if(add(1,2) !== 3) {
+function test () {
+  if (add(1, 2) !== 3) {
     throw new Error('add should return sum of both parameters')
   }
-  if(subtract(2, 1) !== 1) {
+  if (subtract(2, 1) !== 1) {
     throw new Error('subtract should return the difference of both parameters')
   }
 }
@@ -122,18 +125,18 @@ Using mocha, we split these out into their own functions.
 ```js
 describe('add', () => {
   it('returns sum of parameters a and b', () => {
-    if(add(1,2) !== 3) {
+    if (add(1, 2) !== 3) {
       throw new Error('add should return sum of both parameters')
     }
-  });
-});
+  })
+})
 describe('subtract', () => {
   it('returns the difference of parameters a and b', () => {
-    if(subtract(2, 1) !== 1) {
+    if (subtract(2, 1) !== 1) {
       throw new Error('subtract should return the difference of both parameters')
     }
-  });
-});
+  })
+})
 ```
 
 We can then use the mocha command to run both of these tests and report back any tests that failed.
@@ -146,16 +149,17 @@ Chai is an assertion library. It asserts that a value meets another value and th
 
 Using Chai, our example test function becomes:
 
-```describe('add', () => {
-  if(add(1,2) !== 3) {
-    expect(add(1, 2)).to.equal(3);
+```js
+describe('add', () => {
+  if (add(1, 2) !== 3) {
+    expect(add(1, 2)).to.equal(3)
   }
-});
+})
 describe('subtract', () => {
-  if(subtract(2, 1) !== 1) {
-    expect(subtract(2, 1)).to.equal(1);
+  if (subtract(2, 1) !== 1) {
+    expect(subtract(2, 1)).to.equal(1)
   }
-});
+})
 ```
 
 Much more readable.
@@ -169,13 +173,15 @@ In the command line, run:
 When that's installed, add a new file Foo.spec.js to the test directory and paste the following code.
 
 ```js
-const chai =  require('chai');
-const expect = chai.expect;
+const chai = require('chai')
+
+const expect = chai.expect
+
 describe('first test', () => {
   it('is true', () => {
-    expect(true).to.equal(true);
-  });
-});
+    expect(true).to.equal(true)
+  })
+})
 ```
 Now we are going to add an <a rel="noopener" href="https://medium.com/@mxstbr/npm-scripts-explained-f125e85eb378#.8k1r9ok7a" target="_blank">npm script</a>. Open up package.json. If you used npm init, there will be a scripts.test property, like this:
 ```json
@@ -219,16 +225,16 @@ export default {
   name: 'hello',
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App',
+      msg: 'Welcome to Your Vue.js App'
     };
   },
   props: ['passedProp'],
   methods: {
     changeMessage() {
-      this.msg = 'new message';
-    },
-  },
-};
+      this.msg = 'new message'
+    }
+  }
+}
 </script>
 ```
 
@@ -254,13 +260,14 @@ The tool we use for this is webpack. Webpack is a module bundler that takes mult
 In the build directory create a file named webpack.config.js, and paste in the code below:
 
 ```js
-const path = require('path');
+const path = require('path')
+
 module.exports = {
   module: {
     loaders: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
+        loader: 'vue-loader'
       },
       {
         test: /\.js$/,
@@ -269,16 +276,16 @@ module.exports = {
           presets: ['es2015']
         },
         include: [
-          path.resolve(__dirname, '../'),
+          path.resolve(__dirname, '../')
         ],
-        exclude: /node_modules/,
-      },
-    ],
+        exclude: /node_modules/
+      }
+    ]
   },
   resolve: {
-    extensions: ['.js', '.vue'],
-  },
-};
+    extensions: ['.js', '.vue']
+  }
+}
 ```
 
 Out the box, webpack does not compile .vue files or es2015, so we have to tell it do that. We also need to tell webpack where out project route is.
@@ -287,7 +294,7 @@ If this config file feels like a black box, don't worry. There are hundreds of t
 
 Now in package.json, we need to edit the test script to use mocha-webpack:
 
-```js
+```json
 "scripts": {
   "test": "mocha-webpack --webpack-config build/webpack.test.config.js test --recursive"
 },
@@ -304,15 +311,16 @@ Now let's write a real test. We don't need our passing test anymore so we can de
 Open Foo.spec.js and paste this over the previous content:
 
 ```js
-import { expect } from 'chai';
-import { mount } from 'avoriaz';
-import Foo from '../app/components/Foo.vue';
+import { expect } from 'chai'
+import { mount } from 'avoriaz'
+import Foo from '../app/components/Foo.vue'
+
 describe('Foo.vue', () => {
-   it('has a root element with class foo', () => {
-     const wrapper = mount(Foo);
-     expect(wrapper.is('.foo')).to.equal(true)
-   })
-});
+  it('has a root element with class foo', () => {
+    const wrapper = mount(Foo)
+    expect(wrapper.is('.foo')).to.equal(true)
+  })
+})
 ```
 
 This test is asserting that the root element of Foo has the className foo.
@@ -349,7 +357,7 @@ Time for some more tests.
 Let's look at our current test again.
 
 ```js
-const wrapper = mount(Foo);
+const wrapper = mount(Foo)
 expect(wrapper.is('.foo')).to.equal(true)
 ```
 
@@ -360,8 +368,8 @@ Under the hood, mount mounts the Vue component and creates a wrapper class with 
 A useful method is find. This searches the wrapper for elements matching a selector and returns an array of wrappers made from the elements found.
 
 ```js
-const wrapper = mount(Foo);
-const p = wrapper.find('p')[0];
+const wrapper = mount(Foo)
+const p = wrapper.find('p')[0]
 ```
 
 Here, p will be the first tag found in Foo.
@@ -369,18 +377,18 @@ Here, p will be the first tag found in Foo.
 We can also pass props with mount. This is done with the propsData option:
 
 ```js
-const wrapper = mount(Foo, {propsData: {propertyA: 'property'}});
+const wrapper = mount(Foo, { propsData: { propertyA: 'property' }})
 ```
 
 Using find and propsData, we can test whether foo correctly renders passedProp in the p tag:
 
 ```js
 it('has a root element with class foo', () => {
-  const passedProp = 'some text';
-  const wrapper = mount(Foo, {propsData: {passedProp}});
-  const p = wrapper.find('p')[0];
+  const passedProp = 'some text'
+  const wrapper = mount(Foo, { propsData: { passedProp }})
+  const p = wrapper.find('p')[0]
   expect(p.text()).to.equal(passedProp)
-});
+})
 ```
 
 Cool! Let's look at one last method - dispatch.
@@ -389,12 +397,12 @@ Dispatch dispatches a DOM event to the wrapper root element. In our Foo.vue file
 
 ```js
 it('changes h1 text when #change-text is clicked', () => {
-  const wrapper = mount(Foo);
-  const changeMessage = wrapper.find('#change-message')[0];
-  changeMessage.dispatch('click');
-  const h1 = wrapper.find('h1')[0];
+  const wrapper = mount(Foo)
+  const changeMessage = wrapper.find('#change-message')[0]
+  changeMessage.dispatch('click')
+  const h1 = wrapper.find('h1')[0]
   expect(h1.text()).to.equal('new message')
-});
+})
 ```
 
 This test finds the changeMessage button, dispatches a click event and then asserts that the h1 text has changed.
@@ -403,28 +411,28 @@ Success!
 All together now:
 
 ```js
-import { expect } from 'chai';
-import { mount } from 'avoriaz';
-import Foo from '../app/components/Foo.vue';
+import { expect } from 'chai'
+import { mount } from 'avoriaz'
+import Foo from '../app/components/Foo.vue'
 describe('Foo.vue', () => {
-   it('has a root element with class foo', () => {
-     const wrapper = mount(Foo);
-     expect(wrapper.is('.foo')).to.equal(true);
-   });
   it('has a root element with class foo', () => {
-    const passedProp = 'some text';
-    const wrapper = mount(Foo, {propsData: {passedProp}});
-    const p = wrapper.find('p')[0];
-    expect(p.text()).to.equal(passedProp);
-  });
+    const wrapper = mount(Foo)
+    expect(wrapper.is('.foo')).to.equal(true)
+  })
+  it('has a root element with class foo', () => {
+    const passedProp = 'some text'
+    const wrapper = mount(Foo, { propsData: { passedProp }})
+    const p = wrapper.find('p')[0]
+    expect(p.text()).to.equal(passedProp)
+  })
   it('changes h1 text when #change-text is clicked', () => {
-    const wrapper = mount(Foo);
-    const changeMessage = wrapper.find('#change-message')[0];
-    changeMessage.dispatch('click');
-    const h1 = wrapper.find('h1')[0];
-    expect(h1.text()).to.equal('new message');
-  });
-});
+    const wrapper = mount(Foo)
+    const changeMessage = wrapper.find('#change-message')[0]
+    changeMessage.dispatch('click')
+    const h1 = wrapper.find('h1')[0]
+    expect(h1.text()).to.equal('new message')
+  })
+})
 ```
 
 That's all the tests we're going to write in this tutorial. To learn more about unit testing Vue components, see <a rel="noopener" href="{% post_url 2017-02-08-unit-test-vue-components %}" target="_blank">How to unit test Vue components</a>.

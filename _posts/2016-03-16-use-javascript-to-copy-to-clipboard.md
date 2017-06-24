@@ -27,17 +27,17 @@ In the not too distant past you'd need to use Flash (yuck) to allow the user to 
 ## The Code
 
 ```js
-var elemToCopy = document.getElementById( 'elem-to-copy' );
+var elemToCopy = document.getElementById('elem-to-copy')
 // Bind Event
-elemToCopy.onclick = copyText;
-function copyText() {
+elemToCopy.onclick = copyText
+function copyText () {
   this.select()
   try {
-    // Now that we've selected the text, execute the copy command
-    var successful = document.execCommand('copy');
-    successful ? console.log("success") : console.log("didn't work")
-  } catch(err) {
-    alert('Unable to copy, update your browser');
+        // Now that we've selected the text, execute the copy command
+    var successful = document.execCommand('copy')
+    successful ? console.log('success') : console.log("didn't work")
+  } catch (err) {
+    window.alert('Unable to copy, update your browser')
   }
 }
 ```
@@ -45,19 +45,19 @@ function copyText() {
 Use this code to copy from an input or textarea. Replace 'elem-to-copy' with the id of the element you wish to copy. If you want to dynamically copy all instances of a textfield, use the code below. If you want to copy from a non text-field element, click <a rel="noopener" href="#copy-from-non-textfield">here</a>.
 
 ```js
-var elemsToCopy = document.getElementsByClassName( 'elem-to-copy' );
-for ( var i = 0; i < elemsToCopy.length; i++ ) {
-  elemsToCopy[i].onclick = copyText;
+var elemsToCopy = document.getElementsByClassName('elem-to-copy')
+for (var i = 0; i < elemsToCopy.length; i++) {
+  elemsToCopy[i].onclick = copyText
 }
 // Bind Event
-function copyText() {
+function copyText () {
   this.select()
   try {
-    // Now that we've selected the text, execute the copy command
-    var successful = document.execCommand('copy');
-    successful ? console.log("success") : console.log("didn't work")
-  } catch(err) {
-    alert('Unable to copy, update your browser');
+        // Now that we've selected the text, execute the copy command
+    var successful = document.execCommand('copy')
+    successful ? console.log('success') : console.log("didn't work")
+  } catch (err) {
+    window.alert('Unable to copy, update your browser')
   }
 }
 ```
@@ -87,22 +87,22 @@ We want to know if it was successful or not! IE9- and Safari don't support execC
 The select() method only works on textfields, so we have to go about it a bit differently if we want to copy text container in a paragraph, for example.
 
 ```js
-var elemsToCopy = document.getElementsByTagName( 'p' );
-for ( var i = 0; i < elemsToCopy.length; i++ ) {
-  elemsToCopy[i].onclick = copyText;
+var elemsToCopy = document.getElementsByTagName('p')
+for (var i = 0; i < elemsToCopy.length; i++) {
+  elemsToCopy[i].onclick = copyText
 }
 // Bind Event
-function copyText() {
-  	// Create Range to select text that is normally unselectable
-	var range = document.createRange();
-	range.selectNode(this);
-	window.getSelection().addRange(range);
+function copyText () {
+    // Create Range to select text that is normally unselectable
+  var range = document.createRange()
+  range.selectNode(this)
+  window.getSelection().addRange(range)
   try {
-    // Now that we've selected the text, execute the copy command
-    var successful = document.execCommand('copy');
-    successful ? console.log("success") : console.log("didn't work")
-  } catch(err) {
-    alert('Unable to copy, update your browser');
+        // Now that we've selected the text, execute the copy command
+    var successful = document.execCommand('copy')
+    successful ? console.log('success') : console.log("didn't work")
+  } catch (err) {
+    alert('Unable to copy, update your browser')
   }
 }
 ```

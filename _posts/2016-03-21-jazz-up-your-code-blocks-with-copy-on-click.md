@@ -31,49 +31,47 @@ Copy and paste this code to add copy on click functionality to your site.
 Include this on any page you want to add the copy on click functionality
 
 ```js
-( function(){
- // Cache Dom
- var code = document.getElementsByTagName( 'code' );
- var success = document.getElementById( 'success' );
- var failure = document.getElementById( 'failure' );
- // Declare variable for function to be assigned to
- var copyOnClick;
- // Run function if
-<pre> exists
- if ( code.length ) {
- // Assign function to variable to ensure function only called on pages with
-<pre> tags
- copyOnClick = function() {
- for ( var i = 0; i < code.length; i++ ) {
- code[i].onclick = copyToClipboard;
- }
- function copyToClipboard() {
- // Create Range to select text that is normally unselectable
- var range = document.createRange();
- range.selectNode(this);
- window.getSelection().addRange(range);
- try {
- // Now that we've selected the anchor text, execute the copy command
- var successful = document.execCommand('copy');
- successful ? worked() : failure();
- } catch(err) {
- failure();
- }
- function worked () {
- window.getSelection().removeAllRanges();
- success.className += ' show';
- setTimeout( function(){ success.className = success.className.replace( ' show', '' ); }, 500);
- }
- function failure() {
- window.getSelection().removeAllRanges();
- failure.className += ' show';
- setTimeout( function(){ failure.className =failure.className.replace( ' show', '' ); }, 500);
- }
- }
- };
- copyOnClick();
- }
-} )();
+(function () {
+    // Cache Dom
+  var code = document.getElementsByTagName('code')
+  var success = document.getElementById('success')
+  var failure = document.getElementById('failure')
+    // Declare variable for function to be assigned to
+  var copyOnClick
+    // Run function if <pre> exists
+  if (code.length) {
+        // Assign function to variable to ensure function only called on pages with <pre> tags
+    copyOnClick = function () {
+      for (var i = 0; i < code.length; i++) {
+        code[i].onclick = copyToClipboard
+      }
+      function copyToClipboard () {
+                // Create Range to select text that is normally unselectable
+        var range = document.createRange()
+        range.selectNode(this)
+        window.getSelection().addRange(range)
+        try {
+                    // Now that we've selected the anchor text, execute the copy command
+          var successful = document.execCommand('copy')
+          successful ? worked() : failure()
+        } catch (err) {
+          failure()
+        }
+        function worked () {
+          window.getSelection().removeAllRanges()
+          success.className += ' show'
+          setTimeout(function () { success.className = success.className.replace(' show', '') }, 500)
+        }
+        function failure () {
+          window.getSelection().removeAllRanges()
+          failure.className += ' show'
+          setTimeout(function () { failure.className = failure.className.replace(' show', '') }, 500)
+        }
+      }
+    }
+    copyOnClick()
+  }
+})()
 ```
 ### HTML
 
@@ -152,19 +150,19 @@ That was  a lot of code. If you pasted it into the correct places your site will
 The copy on click code is explained <a rel="noopener" href="/javascript/use-javascript-to-copy-to-clipboard/">in this previous article</a>. So we'll just look at the code that isn't explained there :
 
 ```js
-( function(){
-	// Cache Dom
-	var code = document.getElementsByTagName( 'code' );
-	// Declare variable for function to be assigned to
-	var copyOnClick;
-	// Run function if code exists
-	if ( code.length ) {
-		// Assign function to variable to ensure function only called on pages with code tags
-		copyOnClick = function() {
-		};
-		copyOnClick();
-	}
-} )();
+(function () {
+    // Cache Dom
+  var code = document.getElementsByTagName('code')
+    // Declare variable for function to be assigned to
+  var copyOnClick
+    // Run function if code exists
+  if (code.length) {
+        // Assign function to variable to ensure function only called on pages with code tags
+    copyOnClick = function () {
+    }
+    copyOnClick()
+  }
+})()
 ```
 
 The code is wrapped in <a rel="noopener" href="http://markdalgleish.com/2011/03/self-executing-anonymous-functions/">a self executing anonymous function</a>. This is used to avoid polluting the global namespace.

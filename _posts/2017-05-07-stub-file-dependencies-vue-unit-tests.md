@@ -29,7 +29,7 @@ For example:
 
 ```js
 import { sendEmail } from './module'
-function success() {
+function success () {
   console.log('success!')
   sendEmail()
 }
@@ -49,11 +49,11 @@ For example, say we need to test this function:
 ```js
 // functionToTest.js
 import dependency from './dependency'
-function functionToTest() {
+function functionToTest () {
   if (dependency()) {
-    return 1;
+    return 1
   } else {
-    return 3;
+    return 3
   }
 }
 ```
@@ -284,11 +284,11 @@ So the final test file looks like this:
 import { mount } from 'avoriaz'
 import componentFactory from '!!vue-loader?inject!@/components/Component'
 describe('Component.vue', () => {
-it('renders a div with class active when dependency returns true', () => {
-  const Component = componentFactory({})
-  const wrapper = mount(Component)
-  expect(wrapper.hasClass('active')).to.equal(true)
-})
+  it('renders a div with class active when dependency returns true', () => {
+    const Component = componentFactory({})
+    const wrapper = mount(Component)
+    expect(wrapper.hasClass('active')).to.equal(true)
+  })
   it('renders a div without class active when dependency returns false', () => {
     const Component = componentFactory({
       '../lib/dependency': () => false
@@ -301,7 +301,7 @@ it('renders a div with class active when dependency returns true', () => {
 
 Now let's see those tests pass!
 
-```js
+```shell
 npm test
 ```
 2 passing, yay! (hopefully)

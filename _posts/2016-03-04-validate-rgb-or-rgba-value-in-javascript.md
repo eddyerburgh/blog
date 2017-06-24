@@ -27,11 +27,11 @@ I couldn't find any copy pasta for this problem so I had a look myself. Turns ou
 ## The code
 
 ```javascript
-function checkRgb(rgb) {
-    var rxValidRgb = /([R][G][B][A]?[(]\s*([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\s*,\s*([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\s*,\s*([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])(\s*,\s*((0\.[0-9]{1})|(1\.0)|(1)))?[)])/i;
-    if (rxValidRgb.test(rgb)) {
-      return true;
-    }
+function checkRgb (rgb) {
+  var rxValidRgb = /([R][G][B][A]?[(]\s*([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\s*,\s*([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\s*,\s*([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])(\s*,\s*((0\.[0-9]{1})|(1\.0)|(1)))?[)])/i
+  if (rxValidRgb.test(rgb)) {
+    return true
+  }
 }
 ```
 

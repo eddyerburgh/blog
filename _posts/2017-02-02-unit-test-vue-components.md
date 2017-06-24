@@ -46,9 +46,9 @@ This works, but some common testing utilities (like dispatching a click) are qui
 
 ```js
 const foo = vm.$el.querySelector('.foo')
-const eventObject = new window.Event(type);
-foo.dispatchEvent(eventObject);
-vm._watcher.run();
+const eventObject = new window.Event(type)
+foo.dispatchEvent(eventObject)
+vm._watcher.run()
 ```
 
 To make our lives easier, we can use a <a rel="noopener" href="https://github.com/eddyerburgh/avoriaz" target="_blank">test utility library</a>.
@@ -66,8 +66,8 @@ npm install --save-dev avoriaz chai
 Now, in your test file import mount from avoriaz and expect from chai:
 
 ```js
-import { mount } from 'avoriaz';
-import { expect } from 'chai';
+import { mount } from 'avoriaz'
+import { expect } from 'chai'
 ```
 
 If you've set up your test environment using mocha-webpack or Karma then you're ready to go. If you're having trouble, git clone the <a rel="noopener" href="https://github.com/eddyerburgh/avoriaz-mocha-example" target="_blank">avoriaz mocha example project</a>, and run npm install to get the project up and running.
@@ -83,16 +83,16 @@ Now, time to test.
 ```js
 describe('Bar.vue', () => {
   it('renders a div with class bar', () => {
-    const wrapper = mount(Bar);
-    expect(wrapper.is('div')).to.equal(true);
-    expect(wrapper.hasClass('bar')).to.equal(true);
-  });
+    const wrapper = mount(Bar)
+    expect(wrapper.is('div')).to.equal(true)
+    expect(wrapper.hasClass('bar')).to.equal(true)
+  })
   it('renders 4 list elements inside .parent-ul', () => {
-    const wrapper = mount(Bar);
-    const listElements = wrapper.find('.parent-ul li');
-    expect(listElements.length).to.equal(4);
-  });
-});
+    const wrapper = mount(Bar)
+    const listElements = wrapper.find('.parent-ul li')
+    expect(listElements.length).to.equal(4)
+  })
+})
 ```
 
 The <a rel="noopener" href="https://eddyerburgh.gitbooks.io/avoriaz/content/api/mount/find.html" target="_blank">find</a> method returns an array of element wrappers. To see the full list of methods available to a wrapper, <a rel="noopener" href="https://eddyerburgh.gitbooks.io/avoriaz/content/api/mount/" target="_blank">check out the docs</a>.
@@ -104,13 +104,13 @@ Another useful method is <a rel="noopener" href="https://eddyerburgh.gitbooks.io
 ```js
 describe('Bar.vue', () => {
   it('renders h1 which changes text when button is clicked', () => {
-    const expectedMessage = 'new message';
-    const wrapper = mount(Foo);
-    const button = wrapper.find('#change-message')[0];
-    button.dispatch('click');
-    expect(wrapper.find('h1')[0].text()).to.equal(expectedMessage);
-  });
-});
+    const expectedMessage = 'new message'
+    const wrapper = mount(Foo)
+    const button = wrapper.find('#change-message')[0]
+    button.dispatch('click')
+    expect(wrapper.find('h1')[0].text()).to.equal(expectedMessage)
+  })
+})
 ```
 
 For full examples, check out the <a rel="noopener" href="https://github.com/eddyerburgh/avoriaz-mocha-example" target="_blank">mocha-webpack example project</a>.
