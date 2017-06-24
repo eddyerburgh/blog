@@ -205,7 +205,7 @@ There are two elements we're styling here:
 1. A tooltip that appears on hover to let users know they can copy the code on click
 2. The success/ failure messages
 
-####The Tooltip
+#### The Tooltip
 
 ```css
 code {
@@ -240,7 +240,7 @@ The `:before` element is positioned absolutely. This is why we need *<code>* to 
 
 The `:after` element is just a <a href="https://css-tricks.com/snippets/css/css-triangle/">CSS triangle</a>, and is purely for style.
 
-####The Success/ Failure Messages
+#### The Success/ Failure Messages
 
 Here we create a base overlay with overlay-message positioned in the center.
 

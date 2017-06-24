@@ -18,7 +18,7 @@ In this tutorial we will see how to stub dependencies in vue unit tests.
 
 *note: this is an advanced tutorial on testing. If you're not familiar with unit testing Vue components, using babel and webpack check out How to unit test Vue components*
 
-##What does stubbing dependencies mean?
+## What does stubbing dependencies mean?
 
 To answer the question we need to define dependencies and stubs.
 
@@ -39,7 +39,7 @@ A stub is a mock that simulates the behavior of a module or function.
 
 Stubbing dependencies simply means passing a stub to your code, instead of the dependency.
 
-##Why use stubs?
+## Why use stubs?
 
 Stubs give us total control over what our function returns.
 
@@ -60,11 +60,11 @@ To test both branches, dependency needs to return true in one test and false in 
 
 This is easy to do with a stub - because we control what it returns!
 
-##How?
+## How?
 
 This tutorial will go over 2 different methods. One using <a href="https://github.com/speedskater/babel-plugin-rewire">babel-plugin-rewire</a> and another using <a href="https://github.com/plasticine/inject-loader" target="_blank">inject-loader</a>.
 
-###babel-plugin-rewire
+### babel-plugin-rewire
 
 We're going to use a pre made project to learn how to use babel-plugin-rewire.
 
@@ -215,7 +215,7 @@ npm run test
 
 So that's one way to stub dependencies. In the next section we'll see how to achieve the same effect using inject-loader.
 
-###inject-loader
+### inject-loader
 
 <a href="https://github.com/plasticine/inject-loader" target="_blank">inject-loader</a> is recommended in the <a href="https://vue-loader.vuejs.org/en/workflow/testing-with-mocks.html">testing with mocks</a> tutorial in the vue-loader docs.
 
@@ -307,7 +307,7 @@ npm test
 
 *If it's not passing, a work repo is available <a href="https://github.com/eddyerburgh/stub-vue-components-inject-loader">here</a>.*
 
-##Conclusion
+## Conclusion
 
 We've seen 2 ways to stub dependencies in Vue components.
 
