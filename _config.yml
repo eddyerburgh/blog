@@ -1,5 +1,4 @@
 # Dependencies
-markdown: redcarpet
 rouge: true
 
 # Permalinks
@@ -9,8 +8,6 @@ baseurl: /blog
 # Setup
 title: Edd Yerburgh
 tagline: 'Software Engineer'
-
-url: https://eddyerburgh.me
 
 author:
   name: 'Edd Yerburgh'
