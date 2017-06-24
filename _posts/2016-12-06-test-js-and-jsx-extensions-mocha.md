@@ -12,7 +12,7 @@ categories:
 - JavaScript
 - Snippet
 tags: []
-comments: []
+comments: true
 ---
 Out the box, mocha only reads test files with a .js extension. What if you need to test `.js` AND `.jsx` extensions with mocha?
 

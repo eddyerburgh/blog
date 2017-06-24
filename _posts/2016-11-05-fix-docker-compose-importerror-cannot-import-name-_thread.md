@@ -12,7 +12,7 @@ categories:
 - Python
 - Snippet
 tags: []
-comments: []
+comments: true
 ---
 
 In this snippet I'll show you how to Fix `docker-compose ImportError: cannot import name _thread`.

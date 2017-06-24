@@ -12,7 +12,7 @@ categories:
 - JavaScript
 - Tutorials
 tags: []
-comments: []
+comments: true
 ---
 
 There's a great article by <a rel="noopener" href="http://codoki.com/2015/09/01/native-javascript-templating/">CD Media</a> that explains how to do templating with vanilla JS. In this tutorial we will expand on CD Media's example to include some basic features, including conditionals and changing the src of an image.

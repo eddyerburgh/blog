@@ -19,7 +19,7 @@ categories:
 - Tutorials
 - XAMPP
 tags: []
-comments: []
+comments: true
 ---
 
 Local subdomains are useful for organizing local projects.  Luckily, it's easy to add Subdomains to a XAMPP Server! Simply copy some code, paste it in the correct files and off you go!

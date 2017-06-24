@@ -13,6 +13,7 @@ categories:
 tags:
 - Modulus
 comments: []
+comments: true
 ---
 
 *Note: This posts assume you understand the loop, can access your template.php files and have a basic understanding of PHP*

@@ -11,7 +11,7 @@ date_gmt: '2016-12-16 10:55:58 +0000'
 categories:
 - Uncategorized
 tags: []
-comments: []
+comments: true
 ---
 
 Chai 4 canary version is out!

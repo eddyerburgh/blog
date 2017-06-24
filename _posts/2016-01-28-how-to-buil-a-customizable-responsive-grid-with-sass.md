@@ -15,7 +15,7 @@ categories:
 tags:
 - Responsive
 - SASS
-comments: []
+comments: true
 ---
 
 Variables and calculations make it easy to create a customizable responsive grid with SASS. Let's build one now in SCSS

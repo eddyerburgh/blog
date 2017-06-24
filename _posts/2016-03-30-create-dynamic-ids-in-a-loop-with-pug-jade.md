@@ -12,7 +12,7 @@ categories:
 - Jade
 - Tutorials
 tags: []
-comments: []
+comments: true
 ---
 
 <a rel="noopener" href="http://jade-lang.com/tutorial/">Pug</a> (previously known as Jade)  is a template engine built for node. In this tutorial I am going to show you how to create dynamic IDs in a loop with Pug.

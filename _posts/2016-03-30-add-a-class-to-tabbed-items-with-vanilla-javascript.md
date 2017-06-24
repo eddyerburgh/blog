@@ -13,7 +13,7 @@ categories:
 - JavaScript
 - Snippet
 tags: []
-comments: []
+comments: true
 ---
 This snippet will add a class to elements that are selected with the tab button.
 

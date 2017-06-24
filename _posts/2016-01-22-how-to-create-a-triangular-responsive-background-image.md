@@ -20,7 +20,7 @@ categories:
 - Tutorials
 tags:
 - clip-path
-comments: []
+comments: true
 ---
 I saw [this question](http://stackoverflow.com/questions/34008650/how-do-i-create-a-triangular-responsive-background-image) on Stack Overflow one afternoon, and bookmarked it for later. I really wanted to know how to create a fullscreen triangular responsive background image in CSS! When I checked back later no one had answered, so I took it on myself to figure out how.
 

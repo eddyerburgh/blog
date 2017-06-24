@@ -19,7 +19,7 @@ categories:
 - CSS
 - Sass
 tags: []
-comments: []
+comments: true
 ---
 I wanted to figure out how to loop through every RGB value with Sass and assign them to divs with the nth-child selector. It was easy to write, but I haven't got a computer powerful enough to compile 16 million CSS classes. Do you?
 

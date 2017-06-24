@@ -12,7 +12,7 @@ categories:
 - Sass
 - Snippet
 tags: []
-comments: []
+comments: true
 ---
 
 If you're using Bootstrap 4 SCSS you'll want to use the Bootstrap 4 Media Query Mixins.

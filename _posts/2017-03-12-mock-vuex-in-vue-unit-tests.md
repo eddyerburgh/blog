@@ -7,6 +7,7 @@ date_gmt: '2017-05-07 17:47:43 +0000'
 categories:
 - Tutorials
 - Vue
+comments: true
 ---
 
 Vuex is a great way to manage state in a Vue app. For any serious app, you want tests, so in this tutorial we'll see how to mock Vuex in Vue unit tests.

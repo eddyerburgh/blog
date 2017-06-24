@@ -20,6 +20,7 @@ comments:
   date: '2017-04-14 14:27:24 +0000'
   date_gmt: '2017-04-14 14:27:24 +0000'
   content: useful article, thanks
+comments: true
 ---
 
 It's easy to toggle an element with <a rel="noopener" href="http://api.jquery.com/toggle/" target="newwindow">jQuery</a>, or <a rel="noopener" href="http://codepen.io/eddyerburgh/pen/PNxyrp" target="newwindow">native JavaScript</a>. If you're new to the framework you might be wondering what the best way to toggle visibility with React is. In this tutorial we'll see how to achieve this using conditional rendering.

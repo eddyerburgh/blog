@@ -19,7 +19,7 @@ categories:
 - JavaScript
 - Tutorials
 tags: []
-comments: []
+comments: true
 ---
 
 I couldn't find any copy pasta for this problem so I had a look myself. Turns out it's easy to validate an RGB or RGBA Value in JavaScript using <a rel="noopener" href="http://www.regular-expressions.info/tutorial.html" target="_blank">regEx</a>.

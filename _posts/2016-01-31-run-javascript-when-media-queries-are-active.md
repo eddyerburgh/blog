@@ -21,7 +21,7 @@ categories:
 - jQuery
 tags:
 - media queries
-comments: []
+comments: true
 ---
 
 Before I tried it, I assumed it would be easy to check the screen width with JavaScript. It's not. There are lots of methods and libraries, like <a rel="noopener" href="http://wicky.nillia.ms/enquire.js/">Enquire.js</a>, to solve this problem. I've stumbled upon a simpler solution - a surefire way to run JavaScript when media queries are active. Use CSS properties that are affected by media queries to schedule your JavaScript.

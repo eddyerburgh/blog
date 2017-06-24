@@ -12,7 +12,7 @@ categories:
 - JavaScript
 - Snippet
 tags: []
-comments: []
+comments: true
 ---
 In this short tutorial we'll add a function that lets us convert any css color to hex.
 

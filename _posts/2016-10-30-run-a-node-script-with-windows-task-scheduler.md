@@ -12,7 +12,7 @@ categories:
 - JavaScript
 - Tutorials
 tags: []
-comments: []
+comments: true
 ---
 
 In this tutorial, we are going to learn how to run a node script with windows task scheduler.

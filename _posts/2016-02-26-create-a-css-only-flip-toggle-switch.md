@@ -18,7 +18,7 @@ date_gmt: '2016-02-26 13:33:58 +0000'
 categories:
 - CSS
 tags: []
-comments: []
+comments: true
 ---
 
 In this tutorial you will learn how to style a css only flip toggle switch, like the ones below .

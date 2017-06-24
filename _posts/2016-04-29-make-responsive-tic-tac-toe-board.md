@@ -12,7 +12,7 @@ categories:
 - CSS
 - Tutorials
 tags: []
-comments: []
+comments: true
 ---
 
 In this tutorial we are going to make a responsive tic tac toe board with an HTML table. The final product will look like this:

@@ -12,7 +12,7 @@ categories:
 - Tutorials
 - Vue
 tags: []
-comments: []
+comments: true
 ---
 In this tutorial we will see how to stub file dependencies in vue unit tests.
 

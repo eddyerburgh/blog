@@ -20,7 +20,7 @@ categories:
 tags:
 - copy to clipboard
 - vanilla javascript
-comments: []
+comments: true
 ---
 In the not too distant past you'd need to use Flash (yuck) to allow the user to copy to clipboard in one click. Thankfully we don't live in the past. Today, with the exception of Safari, all modern browsers let you use JavaScript to copy to clipboard with one easy method.
 

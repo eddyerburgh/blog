@@ -12,7 +12,7 @@ categories:
 - CSS
 - Tutorials
 tags: []
-comments: []
+comments: true
 ---
 It seems like every landing page has elements bouncing into view as you scroll down. Most people use <a rel="noopener" href="https://daneden.github.io/animate.css/" target="newwindow">Animate.CSS</a> and <a rel="noopener" href="http://mynameismatthieu.com/WOW/" target="newwindow">Wow.JS</a> to achieve the effect. In this tutorial we'll learn how to animate elements when scrolled into view with native JS and a bit of CSS.
 

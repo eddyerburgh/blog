@@ -13,7 +13,7 @@ categories:
 - JavaScript
 - Tutorials
 tags: []
-comments: []
+comments: true
 ---
 
 In this tutorial, we'll add copy on click functionality to all code blocks on a page.

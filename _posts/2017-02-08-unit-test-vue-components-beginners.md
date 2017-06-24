@@ -64,6 +64,7 @@ comments:
   date: '2017-06-06 06:49:05 +0000'
   date_gmt: '2017-06-06 06:49:05 +0000'
   content: Sorry about this Anwar, I'll update the tutorial
+comments: true
 ---
 You've heard about unit testing, but you're not really sure what it is. No problem!
 In this tutorial we'll see what unit tests are, why we write them and how to unit test Vue components. The testing libraries we use will be Mocha, Chai and avoriaz. Let's get started!

@@ -11,7 +11,7 @@ date_gmt: '2017-02-02 12:27:33 +0000'
 categories:
 - Tutorials
 - Vue
-tags: []
+comments: true
 ---
 It seems everybody's using Vue.js nowadays, and it's easy to see why. It's <a rel="noopener" href="https://vuejs.org/v2/guide/comparison.html#Performance-Profiles" target="_blank">fast</a>, <a rel="noopener" href="https://medium.com/js-dojo/vue-js-is-easier-to-learn-than-jquery-abbbb9c12cf8" target="_blank">easy to learn</a> and has <a rel="noopener" href="https://vuejs.org/v2/api/" target="_blank">amazing documentation</a>. But how do we unit test Vue components?
 
