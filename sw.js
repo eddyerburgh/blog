@@ -57,8 +57,9 @@ self.addEventListener('fetch', function(event) {
                     });
             });
         }).catch(function() {
+            console.log('asdasds')
             // Fallback to the offline page if not available in the cache.
-            return caches.match('/offline.html');
+            return caches.match('/offline');
         })
     );
 });
@@ -72,7 +73,8 @@ self.addEventListener('fetch', function(event) {
             });
         }).catch(function() {
             // Fallback to the offline page if not available in the cache.
-            return caches.match('/offline.html');
+            console.log('asdasds')
+            return caches.match('/offline');
         })
     );
 });
