@@ -20,3 +20,4 @@ version: 2.0.0
 gems:
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-minifier
