@@ -75,7 +75,7 @@ For this example, we'll add a new folder - Scripts. Adding a new Task Folder is 
 
 1. in the actions panel, click *New Folder* and enter the folder name (Scripts). (If that was too vague, <a rel="noopener" href="https://technet.microsoft.com/en-us/library/cc749582(v=ws.11).aspx">Click here</a> for more detailed instructions on adding a Task Folder).
 2. After you've added the new folder, click on it in the folder tree.
-[caption id="attachment_367" align="aligncenter" width="997"]<a rel="noopener" href="/assets/2016/10/task-scheduler-tree.png"><img class="wp-image-367 size-full" src="/assets/2016/10/task-scheduler-tree.png" alt="Task scheduler tree" width="997" height="405" /></a> Task folder tree[/caption]
+<a rel="noopener" href="/assets/2016/10/task-scheduler-tree.png"><img class="wp-image-367 size-full" src="/assets/2016/10/task-scheduler-tree.png" alt="Task scheduler tree" width="997" height="405" /></a>
 3. In the actions panel, click *Create Task*. This will open the create task wizard.
 4. Give your task a a name and a description - to describe what your task is doing.<a rel="noopener" href="/assets/2016/10/creating-new-task.png"><img class="aligncenter size-full wp-image-365" src="/assets/2016/10/creating-new-task.png" alt="creating-new-task" width="642" height="486" /></a>
 5. In Security options, make sure** Run whether user is logged on or not **is selected.
@@ -85,7 +85,7 @@ For this example, we'll add a new folder - Scripts. Adding a new Task Folder is 
 9. In the **Begin the task** dropdown, select **On a schedule**
 10. In the Settings panel, select Daily
 11. In the start data panel, select the date for the trigger to begin and the time that it should run. (22:00 in our case)
-[caption id="attachment_366" align="aligncenter" width="603"]<a rel="noopener" href="/assets/2016/10/adding-new-trigger.png"><img class="wp-image-366 size-full" src="/assets/2016/10/adding-new-trigger.png" alt="adding-new-trigger" width="603" height="520" /></a> Adding a new trigger[/caption]
+<a rel="noopener" href="/assets/2016/10/adding-new-trigger.png"><img class="wp-image-366 size-full" src="/assets/2016/10/adding-new-trigger.png" alt="adding-new-trigger" width="603" height="520" /></a>
 12. Click OK
 13. Switch to the **Actions** tab
 14. Click **New...**

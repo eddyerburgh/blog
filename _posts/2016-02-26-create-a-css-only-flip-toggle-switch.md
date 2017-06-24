@@ -29,12 +29,13 @@ In this tutorial you will learn how to style a css only flip toggle switch, like
 
 First time I tried to style a checkbox I was shocked - my CSS wasn't doing anything! A bit of Googling told that checkboxes are <a rel="noopener" href="http://stackoverflow.com/questions/4148499/how-to-style-checkbox-using-css">notoriously difficult to style</a>. Browsers are inconsistent in applying styles to form elements like checkboxes, and **CSS2 isn't expressive enough to style these complex elements**. Check out how this togglebox gets rendered by different browsers:
 
-[caption id="attachment_106" align="aligncenter" width="240"]<a rel="noopener" href="/assets/2016/02/toggleswitch-chrome-1.png" rel="attachment wp-att-102"><img class="wp-image-106 size-full" src="/assets/2016/02/toggleswitch-chrome-1.png" alt="Styled checkbox in chrome" width="240" height="123" /></a> Chrome ❤[/caption]
-[caption id="attachment_105" align="aligncenter" width="222"]<a rel="noopener" href="/assets/2016/02/toggleswitch-ie11.png" rel="attachment wp-att-105"><img class="wp-image-105 size-full" src="/assets/2016/02/toggleswitch-ie11.png" alt="Styled checkbox in ie11" width="222" height="110" /></a> IE11[/caption]
-[caption id="attachment_104" align="aligncenter" width="220"]<a rel="noopener" href="/assets/2016/02/toggleswitch-ie10.png" rel="attachment wp-att-104"><img class="size-full wp-image-104" src="/assets/2016/02/toggleswitch-ie10.png" alt="Styled checkbox in ie10" width="220" height="111" /></a> IE10[/caption]
-[caption id="attachment_103" align="aligncenter" width="220"]<a rel="noopener" href="/assets/2016/02/toggleswitch-firefox.png" rel="attachment wp-att-103"><img class="size-full wp-image-103" src="/assets/2016/02/toggleswitch-firefox.png" alt="Styled checkbox in firefox 43.04" width="220" height="111" /></a> firefox..[/caption]
+<figure><a rel="noopener" href="/assets/2016/02/toggleswitch-chrome-1.png" rel="attachment wp-att-102"><img class="wp-image-106 size-full" src="/assets/2016/02/toggleswitch-chrome-1.png" alt="Styled checkbox in chrome" width="240" height="123" /></a> <figcaption>Chrome ❤</figcaption></figure>
+<figure><a rel="noopener" href="/assets/2016/02/toggleswitch-ie11.png" rel="attachment wp-att-105"><img class="wp-image-105 size-full" src="/assets/2016/02/toggleswitch-ie11.png" alt="Styled checkbox in ie11" width="222" height="110" /></a> <figcaption>IE11</figcaption></figure>
+<figure><a rel="noopener" href="/assets/2016/02/toggleswitch-ie10.png" rel="attachment wp-att-104"><img class="size-full wp-image-104" src="/assets/2016/02/toggleswitch-ie10.png" alt="Styled checkbox in ie10" width="220" height="111" /></a> <figcaption>IE10</figcaption></figure>
+<figure><a rel="noopener" href="/assets/2016/02/toggleswitch-firefox.png" rel="attachment wp-att-103"><img class="size-full wp-image-103" src="/assets/2016/02/toggleswitch-firefox.png" alt="Styled checkbox in firefox 43.04" width="220" height="111" /></a> <figcaption>firefox..</figcaption></figure>
 
 WTF?! *That's* why we're **not going to style the checkbox**. Instead, we'll hide the checkbox and style a label element that's much easier to work with.
+
 ## The HTML
 
 ```html
