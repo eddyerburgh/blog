@@ -205,8 +205,32 @@ Let's add our vue component. In the components directory, create a file named Fo
 
 Copy the code below into Foo.vue:
 
-<pre url="https://raw.githubusercontent.com/eddyerburgh/how-to-unit-test-vue-components-for-beginners/master/app/components/Foo.vue">
-</pre>
+```vue
+<template>
+  <div class="foo">
+    <h1>{{ msg }}</h1>
+    <button id="change-message" @click="changeMessage">Change message</button>
+	  <p>{{ passedProp }}</p>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'hello',
+  data() {
+    return {
+      msg: 'Welcome to Your Vue.js App',
+    };
+  },
+  props: ['passedProp'],
+  methods: {
+    changeMessage() {
+      this.msg = 'new message';
+    },
+  },
+};
+</script>
+```
 
 Great. Now we've got our Vue component to test.
 
