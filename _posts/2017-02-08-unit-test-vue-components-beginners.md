@@ -435,6 +435,6 @@ describe('Foo.vue', () => {
 })
 ```
 
-That's all the tests we're going to write in this tutorial. To learn more about unit testing Vue components, see <a rel="noopener" href="{% post_url 2017-02-08-unit-test-vue-components %}" target="_blank">How to unit test Vue components</a>.
+That's all the tests we're going to write in this tutorial. To learn more about unit testing Vue components, see <a rel="noopener" href="{% post_url 2017-02-02-unit-test-vue-components %}" target="_blank">How to unit test Vue components</a>.
 
 A repo for this tutorial is <a rel="noopener" href="https://github.com/eddyerburgh/how-to-unit-test-vue-components-for-beginners" target="_blank">available here</a>.
