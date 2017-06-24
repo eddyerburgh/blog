@@ -1,0 +1,48 @@
+@media (min-width: 30rem) {
+    .sidebar {
+        font-size: .75rem; /* 14px */
+    }
+
+    .sidebar-toggle {
+        position: fixed;
+        width: 2.25rem;
+    }
+    .sidebar-toggle:before {
+        padding-bottom: .15rem;
+        border-top-width: .45rem;
+        border-bottom-width: .15rem;
+    }
+
+    blockquote {
+        padding-right: 5rem;
+        padding-left: 1.25rem;
+    }
+
+    .pagination {
+        margin: 3rem 0;
+    }
+    .pagination-item {
+        float: left;
+        width: 50%;
+    }
+    .pagination-item:first-child {
+        margin-bottom: 0;
+        border-top-left-radius:    4px;
+        border-bottom-left-radius: 4px;
+    }
+    .pagination-item:last-child {
+        margin-left: -1px;
+        border-top-right-radius:    4px;
+        border-bottom-right-radius: 4px;
+    }
+}
+
+@media (min-width: 38rem) {
+    html {
+        font-size: 20px;
+    }
+
+    .container {
+        max-width: 32rem;
+    }
+}

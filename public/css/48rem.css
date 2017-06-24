@@ -1,0 +1,22 @@
+@media (max-width: 48rem) {
+    .masthead-title {
+        text-align: center;
+    }
+    .masthead-title small {
+        display: none;
+    }
+
+    .sidebar-item {
+        padding: 1.5rem;
+    }
+    .sidebar-nav-item {
+        padding-left:  1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 56rem) {
+    .container {
+        max-width: 38rem;
+    }
+}
