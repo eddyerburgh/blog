@@ -13,13 +13,13 @@ url: https://eddyerburgh.me
 
 author:
   name: 'Edd Yerburgh'
-  url: https://github.com/eddyerburgh
+  url: https://github.com/eddyerburgh/blog
 
 paginate: 5
 
 # Custom vars
 version: 2.0.0
 
-gems:
+plugins:
   - jekyll-seo-tag
   - jekyll-paginate
