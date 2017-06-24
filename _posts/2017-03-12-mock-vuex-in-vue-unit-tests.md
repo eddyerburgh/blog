@@ -6,9 +6,9 @@ description: Learn how to mock Vuex in Vue unit tests. This tutorial shows you h
 
 Vuex is a great way to manage state in a Vue app. For any serious app, you want tests, so in this tutorial we'll see how to mock Vuex in Vue unit tests.
 
-*Note: This tutorial assumes you understand Vuex and how to unit test Vue components. If you don't, check out <a href="https://www.coding123.org/unit-test-vue-components/">How to unit test Vue components</a>*
+*Note: This tutorial assumes you understand Vuex and how to unit test Vue components. If you don't, check out <a rel="noopener" href="https://www.coding123.org/unit-test-vue-components/">How to unit test Vue components</a>*
 
-*This is a code-heavy tutorial. A full github repo is <a href="https://github.com/eddyerburgh/mock-vuex-in-vue-unit-tests-tutorial">available here</a> to supplement the tutorial.*
+*This is a code-heavy tutorial. A full github repo is <a rel="noopener" href="https://github.com/eddyerburgh/mock-vuex-in-vue-unit-tests-tutorial">available here</a> to supplement the tutorial.*
 
 ## Mocking Actions
 
@@ -45,7 +45,7 @@ For the purposes of this test, we don't care what the actions do, or what the st
 
 To test this, we need to pass a mock store to Vue when we mount our component.
 
-In this tutorial we will be using <a href="https://github.com/eddyerburgh/avoriaz">avoriaz</a>, which has a mount method. We can pass the store as an option to mount.
+In this tutorial we will be using <a rel="noopener" href="https://github.com/eddyerburgh/avoriaz">avoriaz</a>, which has a mount method. We can pass the store as an option to mount.
 
 Let's see what this looks like:
 
@@ -93,11 +93,11 @@ describe('Actions.vue', () => {
 });
 ```
 
-What's happening here? First we tell Vue to use Vuex with <a href="https://vuejs.org/v2/api/#Vue-use" target="_blank">Vue.use</a> method.
+What's happening here? First we tell Vue to use Vuex with <a rel="noopener" href="https://vuejs.org/v2/api/#Vue-use" target="_blank">Vue.use</a> method.
 
 We then make a mock store by calling new Vuex.store with our mock values. We only pass it the actions, since that's all we care about. 
 
-The actions are <a href="http://sinonjs.org/" target="_blank">sinon stubs</a>. The stubs give us methods to assert whether the actions were called or not.
+The actions are <a rel="noopener" href="http://sinonjs.org/" target="_blank">sinon stubs</a>. The stubs give us methods to assert whether the actions were called or not.
 
 We can then assert in our tests that the action stub was called when expected.
 
@@ -177,7 +177,7 @@ This is great, but what if we want to check our getters are returning the correc
 
 ## Mocking with Modules
 
-<A href="https://vuex.vuejs.org/en/modules.html" target="_blank">Modules</a> are useful for separating out our store into manageable chunks. They also export getters. We can use these in our tests.
+<a rel="noopener" href="https://vuex.vuejs.org/en/modules.html" target="_blank">Modules</a> are useful for separating out our store into manageable chunks. They also export getters. We can use these in our tests.
 
 Let's look at our component:
 
@@ -251,7 +251,7 @@ describe('Modules.vue', () => {
 });
 ```
 
-To have a look at what the module file looks like, <a href="https://github.com/eddyerburgh/mock-vuex-in-vue-unit-tests-tutorial" target="_blank">check out the repo</a>.
+To have a look at what the module file looks like, <a rel="noopener" href="https://github.com/eddyerburgh/mock-vuex-in-vue-unit-tests-tutorial" target="_blank">check out the repo</a>.
 
 So now we're importing getters from out Vuex store module. This means we need to mock the state.
 

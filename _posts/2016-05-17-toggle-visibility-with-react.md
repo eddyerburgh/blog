@@ -22,7 +22,7 @@ comments:
   content: useful article, thanks
 ---
 
-It's easy to toggle an element with <a href="http://api.jquery.com/toggle/" target="newwindow">jQuery</a>, or <a href="http://codepen.io/eddyerburgh/pen/PNxyrp" target="newwindow">native JavaScript</a>. If you're new to the framework you might be wondering what the best way to toggle visibility with React is. In this tutorial we'll see how to achieve this using conditional rendering.
+It's easy to toggle an element with <a rel="noopener" href="http://api.jquery.com/toggle/" target="newwindow">jQuery</a>, or <a rel="noopener" href="http://codepen.io/eddyerburgh/pen/PNxyrp" target="newwindow">native JavaScript</a>. If you're new to the framework you might be wondering what the best way to toggle visibility with React is. In this tutorial we'll see how to achieve this using conditional rendering.
 
 ## The Theory
 
@@ -82,7 +82,7 @@ const app = document.getElementById('app');
 ReactDOM.render(Parent, app);
 ```
 
-**Note:** this code is using ES6 and ES7 features. You'll need to run it through a transpiler like <a href="https://babeljs.io/" target="newwindow">Babel</a>.
+**Note:** this code is using ES6 and ES7 features. You'll need to run it through a transpiler like <a rel="noopener" href="https://babeljs.io/" target="newwindow">Babel</a>.
 
 ## What's Going On?
 

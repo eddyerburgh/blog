@@ -26,7 +26,7 @@ function colorToHex( color ) {
 
 Simple, eh? All it does is search an object for a color and return the value of that color, which is the hex code. The object includes every CSS color as properties and the corresponding hex codes as values. Have a look below to see what it looks like.
 
-Thing is, the object is a bit big. No problem though, just copy it and include somewhere out the way in your JS - I add mine to a separate file and concatenate it using <a href="https://github.com/gruntjs/grunt-contrib-concat">grunt-contrib-concat</a>. I got the list from <a href="https://github.com/bahamas10/css-color-names">this repo</a> and made it an object so it was easier to work through and convert any CSS color to hex.
+Thing is, the object is a bit big. No problem though, just copy it and include somewhere out the way in your JS - I add mine to a separate file and concatenate it using <a rel="noopener" href="https://github.com/gruntjs/grunt-contrib-concat">grunt-contrib-concat</a>. I got the list from <a rel="noopener" href="https://github.com/bahamas10/css-color-names">this repo</a> and made it an object so it was easier to work through and convert any CSS color to hex.
 
 ```js
 var cssColorsHex = {

@@ -42,7 +42,7 @@ function copyText() {
 }
 ```
 
-Use this code to copy from an input or textarea. Replace 'elem-to-copy' with the id of the element you wish to copy. If you want to dynamically copy all instances of a textfield, use the code below. If you want to copy from a non text-field element, click <a href="#copy-from-non-textfield">here</a>.
+Use this code to copy from an input or textarea. Replace 'elem-to-copy' with the id of the element you wish to copy. If you want to dynamically copy all instances of a textfield, use the code below. If you want to copy from a non text-field element, click <a rel="noopener" href="#copy-from-non-textfield">here</a>.
 
 ```js
 var elemsToCopy = document.getElementsByClassName( 'elem-to-copy' );
@@ -72,17 +72,17 @@ First we assign the copyText function to fire when your element is clicked.
 
 ### Select the Text
 
-When the element is clicked, we select, or highlight the elements text with the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select">select() method</a>. The text content needs to be highlighted in order to be copied in the next step.
+When the element is clicked, we select, or highlight the elements text with the <a rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select">select() method</a>. The text content needs to be highlighted in order to be copied in the next step.
 
 ### Copy the Text
 
-This is easy with the<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand"> execCommand() function</a>. We simply pass 'copy' as a parameter and the browser will copy any highlighted text.
+This is easy with the<a rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand"> execCommand() function</a>. We simply pass 'copy' as a parameter and the browser will copy any highlighted text.
 
 ### Record the Success/ Failure of the Copy
 
-We want to know if it was successful or not! IE9- and Safari don't support execCommand. It's also nice to fire a function on successful copy to indicate to the user that the copy was successful, as seen on <a href="https://flatuicolors.com/">flatuicolors.com</a>.
+We want to know if it was successful or not! IE9- and Safari don't support execCommand. It's also nice to fire a function on successful copy to indicate to the user that the copy was successful, as seen on <a rel="noopener" href="https://flatuicolors.com/">flatuicolors.com</a>.
 
-## <a name="copy-from-non-textfield"></a>Copy From a Non text-field Element
+## <a rel="noopener" name="copy-from-non-textfield"></a>Copy From a Non text-field Element
 
 The select() method only works on textfields, so we have to go about it a bit differently if we want to copy text container in a paragraph, for example.
 
@@ -107,4 +107,4 @@ function copyText() {
 }
 ```
 
-This code copies text from any element. Instead of using select() we create a <a href="https://developer.mozilla.org/en/docs/Web/API/Range">range</a> that includes our target element. We then use the selectNode() method to select the content of the paragraph tag. Easy.
+This code copies text from any element. Instead of using select() we create a <a rel="noopener" href="https://developer.mozilla.org/en/docs/Web/API/Range">range</a> that includes our target element. We then use the selectNode() method to select the content of the paragraph tag. Easy.

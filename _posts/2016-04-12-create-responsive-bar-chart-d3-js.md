@@ -162,14 +162,14 @@ rect:hover {
 
 ## What's Going On
 
-What we're doing is creating an SVG with D3.JS and setting it's width to 100% of it's containing div. This isn't as simple as setting the SVG width to 100% with CSS. We have to use multiple divs, the attributes *preserveAspectRatio* and *viewBox* and the <a href="https://css-tricks.com/absolute-positioning-inside-relative-positioning/">position:absolute position: relative trick</a>, as well as some other CSS properties.
+What we're doing is creating an SVG with D3.JS and setting it's width to 100% of it's containing div. This isn't as simple as setting the SVG width to 100% with CSS. We have to use multiple divs, the attributes *preserveAspectRatio* and *viewBox* and the <a rel="noopener" href="https://css-tricks.com/absolute-positioning-inside-relative-positioning/">position:absolute position: relative trick</a>, as well as some other CSS properties.
 
 First, we have a div with the id chart. This is our container that dictates the size of the graph, so we set it's width to 100%, or 90% or whatever width suits your need. To center it we add margin: 0 auto, and a max-width of 1000px to stop the graph getting too big.
 
-Then we add a div inside #container and set viewBox to 0 0 width height. This tells the div that it's child SVG will start from the top left hand corner and will be the width and height we set in our JavaScript. To make the div scale, we add a PreserveAspectRatio of xMinYMin meet. These attributes, in combination with a padding-bottom of 100% make the child SVG cover 100% of the divs width and scale on resize. You can read about viewBox and PreserveAspectRatio and the 100% padding-bottom hack <a href="https://css-tricks.com/scale-svg/">here</a>.
+Then we add a div inside #container and set viewBox to 0 0 width height. This tells the div that it's child SVG will start from the top left hand corner and will be the width and height we set in our JavaScript. To make the div scale, we add a PreserveAspectRatio of xMinYMin meet. These attributes, in combination with a padding-bottom of 100% make the child SVG cover 100% of the divs width and scale on resize. You can read about viewBox and PreserveAspectRatio and the 100% padding-bottom hack <a rel="noopener" href="https://css-tricks.com/scale-svg/">here</a>.
 
 The problem with this method is that the y anx x axes are hidden. To counter this, we need to add padding to our SVG. The padding needs to be set using percent values, to keep it responsive. These are calculated in the JavaScript based on the margin object properties.
 
 And there you have it - a responsive bar chart with D3.js.
 
-If you have any questions, leave a comment. Or get in touch <a href="https://twitter.com/EddYerburgh">@EddYerbugh</a>
+If you have any questions, leave a comment. Or get in touch <a rel="noopener" href="https://twitter.com/EddYerburgh">@EddYerbugh</a>

@@ -67,7 +67,7 @@ comments:
 ---
 You've heard about unit testing, but you're not really sure what it is. No problem!
 In this tutorial we'll see what unit tests are, why we write them and how to unit test Vue components. The testing libraries we use will be Mocha, Chai and avoriaz. Let's get started!
-*Note: for this tutorial you need to have node installed, if it's not <a href="https://nodejs.org/en/download/" target="_blank">download it here</a>. We also use ES6 syntax, so you should brush up on that if you're not familiar with it*
+*Note: for this tutorial you need to have node installed, if it's not <a rel="noopener" href="https://nodejs.org/en/download/" target="_blank">download it here</a>. We also use ES6 syntax, so you should brush up on that if you're not familiar with it*
 ## What Are Unit Tests?
 Unit tests are a way to automatically check that our code does what it's meant to do. We run the code in a controlled environment and assert that functions produce the expected output.
 For example, here is an add function:
@@ -114,7 +114,7 @@ Create a new directory with the following structure:
 The components directory will hold our components. The test directory will hold our test files, and the build directory will hold our webpack config file.
 First, we're going to write a passing test.
 ### Getting Started
-Open up the command line and change your current directory to the root of the    project. (Note: If you don't know how to change your working directory, check out <a href="http://askubuntu.com/a/520794" target="_blank">this stackoverflow answer</a> for linux/mac and <a href="http://www.digitalcitizen.life/command-prompt-how-use-basic-commands" target="_blank">this guide</a> for windows).
+Open up the command line and change your current directory to the root of the    project. (Note: If you don't know how to change your working directory, check out <a rel="noopener" href="http://askubuntu.com/a/520794" target="_blank">this stackoverflow answer</a> for linux/mac and <a rel="noopener" href="http://www.digitalcitizen.life/command-prompt-how-use-basic-commands" target="_blank">this guide</a> for windows).
 When you're in the directory, run:
 <pre class=""><code class="shell">npm init</code>
 </pre>
@@ -178,7 +178,7 @@ describe('first test', () => {
   });
 });</code>
 </pre>
-Now we are going to add an <a href="https://medium.com/@mxstbr/npm-scripts-explained-f125e85eb378#.8k1r9ok7a" target="_blank">npm script</a>. Open up package.json. If you used npm init, there will be a scripts.test property, like this:
+Now we are going to add an <a rel="noopener" href="https://medium.com/@mxstbr/npm-scripts-explained-f125e85eb378#.8k1r9ok7a" target="_blank">npm script</a>. Open up package.json. If you used npm init, there will be a scripts.test property, like this:
 <pre class=""><code class="json">"scripts": {
   "test": "echo \"Error: no test specified\" && exit 1"
 },</code>
@@ -279,7 +279,7 @@ Let's look at our current test again.
 expect(wrapper.is('.foo')).to.equal(true)</code>
 </pre>
 We're using the mount method imported from avoriaz, and then calling <code>is</code> on the wrapper.
-Under the hood, mount mounts the Vue component and creates a wrapper class with methods to test the Vue component. Above we use the <a href="https://eddyerburgh.gitbooks.io/avoriaz/content/api/mount/is.html" target="_blank">is method</a>, but there are loads more to choose from. Have a look through <a href="https://eddyerburgh.gitbooks.io/avoriaz/content/api/mount/" target="_blank">the docs</a> for the full list.
+Under the hood, mount mounts the Vue component and creates a wrapper class with methods to test the Vue component. Above we use the <a rel="noopener" href="https://eddyerburgh.gitbooks.io/avoriaz/content/api/mount/is.html" target="_blank">is method</a>, but there are loads more to choose from. Have a look through <a rel="noopener" href="https://eddyerburgh.gitbooks.io/avoriaz/content/api/mount/" target="_blank">the docs</a> for the full list.
 A useful method is find. This searches the wrapper for elements matching a selector and returns an array of wrappers made from the elements found.
 <pre><code class="javascript">const wrapper = mount(Foo);
 const p = wrapper.find('p')[0];</code>
@@ -333,5 +333,5 @@ describe('Foo.vue', () => {
   });
 });</code>
 </pre>
-That's all the tests we're going to write in this tutorial. To learn more about unit testing Vue components, see <a href="http://www.coding123.org/tutorials/unit-test-vue-components/" target="_blank">How to unit test Vue components</a>.
-A repo for this tutorial is <a href="https://github.com/eddyerburgh/how-to-unit-test-vue-components-for-beginners" target="_blank">available here</a>.
+That's all the tests we're going to write in this tutorial. To learn more about unit testing Vue components, see <a rel="noopener" href="http://www.coding123.org/tutorials/unit-test-vue-components/" target="_blank">How to unit test Vue components</a>.
+A repo for this tutorial is <a rel="noopener" href="https://github.com/eddyerburgh/how-to-unit-test-vue-components-for-beginners" target="_blank">available here</a>.

@@ -31,7 +31,7 @@ First we'll make the grid.
 
 ## The Grid
 
-We're going to use an HTML table structure for our grid. It's more semantic and is better for accesability - <a href="https://www.paciellogroup.com/blog/2015/01/basic-screen-reader-commands-for-accessibility-testing/">screen readers treat tables differently from other elements</a>. Most screen readers include shortcuts to navigate the tables with the arrow pad, and the size of the grid will be read out to tell the user the dimensions of the grid.
+We're going to use an HTML table structure for our grid. It's more semantic and is better for accesability - <a rel="noopener" href="https://www.paciellogroup.com/blog/2015/01/basic-screen-reader-commands-for-accessibility-testing/">screen readers treat tables differently from other elements</a>. Most screen readers include shortcuts to navigate the tables with the arrow pad, and the size of the grid will be read out to tell the user the dimensions of the grid.
 
 Our HTML looks like this :
 
@@ -74,7 +74,7 @@ So what's going on? First, we set the table to be 100% the width of it's contain
 
 The table cells (td stands for table datum, but everyone calls them cells) are given a width of 33.333%. This means each cell will take up a third of the table width.
 
-So far so good, but we need some height! This is where the magic happens. We create a <i>pseudo element</i> using <a href="https://developer.mozilla.org/en/docs/Web/CSS/::after">after</a>. We're basically adding a child to our td element with CSS here. With the child we display it as a block element and give it 100% margin-top. Since margin-top is based on its parent's width, the :after element will be the same size as it's parent.
+So far so good, but we need some height! This is where the magic happens. We create a <i>pseudo element</i> using <a rel="noopener" href="https://developer.mozilla.org/en/docs/Web/CSS/::after">after</a>. We're basically adding a child to our td element with CSS here. With the child we display it as a block element and give it 100% margin-top. Since margin-top is based on its parent's width, the :after element will be the same size as it's parent.
 
 So because all our widths are set as percentages, we have responsive tic tac toe board. We can see how it resizes with the borders added:
 
@@ -107,7 +107,7 @@ tr:nth-of-type(3) td {
 }</code>
 </pre>
 Can you see it? It's <code>border-collapse: collapse</code>. Normally table borders have a sort of gutter in them, so we need this property to get rid of that.
-Apart from that, we're just setting the relevant border colors to transparent using the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child">nth-child pseudo class</a>. This pseudo class only targets the nth child, so we can target the 2nd td in each column by adding 2 to the nth child pseudo class. We also use the first-of-type pseudo class which targets the first element in a group of elements.
+Apart from that, we're just setting the relevant border colors to transparent using the <a rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child">nth-child pseudo class</a>. This pseudo class only targets the nth child, so we can target the 2nd td in each column by adding 2 to the nth child pseudo class. We also use the first-of-type pseudo class which targets the first element in a group of elements.
 And that's it, we got ourselves a responsive tic tac toe board.
 Put all the CSS together and we're good to go :
 <pre><code class="css">table {

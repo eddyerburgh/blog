@@ -40,7 +40,7 @@ scripts.js is saved in C:\Users\Edd\Scripts (more on that later).
 
 ### Node
 
-If it's not installed already, <a href="https://nodejs.org/en/download/" target="_blank">download it and install</a>.
+If it's not installed already, <a rel="noopener" href="https://nodejs.org/en/download/" target="_blank">download it and install</a>.
 
 To check node installed successfully enter node -v into git bash, or another shell. If the command is not found, node did not install successfully.
 
@@ -48,7 +48,7 @@ To check node installed successfully enter node -v into git bash, or another she
 
 We're going to use git bash shell to run the command that runs our script. (Because who wants to work with CMD.EXE?)
 
-If you don't have git bash installed already, you can <a href="https://git-scm.com/downloads">download it here</a>.
+If you don't have git bash installed already, you can <a rel="noopener" href="https://git-scm.com/downloads">download it here</a>.
 
 Got it installed? Great. Now we need to open up Windows Task Scheduler.
 
@@ -56,7 +56,7 @@ Got it installed? Great. Now we need to open up Windows Task Scheduler.
 
 Windows task scheduler lets you run tasks automatically. You can set commands to run in response to events, like starting up windows or logging in as an admin. You can also schedule them to run at regular intervals.
 
-To set up a task to run in Task Scheduler, we first need to <a href="https://technet.microsoft.com/en-us/library/cc721931(v=ws.11).aspx" target="_blank">open start task scheduler</a>. For Windows 8+ search task scheduler in the start menu search bar and open it from the results.
+To set up a task to run in Task Scheduler, we first need to <a rel="noopener" href="https://technet.microsoft.com/en-us/library/cc721931(v=ws.11).aspx" target="_blank">open start task scheduler</a>. For Windows 8+ search task scheduler in the start menu search bar and open it from the results.
 
 When Task Scheduler's open we're ready to add our task.
 
@@ -73,11 +73,11 @@ In Task Scheduler, find the **Task Scheduler Library** folder tree. This should 
 For this example, we'll add a new folder - Scripts. Adding a new Task Folder is easy:
 
 
-1. in the actions panel, click *New Folder* and enter the folder name (Scripts). (If that was too vague, <a href="https://technet.microsoft.com/en-us/library/cc749582(v=ws.11).aspx">Click here</a> for more detailed instructions on adding a Task Folder).
+1. in the actions panel, click *New Folder* and enter the folder name (Scripts). (If that was too vague, <a rel="noopener" href="https://technet.microsoft.com/en-us/library/cc749582(v=ws.11).aspx">Click here</a> for more detailed instructions on adding a Task Folder).
 2. After you've added the new folder, click on it in the folder tree.
-[caption id="attachment_367" align="aligncenter" width="997"]<a href="/assets/2016/10/task-scheduler-tree.png"><img class="wp-image-367 size-full" src="/assets/2016/10/task-scheduler-tree.png" alt="Task scheduler tree" width="997" height="405" /></a> Task folder tree[/caption]
+[caption id="attachment_367" align="aligncenter" width="997"]<a rel="noopener" href="/assets/2016/10/task-scheduler-tree.png"><img class="wp-image-367 size-full" src="/assets/2016/10/task-scheduler-tree.png" alt="Task scheduler tree" width="997" height="405" /></a> Task folder tree[/caption]
 3. In the actions panel, click *Create Task*. This will open the create task wizard.
-4. Give your task a a name and a description - to describe what your task is doing.<a href="/assets/2016/10/creating-new-task.png"><img class="aligncenter size-full wp-image-365" src="/assets/2016/10/creating-new-task.png" alt="creating-new-task" width="642" height="486" /></a>
+4. Give your task a a name and a description - to describe what your task is doing.<a rel="noopener" href="/assets/2016/10/creating-new-task.png"><img class="aligncenter size-full wp-image-365" src="/assets/2016/10/creating-new-task.png" alt="creating-new-task" width="642" height="486" /></a>
 5. In Security options, make sure** Run whether user is logged on or not **is selected.
 6. Select **Run with highest privileges**. This will avoid any permissions issues node might have running file system operations.
 7. Open the **Triggers** tab
@@ -85,7 +85,7 @@ For this example, we'll add a new folder - Scripts. Adding a new Task Folder is 
 9. In the **Begin the task** dropdown, select **On a schedule**
 10. In the Settings panel, select Daily
 11. In the start data panel, select the date for the trigger to begin and the time that it should run. (22:00 in our case)
-[caption id="attachment_366" align="aligncenter" width="603"]<a href="/assets/2016/10/adding-new-trigger.png"><img class="wp-image-366 size-full" src="/assets/2016/10/adding-new-trigger.png" alt="adding-new-trigger" width="603" height="520" /></a> Adding a new trigger[/caption]
+[caption id="attachment_366" align="aligncenter" width="603"]<a rel="noopener" href="/assets/2016/10/adding-new-trigger.png"><img class="wp-image-366 size-full" src="/assets/2016/10/adding-new-trigger.png" alt="adding-new-trigger" width="603" height="520" /></a> Adding a new trigger[/caption]
 12. Click OK
 13. Switch to the **Actions** tab
 14. Click **New...**
@@ -117,7 +117,7 @@ Copy and paste the code below into the **Add arguments** input field.
 
 This might look cryptic to you, but it's just a list of commands for the computer to carry out.
 
-`-i` sets the shell to run in <a href="https://www.gnu.org/software/bash/manual/html_node/Interactive-Shells.html#Interactive-Shells">interactive shell mode</a>.
+`-i` sets the shell to run in <a rel="noopener" href="https://www.gnu.org/software/bash/manual/html_node/Interactive-Shells.html#Interactive-Shells">interactive shell mode</a>.
 
 `-c` sets it to execute the first non option argument passed to it, then exit. So in our example it'll execute the node command.
 
@@ -133,7 +133,7 @@ Simple really.
 
 Now our **New Action **dialog should look similar to the image below.
 
-<a href="/assets/2016/10/adding-action.png"><img class="aligncenter wp-image-370 size-full" src="/assets/2016/10/adding-action.png" alt="Add an action to run a Node Script with Windows Task Scheduler" width="465" height="505" /></a>
+<a rel="noopener" href="/assets/2016/10/adding-action.png"><img class="aligncenter wp-image-370 size-full" src="/assets/2016/10/adding-action.png" alt="Add an action to run a Node Script with Windows Task Scheduler" width="465" height="505" /></a>
 
 If it does, we're ready to go!
 

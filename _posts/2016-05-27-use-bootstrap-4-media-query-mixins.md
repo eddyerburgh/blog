@@ -19,7 +19,7 @@ If you're using Bootstrap 4 SCSS you'll want to use the Bootstrap 4 Media Query 
 
 ## Include
 
-To use the Bootstrap 4 mixins you must include <a href="https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss" target="newwindow">variables.scss</a> and <a href="https://github.com/twbs/bootstrap/blob/v4-dev/scss/mixins/_breakpoints.scss" target="newwindow">mixins/_breakpoints.scss</a>.
+To use the Bootstrap 4 mixins you must include <a rel="noopener" href="https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss" target="newwindow">variables.scss</a> and <a rel="noopener" href="https://github.com/twbs/bootstrap/blob/v4-dev/scss/mixins/_breakpoints.scss" target="newwindow">mixins/_breakpoints.scss</a>.
 
 ## The Mixin
 

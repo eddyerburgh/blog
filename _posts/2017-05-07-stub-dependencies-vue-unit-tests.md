@@ -62,7 +62,7 @@ This is easy to do with a stub - because we control what it returns!
 
 ## How?
 
-This tutorial will go over 2 different methods. One using <a href="https://github.com/speedskater/babel-plugin-rewire">babel-plugin-rewire</a> and another using <a href="https://github.com/plasticine/inject-loader" target="_blank">inject-loader</a>.
+This tutorial will go over 2 different methods. One using <a rel="noopener" href="https://github.com/speedskater/babel-plugin-rewire">babel-plugin-rewire</a> and another using <a rel="noopener" href="https://github.com/plasticine/inject-loader" target="_blank">inject-loader</a>.
 
 ### babel-plugin-rewire
 
@@ -163,7 +163,7 @@ Open .babelrc and add it in the env.test.plugins array:
 }
 ```
 
-Why in the test plugins array? If we add it to the top level plugins array it would add the methods to all compiled code. We don't want our production code to have these methods, so we tell babel to only run it when the <a href="http://stackoverflow.com/a/16979503/4939630" target="_blank">NODE_ENV environment variable</a> is set to test.
+Why in the test plugins array? If we add it to the top level plugins array it would add the methods to all compiled code. We don't want our production code to have these methods, so we tell babel to only run it when the <a rel="noopener" href="http://stackoverflow.com/a/16979503/4939630" target="_blank">NODE_ENV environment variable</a> is set to test.
 Now babel will add the methods when we run our tests. Time to get our tests passing.
 Open /test/unit/specs/Component.spec.js
 
@@ -211,13 +211,13 @@ npm run test
 
 2 passing, yay! (hopefully)
 
-*If it's not passing, a working repo is available <a href="https://github.com/eddyerburgh/stub-vue-components-babel-rewire" target="_blank">here</a>.*
+*If it's not passing, a working repo is available <a rel="noopener" href="https://github.com/eddyerburgh/stub-vue-components-babel-rewire" target="_blank">here</a>.*
 
 So that's one way to stub dependencies. In the next section we'll see how to achieve the same effect using inject-loader.
 
 ### inject-loader
 
-<a href="https://github.com/plasticine/inject-loader" target="_blank">inject-loader</a> is recommended in the <a href="https://vue-loader.vuejs.org/en/workflow/testing-with-mocks.html">testing with mocks</a> tutorial in the vue-loader docs.
+<a rel="noopener" href="https://github.com/plasticine/inject-loader" target="_blank">inject-loader</a> is recommended in the <a rel="noopener" href="https://vue-loader.vuejs.org/en/workflow/testing-with-mocks.html">testing with mocks</a> tutorial in the vue-loader docs.
 
 We can use the same project from earlier. First, some clean up.
 
@@ -305,7 +305,7 @@ npm test
 ```
 2 passing, yay! (hopefully)
 
-*If it's not passing, a work repo is available <a href="https://github.com/eddyerburgh/stub-vue-components-inject-loader">here</a>.*
+*If it's not passing, a work repo is available <a rel="noopener" href="https://github.com/eddyerburgh/stub-vue-components-inject-loader">here</a>.*
 
 ## Conclusion
 
@@ -313,6 +313,6 @@ We've seen 2 ways to stub dependencies in Vue components.
 
 Using babel-plugin-rewire, and using inject-loader.
 
-The full working repos are on github - <a href="https://github.com/eddyerburgh/stub-vue-components-babel-rewire" target="_blank">using babel-plugin-rewire</a> and <a href="https://github.com/plasticine/inject-loader" target="_blank">using inject-loader</a>.
+The full working repos are on github - <a rel="noopener" href="https://github.com/eddyerburgh/stub-vue-components-babel-rewire" target="_blank">using babel-plugin-rewire</a> and <a rel="noopener" href="https://github.com/plasticine/inject-loader" target="_blank">using inject-loader</a>.
 
 If you have any questions, leave a comment

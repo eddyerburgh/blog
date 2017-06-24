@@ -17,11 +17,11 @@ comments: []
 
 In this snippet I'll show you how to Fix `docker-compose ImportError: cannot import name _thread`.
 
-I had this error recently after I installed docker-compose with <a href="https://en.wikipedia.org/wiki/Pip_(package_manager)" target="_blank">pip</a>.
+I had this error recently after I installed docker-compose with <a rel="noopener" href="https://en.wikipedia.org/wiki/Pip_(package_manager)" target="_blank">pip</a>.
 
 ## The problem
 
-<a href="https://pypi.python.org/pypi/six" target="_blank">Six</a> has been installed incorrectly, or is outdated.
+<a rel="noopener" href="https://pypi.python.org/pypi/six" target="_blank">Six</a> has been installed incorrectly, or is outdated.
 
 ## The Solution
 

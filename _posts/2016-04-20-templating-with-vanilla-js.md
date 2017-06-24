@@ -15,13 +15,13 @@ tags: []
 comments: []
 ---
 
-There's a great article by <a href="http://codoki.com/2015/09/01/native-javascript-templating/">CD Media</a> that explains how to do templating with vanilla JS. In this tutorial we will expand on CD Media's example to include some basic features, including conditionals and changing the src of an image.
+There's a great article by <a rel="noopener" href="http://codoki.com/2015/09/01/native-javascript-templating/">CD Media</a> that explains how to do templating with vanilla JS. In this tutorial we will expand on CD Media's example to include some basic features, including conditionals and changing the src of an image.
 
 Note: this tutorial assumes you have a basic understanding of what a templating language is.
 
 ## The Problem
 
-Common templating languages like <a href="http://handlebarsjs.com/">Handlebars.js</a> are great, but it's another HTTP request. At 70KB (v 4.0.5) it'd be good to template without loading a library. That's why we're going to look at templating with vanilla js!
+Common templating languages like <a rel="noopener" href="http://handlebarsjs.com/">Handlebars.js</a> are great, but it's another HTTP request. At 70KB (v 4.0.5) it'd be good to template without loading a library. That's why we're going to look at templating with vanilla js!
 
 ## The Theory
 
@@ -29,7 +29,7 @@ Like most templating languages, this trick makes use of <code><script type="text
 
 So inside this script tag we add the basic HTML structure of the element we are templating. This will be used by the JavaScript as a template to fill with the content.
 
-In our JavaScript, we have an array of objects containing the data to use. We create an anchor that holds all of our HTML and is appended to the DOM after the loop has finished. This avoids unnecessary <a href="https://developers.google.com/speed/articles/reflow">browser reflow</a> by only interacting with the document once.
+In our JavaScript, we have an array of objects containing the data to use. We create an anchor that holds all of our HTML and is appended to the DOM after the loop has finished. This avoids unnecessary <a rel="noopener" href="https://developers.google.com/speed/articles/reflow">browser reflow</a> by only interacting with the document once.
 
 So we have an element that will hold all our HTML, now let's generate the HTML. To do this we loop through each object, and on each loop create an element that includes the html contained inside the script tag. If our script tag includes `<p class="data"></p>`, the element created in the loop will be `<p class="data"></p>`. Let's call this our object-element.
 
@@ -100,7 +100,7 @@ This code does basic templating with vanilla js. Once you've got your head aroun
 
 This works great for small projects, even if the element you're templating is quite big. But there are a few disadvantages to using this over a traditional templating language.
 
-A major problem is CPU usage. <a href="http://code.google.com/speed/articles/reflow.html">Manipulating the DOM is expensive</a> and this code doesn't reuse DOM structure, so running the template multiple times results in a lot of rerendering.
+A major problem is CPU usage. <a rel="noopener" href="http://code.google.com/speed/articles/reflow.html">Manipulating the DOM is expensive</a> and this code doesn't reuse DOM structure, so running the template multiple times results in a lot of rerendering.
 
 If you had a really large element to template, this vanilla alternative will become very complex. It requires you to hardcode a lot more than you do with Handlebars.js.
 

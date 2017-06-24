@@ -45,7 +45,7 @@ $column-width: ( 100 - ( $grid-margin * 11 ) ) / 12 ;
 
 Much cleaner than pure CSS.
 
-It's based off <a href="https://github.com/dhg/Skeleton/blob/master/css/skeleton.css">the skeleton grid</a>. The difference is we can control this one by changing the value of $grid-margin and saving the .scss file.
+It's based off <a rel="noopener" href="https://github.com/dhg/Skeleton/blob/master/css/skeleton.css">the skeleton grid</a>. The difference is we can control this one by changing the value of $grid-margin and saving the .scss file.
 
 ## What's Going on?
 
