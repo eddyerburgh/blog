@@ -2,7 +2,7 @@
 rouge: true
 
 # Permalinks
-permalink: /:categories/:title.html
+permalink: /:categories/:title
 
 # Setup
 title: Edd Yerburgh
