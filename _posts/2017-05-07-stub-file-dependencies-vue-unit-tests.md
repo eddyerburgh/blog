@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: Stub File dependencies in Vue unit tests
+title: Stub file dependencies in Vue unit tests
 description: Learn how to stub dependencies in Vue unit tests. This tutorial walks through 2 different ways of passing stubs to dependencies in unit tests.
 wordpress_id: 472
 wordpress_url: https://www.coding123.org/?p=472
