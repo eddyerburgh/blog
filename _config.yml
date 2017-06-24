@@ -20,4 +20,6 @@ paginate: 5
 # Custom vars
 version: 2.0.0
 
-plugins: [jekyll-paginate, jekyll-seo-tag]
+gems:
+  - jekyll-seo-tag
+  - jekyll-paginate
