@@ -12,14 +12,6 @@ categories:
 - JavaScript
 - Tutorials
 tags: []
-comments:
-- id: 371
-  author: alex
-  author_email: as@as.com
-  author_url: ''
-  date: '2017-04-14 14:27:24 +0000'
-  date_gmt: '2017-04-14 14:27:24 +0000'
-  content: useful article, thanks
 comments: true
 ---
 
