@@ -4,6 +4,7 @@ rouge: true
 
 # Permalinks
 permalink: /:categories/:title.html
+baseurl: /blog
 
 # Setup
 title: Edd Yerburgh
@@ -13,7 +14,7 @@ url: https://eddyerburgh.me
 
 author:
   name: 'Edd Yerburgh'
-  url: https://github.com/eddyerburgh/blog
+  url: https://github.com/eddyerburgh
 
 paginate: 5
 
