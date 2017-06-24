@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: Stub dependencies in Vue unit tests
+title: Stub File dependencies in Vue unit tests
 description: Learn how to stub dependencies in Vue unit tests. This tutorial walks through 2 different ways of passing stubs to dependencies in unit tests.
 wordpress_id: 472
 wordpress_url: https://www.coding123.org/?p=472
@@ -14,7 +14,7 @@ categories:
 tags: []
 comments: []
 ---
-In this tutorial we will see how to stub dependencies in vue unit tests.
+In this tutorial we will see how to stub file dependencies in vue unit tests.
 
 *note: this is an advanced tutorial on testing. If you're not familiar with unit testing Vue components, using babel and webpack check out How to unit test Vue components*
 
@@ -213,7 +213,7 @@ npm run test
 
 *If it's not passing, a working repo is available <a rel="noopener" href="https://github.com/eddyerburgh/stub-vue-components-babel-rewire" target="_blank">here</a>.*
 
-So that's one way to stub dependencies. In the next section we'll see how to achieve the same effect using inject-loader.
+So that's one way to stub file dependencies. In the next section we'll see how to achieve the same effect using inject-loader.
 
 ### inject-loader
 
@@ -309,7 +309,7 @@ npm test
 
 ## Conclusion
 
-We've seen 2 ways to stub dependencies in Vue components.
+We've seen 2 ways to stub file dependencies in Vue components.
 
 Using babel-plugin-rewire, and using inject-loader.
 
