@@ -17,7 +17,7 @@ comments: true
 ---
 In this tutorial we will see how to stub file dependencies in vue unit tests.
 
-*note: this is an advanced tutorial on testing. If you're not familiar with unit testing Vue components, using babel and webpack check out How to unit test Vue components*
+*note: this is an advanced tutorial on testing. If you're not familiar with unit testing Vue components, using babel and webpack check out [How to unit test Vue components]({% post_url 2017-02-02-unit-test-vue-components %})*
 
 ## What does stubbing dependencies mean?
 
