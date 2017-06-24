@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+permalink: /about
 ---
 
 Hi, my name is Edd Yerburgh. I'm a programmer, TDD advocate and Vue team member living in London.
