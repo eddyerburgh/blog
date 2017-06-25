@@ -23,7 +23,7 @@ In this tutorial we will see how to stub file dependencies in vue unit tests.
 
 To answer the question we need to define dependencies and stubs.
 
-A dependency is a file or function our code relies on. In .js or .vue files import and require statements are dependencies.
+A dependency is a file or function our code relies on. In .js or .vue files `import` and `require` statements are dependencies.
  
 For example:
 
