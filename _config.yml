@@ -23,6 +23,7 @@ include:
 gems:
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-sitemap
 
 sass:
   style: compressed
