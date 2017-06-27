@@ -70,7 +70,7 @@ Let's see how to add `$route` without affecting other tests.
 
 In our previous test we used `Vue.extend()` to create a constructor for the component we are testing. 
 
-[`Vue.extend()`](https://vuejs.org/v2/api/#Vue-extend) returns a subclass of the instance it was called on. This means we can call it on the base Vue constructor to create a subclass of Vue, add `$route` to the subclass prototype and then extend the subclass to create our component instance.
+[`Vue.extend()`](https://vuejs.org/v2/api/#Vue-extend) returns a subclass of the instance it was called on. This means we can call it on the base Vue constructor to create a subclass of Vue, add `$route` to the subclass prototype and extend the subclass to create our component instance.
 
 That explanation was a bit wordy, so let's see it in action:
 
@@ -92,7 +92,7 @@ it('renders $router.name', () => {
 })
 ```
 
-We create a `scopedVue` subclass then add `$route` to the prototype of the subclass before creating a component instance from the subclass. `$route` will exists on the component instance, but not the base Vue constructor.
+We create a `scopedVue` subclass, add `$route` to the prototype of the subclass and then create a component constructor from the subclass. `$route` will exist on the component instance, but not the base Vue constructor.
 
 Great! Now we're containing the effects of our test. No other Vue instances created with the base Vue constructor will be affected.
 
