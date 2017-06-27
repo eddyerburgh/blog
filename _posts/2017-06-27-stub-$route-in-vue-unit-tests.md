@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-title: stub $route in unit tests
+title: stub $route in Vue unit tests
 description: Learn how to stub dependencies in Vue unit tests. This tutorial walks through 2 different ways of passing stubs to dependencies in unit tests.
 disqus_id: 498
 categories:
