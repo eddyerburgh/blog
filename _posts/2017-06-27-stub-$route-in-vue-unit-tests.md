@@ -2,7 +2,7 @@
 layout: post
 status: publish
 title: stub $route in Vue unit tests
-description: Learn how to stub dependencies in Vue unit tests. This tutorial walks through 2 different ways of passing stubs to dependencies in unit tests.
+description: Learn how to stub the $route in Vue unit tests. This tutorial walks through 4 ways of stubbing the vue-router $route object.
 disqus_id: 498
 categories:
 - Tutorials
@@ -111,13 +111,13 @@ import { shallow } from 'avoriaz'
 import Component from './component.vue'
 
 it('renders $router.name', () => {
-  const instance = Vue.extend()  
+  const instance = Vue.extend()
   const $route = {
     name: 'test name - avoriaz'
   }
   const wrapper = shallow(Component, {
-      globals: { $route },
-      instance
+    globals: { $route },
+    instance
   })
   expect(wrapper.text()).to.equal($route.name)
 })
@@ -139,9 +139,9 @@ Let's look at the same test using vue-test-utils:
 
 ```js
 import { expect } from 'chai'
-import { 
-    scopedVue, 
-    shallow 
+import {
+    scopedVue,
+    shallow
 } from 'vue-test-utils'
 import Component from './component.vue'
 
@@ -150,8 +150,8 @@ it('renders $router.name', () => {
   const $route = {
     name: 'test name - avoriaz'
   }
-  const wrapper = shallow(Component, { 
-    instance, 
+  const wrapper = shallow(Component, {
+    instance,
     intercept: { $route }
   })
   expect(wrapper.text()).to.equal($route.name)
