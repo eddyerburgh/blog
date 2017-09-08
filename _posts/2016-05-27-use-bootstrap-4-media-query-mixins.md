@@ -19,7 +19,7 @@ If you're using Bootstrap 4 SCSS you'll want to use the Bootstrap 4 Media Query 
 
 ## Include
 
-To use the Bootstrap 4 mixins you must include <a rel="noopener" href="https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss" target="newwindow">variables.scss</a> and <a rel="noopener" href="https://github.com/twbs/bootstrap/blob/v4-dev/scss/mixins/_breakpoints.scss" target="newwindow">mixins/_breakpoints.scss</a>.
+To use the Bootstrap 4 mixins you must include <a rel="noopener" href="https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss" target="newwindow">_variables.scss</a>,  <a rel="noopener" href="https://github.com/twbs/bootstrap/blob/v4-dev/scss/_functions.scss" target="newwindow">_functions.scss</a>, and <a rel="noopener" href="https://github.com/twbs/bootstrap/blob/v4-dev/scss/mixins/_breakpoints.scss" target="newwindow">mixins/_breakpoints.scss</a>.
 
 ## The Mixin
 
@@ -35,7 +35,7 @@ The mixins are pretty self explanatory :
  * @media (min-width: 544px) {}
  */
  ```
- 
+
 ### Max Width
 
 ```scss
@@ -46,7 +46,7 @@ The mixins are pretty self explanatory :
  * @media (min-width: 544px) and (max-width: 768px) {}
  */
  ```
- 
+
 ### Min and Max Width
 
 ```
@@ -57,7 +57,7 @@ The mixins are pretty self explanatory :
  * @media (min-width: 576px) and (max-width: 991px) {}
  */
 ```
-    
+
 They use the Bootstrap breakpoint values as parameters. By default these are :
 
 <table>
