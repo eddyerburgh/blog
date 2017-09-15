@@ -82,19 +82,19 @@ describe('Actions.vue', () => {
     const wrapper = mount(Actions, { store })
     const input = wrapper.find('input')[0]
     input.element.value = 'input'
-    input.dispatch('input')
+    input.trigger('input')
     expect(actions.actionInput.calledOnce).to.equal(true)
   })
   it('does not call store action actionInput when input value is not input and an input even is fired', () => {
     const wrapper = mount(Actions, { store })
     const input = wrapper.find('input')[0]
     input.element.value = 'not input'
-    input.dispatch('input')
+    input.trigger('input')
     expect(actions.actionInput.calledOnce).to.equal(false)
   })
   it('calls store action actionClick when button is clicked', () => {
     const wrapper = mount(Actions, { store })
-    wrapper.find('button')[0].dispatch('click')
+    wrapper.find('button')[0].trigger('click')
     expect(actions.actionClick.calledOnce).to.equal(true)
   })
 })
@@ -102,7 +102,7 @@ describe('Actions.vue', () => {
 
 What's happening here? First we tell Vue to use Vuex with <a rel="noopener" href="https://vuejs.org/v2/api/#Vue-use" target="_blank">Vue.use</a> method.
 
-We then make a mock store by calling new Vuex.store with our mock values. We only pass it the actions, since that's all we care about. 
+We then make a mock store by calling new Vuex.store with our mock values. We only pass it the actions, since that's all we care about.
 
 The actions are <a rel="noopener" href="http://sinonjs.org/" target="_blank">sinon stubs</a>. The stubs give us methods to assert whether the actions were called or not.
 
@@ -182,7 +182,7 @@ describe('Getters.vue', () => {
 
 This test is similar to our actions test. We create a mock store before each test, pass it as an option when we call mount, and assert that the value returned by our mock getters is being rendered.
 
-This is great, but what if we want to check our getters are returning the correct part of our state? 
+This is great, but what if we want to check our getters are returning the correct part of our state?
 
 ## Mocking with Modules
 
@@ -199,7 +199,7 @@ Let's look at our component:
 </template>
 <script>
   import { mapActions, mapGetters } from 'vuex'
-  
+
   export default{
     methods: {
       ...mapActions([
@@ -250,7 +250,7 @@ describe('Modules.vue', () => {
   it('calls store action moduleActionClick when button is clicked', () => {
     const wrapper = mount(Modules, { store })
     const button = wrapper.find('button')[0]
-    button.dispatch('click')
+    button.trigger('click')
     expect(actions.moduleActionClick.calledOnce).to.equal(true)
   })
   it('Renders state.inputValue in first p tag', () => {
@@ -265,11 +265,11 @@ To have a look at what the module file looks like, <a rel="noopener" href="https
 
 So now we're importing getters from out Vuex store module. This means we need to mock the state.
 
-Is this a good thing? Well, it means we're testing that the state we expect will be returned by the getter. But this is a unit test, so maybe we should test that in a store test. 
+Is this a good thing? Well, it means we're testing that the state we expect will be returned by the getter. But this is a unit test, so maybe we should test that in a store test.
 
 I'll leave it up to you whether you want to test the state or not.
 
-Hopefully this tutorial has helped you understand how to mock Vuex in Vue unit tests. 
+Hopefully this tutorial has helped you understand how to mock Vuex in Vue unit tests.
 
 If you have any questions, leave a comment.
 x

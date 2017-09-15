@@ -55,7 +55,7 @@ To make our lives easier, we can use a <a rel="noopener" href="https://github.co
 
 ## Testing Vue components using avoriaz
 
-<a rel="noopener" href="https://github.com/eddyerburgh/avoriaz" target="_blank">avoriaz</a> is similar to enzyme (a react testing utils library). It shares methods like find, dispatch and contains.
+<a rel="noopener" href="https://github.com/eddyerburgh/avoriaz" target="_blank">avoriaz</a> is similar to enzyme (a react testing utils library). It shares methods like find, trigger and contains.
 
 To get started, install avoriaz and chai in your project from npm.
 
@@ -99,7 +99,7 @@ The <a rel="noopener" href="https://eddyerburgh.gitbooks.io/avoriaz/content/api/
 
 The find method takes any <a rel="noopener" href="https://eddyerburgh.gitbooks.io/avoriaz/content/api/selectors.html" target="_blank">CSS selector</a>, or a Vue component as a parameter. So you can assert whether a Vue component was rendered or not.
 
-Another useful method is <a rel="noopener" href="https://eddyerburgh.gitbooks.io/avoriaz/content/api/mount/dispatch.html" target="_blank">dispatch</a>. This calls a DOM event on the wrapper element.
+Another useful method is <a rel="noopener" href="https://eddyerburgh.gitbooks.io/avoriaz/content/api/mount/trigger.html" target="_blank">trigger</a>. This dispatches a DOM event on the wrapper element.
 
 ```js
 describe('Bar.vue', () => {
@@ -107,7 +107,7 @@ describe('Bar.vue', () => {
     const expectedMessage = 'new message'
     const wrapper = mount(Foo)
     const button = wrapper.find('#change-message')[0]
-    button.dispatch('click')
+    button.trigger('click')
     expect(wrapper.find('h1')[0].text()).to.equal(expectedMessage)
   })
 })

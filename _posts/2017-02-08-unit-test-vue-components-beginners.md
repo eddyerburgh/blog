@@ -391,15 +391,15 @@ it('has a root element with class foo', () => {
 })
 ```
 
-Cool! Let's look at one last method - dispatch.
+Cool! Let's look at one last method - trigger.
 
-Dispatch dispatches a DOM event to the wrapper root element. In our Foo.vue file, we have a button with id change-message that should change the text of our h1 tag when clicked. Let's write a test to check that it does:
+trigger dispatches a DOM event to the wrapper root element. In our Foo.vue file, we have a button with id change-message that should change the text of our h1 tag when clicked. Let's write a test to check that it does:
 
 ```js
 it('changes h1 text when #change-text is clicked', () => {
   const wrapper = mount(Foo)
   const changeMessage = wrapper.find('#change-message')[0]
-  changeMessage.dispatch('click')
+  changeMessage.trigger('click')
   const h1 = wrapper.find('h1')[0]
   expect(h1.text()).to.equal('new message')
 })
@@ -428,7 +428,7 @@ describe('Foo.vue', () => {
   it('changes h1 text when #change-text is clicked', () => {
     const wrapper = mount(Foo)
     const changeMessage = wrapper.find('#change-message')[0]
-    changeMessage.dispatch('click')
+    changeMessage.trigger('click')
     const h1 = wrapper.find('h1')[0]
     expect(h1.text()).to.equal('new message')
   })
