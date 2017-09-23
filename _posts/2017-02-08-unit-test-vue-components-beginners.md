@@ -383,7 +383,7 @@ const wrapper = mount(Foo, { propsData: { propertyA: 'property' }})
 Using find and propsData, we can test whether foo correctly renders passedProp in the p tag:
 
 ```js
-it('has a root element with class foo', () => {
+it('sets the prop value', () => {
   const passedProp = 'some text'
   const wrapper = mount(Foo, { propsData: { passedProp }})
   const p = wrapper.find('p')[0]
