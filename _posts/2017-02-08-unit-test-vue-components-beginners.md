@@ -19,7 +19,7 @@ You've heard about unit testing, but you're not really sure what it is. No probl
 
 In this tutorial we'll see what unit tests are, why we write them and how to unit test Vue components. The testing libraries we use will be Mocha, Chai and avoriaz. Let's get started!
 
-*Note: for this tutorial you need to have node installed, if it's not <a rel="noopener" href="https://nodejs.org/en/download/" target="_blank">download it here</a>. We also use ES6 syntax, so you should brush up on that if you're not familiar with it*
+*Note: for this tutorial you need to have node 7 installed, if it's not <a rel="noopener" href="https://nodejs.org/en/download/" target="_blank">download it here</a>. We also use ES6 syntax, so you should brush up on that if you're not familiar with it*
 
 ## What Are Unit Tests?
 
