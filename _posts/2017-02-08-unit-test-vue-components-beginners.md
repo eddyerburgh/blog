@@ -257,7 +257,7 @@ Don't worry if you didn't read or understand that. Most of these libraries are u
 
 The tool we use for this is webpack. Webpack is a module bundler that takes multiple JavaScript files (modules) and compiles them into a JavaScript file.
 
-In the build directory create a file named webpack.config.js, and paste in the code below:
+In the build directory create a file named webpack.test.config.js, and paste in the code below:
 
 ```js
 const path = require('path')
