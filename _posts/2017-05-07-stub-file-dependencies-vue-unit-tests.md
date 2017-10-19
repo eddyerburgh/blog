@@ -128,7 +128,7 @@ First, we need babel-plugin-rewire installed.
 Run:
 
 ```shell
-npm install --save-dev babel-rewire-plugin
+npm install --save-dev babel-plugin-rewire
 ```
 This plugin adds methods to imported modules that let us control what their dependencies return. 
 Let's look at a simple example:
