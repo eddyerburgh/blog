@@ -271,5 +271,4 @@ I'll leave it up to you whether you want to test the state or not.
 
 Hopefully this tutorial has helped you understand how to mock Vuex in Vue unit tests.
 
-If you have any questions, leave a comment.
-x
+Want more? I've written a book on Testing Vue applications. You can [buy it now](https://www.manning.com/books/testing-vuejs-applications?a_aid=eddyerburgh) as part of the eartly release program. The book covers every aspect of testing Vue applications.
