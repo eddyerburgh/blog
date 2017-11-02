@@ -118,3 +118,5 @@ For full examples, check out the <a rel="noopener" href="https://github.com/eddy
 For a complete list of avoriaz methods, <a rel="noopener" href="https://eddyerburgh.gitbooks.io/avoriaz/content/" target="_blank">check out the docs</a>.
 
 If you have any questions, leave a comment and I'll get back to you.
+
+Want more? I've written a book on Testing Vue applications. You can [buy it now](https://www.manning.com/books/testing-vuejs-applications?a_aid=eddyerburgh) as part of the eartly release program. The book covers every aspect of testing Vue applications.
