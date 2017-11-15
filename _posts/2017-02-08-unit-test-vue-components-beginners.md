@@ -246,7 +246,7 @@ In the command line, enter:
 
 ```shell
 npm install --save vue &&
-npm install --save-dev avoriaz babel-core babel-loader babel-preset-es2015 chai css-loader mocha mocha-webpack vue-loader vue-template-compiler webpack</code>
+npm install --save-dev avoriaz babel-core babel-loader babel-preset-es2015 chai css-loader mocha mocha-webpack vue-loader vue-template-compiler webpack
 ```
 
 Woo boy. That's a lot of dependencies! If you want to know what they do, read the wall of text below!
