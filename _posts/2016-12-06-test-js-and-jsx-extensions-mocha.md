@@ -14,21 +14,26 @@ categories:
 tags: []
 comments: true
 ---
-Out the box, mocha only reads test files with a .js extension. What if you need to test `.js` AND `.jsx` extensions with mocha?
+Out the box, mocha only runs files with a `.js` extension.
 
-## The solution
-
-You need to compile jsx. If you're using babel, install `babel-register`:
-`npm i -D babel-register`
-
-Tell mocha to compile js and jsx files with babel-register:
+If you want to run files with a `.jsx` extension, you can use regex:
 
 ```shell
-mocha test/**/*.js* --compilers js:babel-register,jsx:babel-register
+mocha 'test/**/*.{js,jsx}'
+```
+
+You probably need to compile `.jsx`. If you're using babel, install `babel-register`:
+
+`npm i -D babel-register`
+
+Tell mocha to compile `.js` and `.jsx` files with `babel-register`:
+
+```shell
+mocha 'test/**/*.{js,jsx}' --compilers js:babel-register,jsx:babel-register
 ```
 
 Your full command will look something like this:
 
 ```shell
-mocha test/unit --recursive --compilers js:babel-register,jsx:babel-register
+mocha 'test/**/*.{js,jsx}' --recursive --compilers js:babel-register,jsx:babel-register
 ```
