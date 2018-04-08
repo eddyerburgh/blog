@@ -28,19 +28,13 @@ tl;dr: [clip-path](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path)
 
 ## Result
 
-[https://jsfiddle.net/11kn8mjn/4/](https://jsfiddle.net/11kn8mjn/4/)
+[https://jsfiddle.net/11kn8mjn/27/](https://jsfiddle.net/11kn8mjn/27/)
 
-## Browser Support
+## Browser support
 
 [Support for clip-path is poor](https://caniuse.com/#feat=css-clip-path) – IE and Edge don’t support it at all!
 
-## How It’s Done
-
-Two fullscreen divs with responsive background images are positioned on top of each other.
-
-Clip mask is used to show a responsive triangle of the overlaying div.
-
-## Creating the Fullscreen Triangular Responsive Background Image
+## Creating the fullscreen triangular responsive background image
 
 Two divs are positioned on top of each other absolutely:
 
