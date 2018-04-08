@@ -17,9 +17,9 @@ comments: true
 
 In this tutorial we're going to make a responsive bar chart using D3.
 
-## The Code
+## The code
 
-### JavaScript
+### Javascript
 
 ```js
 // Get the margin to width ratio as a percent
@@ -161,7 +161,7 @@ rect:hover {
 }
 ```
 
-## What's Going On
+## What's going on
 
 What we're doing is creating an SVG with D3.JS and setting it's width to 100% of it's containing div. This isn't as simple as setting the SVG width to 100% with CSS. We have to use multiple divs, the attributes *preserveAspectRatio* and *viewBox* and the <a rel="noopener" href="https://css-tricks.com/absolute-positioning-inside-relative-positioning/">position:absolute position: relative trick</a>, as well as some other CSS properties.
 

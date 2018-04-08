@@ -17,7 +17,7 @@ comments: true
 
 <a rel="noopener" href="http://jade-lang.com/tutorial/">Pug</a> (previously known as Jade)  is a template engine built for node. In this tutorial I am going to show you how to create dynamic IDs in a loop with Pug.
 
-## Create Dynamic IDs with a Loop
+## Create dynamic ids with a loop
 
 ```pug
 - for ( i=1; i <= 4 ; i++ )
@@ -51,7 +51,7 @@ Because `=` tells pug to buffer the JavaScript, whereas `-` tells it NOT to buff
 
 Although the JavaScript is not buffered, it is still evaluated, allowing us to declare variables, loop over arrays and pretty much anything we can think of with JavaScript( except interact with the DOM!). This is the strength of Jade over a logic less templating engine like HandleBars or Mustache. Anyway.
 
-## Create Dynamic IDs with an Array
+## Create dynamic ids with an array
 
 Say we wanted more descriptive IDs. We could write this :
 

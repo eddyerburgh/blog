@@ -20,12 +20,12 @@ comments: true
 
 Arranging your archive posts as tiles in columns can look great - [check out Chris Lema's site for example](https://chrislema.com/blog/).
 
-
 To achieve this effect you need to wrap the loop output in a div. But how do you do that?
 
 Answer: create a counter!
 
-## The Counter
+## The counter
+
 A counter is a variable number that will increase by one on each loop. Essentially, we are assigning a number to each output of the loop.
 
 We want our first output to be counted as 1, second as 2, third as 3 etc. etc. So to do this, we set counter at 0 before we start the loop.

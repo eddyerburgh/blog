@@ -15,7 +15,7 @@ Vuex is a great way to manage state in a Vue app. For any serious app, you want 
 
 *This is a code-heavy tutorial. A full github repo is <a rel="noopener" href="https://github.com/eddyerburgh/mock-vuex-in-vue-unit-tests-tutorial">available here</a> to supplement the tutorial.*
 
-## Mocking Actions
+## Mocking actions
 
 Let's look at some code.
 
@@ -116,7 +116,7 @@ The most important thing to note in this test is that **we create a mock Vuex st
 
 Great, so now we can mock actions, let's look at mocking getters.
 
-## Mocking Getters
+## Mocking getters
 
 Mocking getters is similar to mocking actions.
 
@@ -184,7 +184,7 @@ This test is similar to our actions test. We create a mock store before each tes
 
 This is great, but what if we want to check our getters are returning the correct part of our state?
 
-## Mocking with Modules
+## Mocking with modules
 
 <a rel="noopener" href="https://vuex.vuejs.org/en/modules.html" target="_blank">Modules</a> are useful for separating out our store into manageable chunks. They also export getters. We can use these in our tests.
 

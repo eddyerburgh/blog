@@ -21,11 +21,11 @@ If you're using Bootstrap 4 SCSS you'll want to use the Bootstrap 4 Media Query 
 
 To use the Bootstrap 4 mixins you must include <a rel="noopener" href="https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss" target="newwindow">_variables.scss</a>,  <a rel="noopener" href="https://github.com/twbs/bootstrap/blob/v4-dev/scss/_functions.scss" target="newwindow">_functions.scss</a>, and <a rel="noopener" href="https://github.com/twbs/bootstrap/blob/v4-dev/scss/mixins/_breakpoints.scss" target="newwindow">mixins/_breakpoints.scss</a>.
 
-## The Mixin
+## The mixin
 
 The mixins are pretty self explanatory :
 
-### Min Width
+### Min width
 
 ```scss
 @include media-breakpoint-up(sm) {
@@ -36,7 +36,7 @@ The mixins are pretty self explanatory :
  */
  ```
 
-### Max Width
+### Max width
 
 ```scss
 @include media-breakpoint-down(sm) {
@@ -47,7 +47,7 @@ The mixins are pretty self explanatory :
  */
  ```
 
-### Min and Max Width
+### Min and max width
 
 ```
 @include media-breakpoint-between(sm, md) {

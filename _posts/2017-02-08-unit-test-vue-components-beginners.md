@@ -21,7 +21,7 @@ In this tutorial we'll see what unit tests are, why we write them and how to uni
 
 *Note: for this tutorial you need to have node 7 installed, if it's not <a rel="noopener" href="https://nodejs.org/en/download/" target="_blank">download it here</a>. We also use ES6 syntax, so you should brush up on that if you're not familiar with it*
 
-## What Are Unit Tests?
+## What are unit tests?
 
 Unit tests are a way to automatically check that our code does what it's meant to do. We run the code in a controlled environment and assert that functions produce the expected output.
 
@@ -46,7 +46,7 @@ Now we can run test() to check our add function works correctly. If add(1,2) doe
 
 At their simplest, this is what unit tests are. Functions checking the result of the function you are testing.
 
-## Why Write Unit Tests?
+## Why write unit tests?
 
 Now we know what unit tests are, why should we use them?
 
@@ -75,7 +75,7 @@ Say another programmer edits the subtract function to add a to b. What will happ
 
 In large projects there can be thousands of unit tests. This means you can refactor the codebase, run one command and be confident that nothing is broken.
 
-## How to Unit Test Vue Components
+## How to unit test vue components
 
 Create a new directory with the following structure:
 
@@ -92,7 +92,7 @@ The components directory will hold our components. The test directory will hold 
 
 First, we're going to write a passing test.
 
-### Getting Started
+### Getting started
 
 Open up the command line and change your current directory to the root of the    project. (Note: If you don't know how to change your working directory, check out <a rel="noopener" href="http://askubuntu.com/a/520794" target="_blank">this stackoverflow answer</a> for linux/mac and <a rel="noopener" href="http://www.digitalcitizen.life/command-prompt-how-use-basic-commands" target="_blank">this guide</a> for windows).
 
@@ -102,7 +102,7 @@ When you're in the directory, run:
 
 And follow the prompt (you can just press enter to each question). This generates a package.json. Make sure it exists in the root of your project before we move on.
 
-### Mocha and Chai
+### Mocha and chai
 
 Before we add anything to our project, let's take a look at Mocha and Chai.
 

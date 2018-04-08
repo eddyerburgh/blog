@@ -65,7 +65,7 @@ This is easy to do with a stub - because we control what it returns!
 
 This tutorial will go over 2 different methods. One using <a rel="noopener" href="https://github.com/speedskater/babel-plugin-rewire">babel-plugin-rewire</a> and another using <a rel="noopener" href="https://github.com/plasticine/inject-loader" target="_blank">inject-loader</a>.
 
-### babel-plugin-rewire
+### Babel-plugin-rewire
 
 We're going to use a pre made project to learn how to use babel-plugin-rewire.
 

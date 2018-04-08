@@ -44,7 +44,7 @@ $blue: 0;
 
 Stick that in your file and ~~smoke it~~ compile it!
 
-## What's Going On?\
+## What's going on?\
 
 We're using nested loops to run through each value of red, green and blue. The possible values of each ranges from 0 - 255 (but you probably already know that), and we need to print every possible combination.
 

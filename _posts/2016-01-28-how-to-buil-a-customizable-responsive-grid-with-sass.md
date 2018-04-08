@@ -18,9 +18,9 @@ tags:
 comments: true
 ---
 
-Variables and calculations make it easy to create a customizable responsive grid with SASS. Let's build one now in SCSS
+Variables and calculations make it easy to create a customizable responsive grid with SASS. Let's build one now in SCSS.
 
-## The Grid
+## The grid
 
 This SASS will compile to a twelve-column grid
 
@@ -47,19 +47,13 @@ Much cleaner than pure CSS.
 
 It's based off <a rel="noopener" href="https://github.com/dhg/Skeleton/blob/master/css/skeleton.css">the skeleton grid</a>. The difference is we can control this one by changing the value of $grid-margin and saving the .scss file.
 
-## What's Going on?
-
-### The Basics
+## What's going on?
 
 Each column is 100% width until it hits the breakpoint (800px in this grid). When the media query kicks in each column is given a width depending on the number and floated to arrange them side-by-side. Have a look at the code or check out this great introduction to understand it.
-
-### The Math
 
 **To calculate column width from the margin**: `( 100 - ( $grid-margin * 11 ) ) / 12 ;`
 
 **To calculate each number width**: `$column-width + ( ($column-width + $grid-margin) * 6`
-
-## Add a SASS loop!
 
 That's great and all, but SASS has loops built into it. There's a lot of repeating going on there, so let's condense it down a bit.
 
@@ -103,7 +97,7 @@ margin-left: $column-width * $i + $grid-margin * $i !important;
 
 Now to add all the extra CSS to make a grid and include the offset SCSS in the loop:
 
-## The Code
+## The code
 
 ```scss
 // Grid

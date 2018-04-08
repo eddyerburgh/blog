@@ -22,7 +22,7 @@ In this tutorial, we'll add copy on click functionality to all code blocks on a 
 
 Click the code block below to see it in action.
 
-### The Code
+### The code
 
 Copy and paste this code to add copy on click functionality to your site.
 
@@ -140,7 +140,7 @@ code:hover:after {
 }
 ```
 
-## What's Happening
+## What's happening
 
 
 That was  a lot of code. If you pasted it into the correct places your site will have copy on click functionality on every *<code>* block. You might want to customize this code to suit your needs, so let's have a look at what's actually happening.
@@ -181,29 +181,29 @@ If there are code blocks, copyOnClick will be assigned a function. This is the m
 
 And that's the Javascript, any questions leave a comment or contact me <a rel="noopener" class="DashboardProfileCard-screennameLink u-linkComplex u-linkClean" href="https://twitter.com/EddYerburgh">@<span class="u-linkComplex-target">EddYerburgh</span></a>.
 
-### HTML
+### Html
 
 Phew, that was a lot of JavaScript code. Luckily this HTML is a lot simpler!
 
 ```html
 <div id="success" class="overlay">
-## Copied to Clipboard!</div>
+## Copied to clipboard!</div>
 <div id="failure" class="overlay">
-## Failed to Copy :(, update your browser or stop using Safari!</div>
+## Failed to copy :(, update your browser or stop using safari!</div>
 ```
 
 All we're doing here is creating the elements to be shown on either success or failure of the copy to clipboard. Edit the message to your liking.
 
 It doesn't matter where in your document you place this, as long as it is between the <body> tags. Mine is in my header.php to avoid <a rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">stacking issues</a>, but sticking it in your footer.php is probably more semantic.
 
-### CSS
+### Css
 
 There are two elements we're styling here:
 
 1. A tooltip that appears on hover to let users know they can copy the code on click
 2. The success/ failure messages
 
-#### The Tooltip
+#### The tooltip
 
 ```css
 code {
@@ -238,7 +238,7 @@ The `:before` element is positioned absolutely. This is why we need *<code>* to 
 
 The `:after` element is just a <a rel="noopener" href="https://css-tricks.com/snippets/css/css-triangle/">CSS triangle</a>, and is purely for style.
 
-#### The Success/ Failure Messages
+#### The success/ failure messages
 
 Here we create a base overlay with overlay-message positioned in the center.
 
@@ -276,7 +276,7 @@ To show the overlay, we add the class *show* using JS. I've given it z-index: 99
 
 overlay-message is centered vertically and horizontally with the <a rel="noopener" href="https://css-tricks.com/centering-percentage-widthheight-elements/">transform translate trick</a>.
 
-## Browser Support
+## Browser support
 
 With an autoprefixer, the CSS is supported by all major browsers.
 
@@ -288,7 +288,7 @@ You need to add browser prefixes to the CSS for full support.
 
 This won't work on mobiles/ tablets. It would be a good idea to wrap the CSS in a media query and use that CSS to <a rel="noopener" href="/css/run-javascript-when-media-queries-are-active/">only run the Javascript when the media query is active</a>.
 
-## That's All Folks!
+## That's all folks!
 
 If you've got any suggestions/ need help with the code please comment or tweet me <a rel="noopener" class="DashboardProfileCard-screennameLink u-linkComplex u-linkClean" href="https://twitter.com/EddYerburgh">@<span class="u-linkComplex-target">EddYerburgh</span></a>
 

@@ -24,9 +24,9 @@ To run a node script with windows task scheduler we need:
 * Node installed
 * Git bash installed
 
-## Setting Up
+## Setting up
 
-### The Script
+### The script
 
 This can be any scripts that can run in node. We could have a script that takes a backup of a database and uploads it to dropbox, or a script that moves old log files to a Logs folder.
 
@@ -44,7 +44,7 @@ If it's not installed already, <a rel="noopener" href="https://nodejs.org/en/dow
 
 To check node installed successfully enter node -v into git bash, or another shell. If the command is not found, node did not install successfully.
 
-### Git Bash
+### Git bash
 
 We're going to use git bash shell to run the command that runs our script. (Because who wants to work with CMD.EXE?)
 
@@ -52,7 +52,7 @@ If you don't have git bash installed already, you can <a rel="noopener" href="ht
 
 Got it installed? Great. Now we need to open up Windows Task Scheduler.
 
-### Windows Task Scheduler
+### Windows task scheduler
 
 Windows task scheduler lets you run tasks automatically. You can set commands to run in response to events, like starting up windows or logging in as an admin. You can also schedule them to run at regular intervals.
 
@@ -129,7 +129,7 @@ node script.js runs script.js in node.
 
 Simple really.
 
-### Finishing Off
+### Finishing off
 
 Now our **New Action **dialog should look similar to the image below.
 

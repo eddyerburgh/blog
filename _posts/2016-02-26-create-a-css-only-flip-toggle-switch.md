@@ -25,7 +25,7 @@ In this tutorial you will learn how to style a css only flip toggle switch, like
 
 <img class="wp-image-87 size-full aligncenter" src="/assets/2016/02/toggle-buttons-min-1.png" alt="CSS Only Flip Toggle Switch" width="180" height="193" />
 
-## The Problem With Styling Checkboxes
+## The problem with styling checkboxes
 
 First time I tried to style a checkbox I was shocked - my CSS wasn't doing anything! A bit of Googling told that checkboxes are <a rel="noopener" href="http://stackoverflow.com/questions/4148499/how-to-style-checkbox-using-css">notoriously difficult to style</a>. Browsers are inconsistent in applying styles to form elements like checkboxes, and **CSS2 isn't expressive enough to style these complex elements**. Check out how this togglebox gets rendered by different browsers:
 
@@ -109,7 +109,7 @@ We hide the checkbox by setting it's opacity to 0. This means it can still be re
 
 Now for the next stage. It's the pseudo selector :checked that lets us create a CSS only flip toggle switch. Since the checkbox comes before the label element, we can style the label and the switch when the checkbox is in the :checked state. By using CSS transforms and transitions we can make the div#switch appear to toggle between on and off.
 
-## The Result
+## The result
 
 <a rel="noopener" href="http://codepen.io/eddyerburgh/pen/jqNgEp">http://codepen.io/eddyerburgh/pen/jqNgEp</a>
 

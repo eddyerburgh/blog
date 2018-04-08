@@ -17,7 +17,7 @@ comments: true
 ---
 This snippet will add a class to elements that are selected with the tab button.
 
-## The Problem
+## The problem
 
 If you set an outline to anchor tags with :focus, the style is also applied when you click the link . I only want it styled when users are tabbing through content with the keypad. To overcome this, I wrote some JavaScript that will add a class to tabbed items, and remove it with the next tab.
 
@@ -25,7 +25,7 @@ I couldn't find any snippet that did what I wanted, so I wrote this.
 
 To see my solution in action, press tab.
 
-## The Code
+## The code
 
 ```js
 // Function to a Add Class to Tabbed Items

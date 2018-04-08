@@ -23,7 +23,7 @@ I had this error recently after I installed docker-compose with <a rel="noopener
 
 <a rel="noopener" href="https://pypi.python.org/pypi/six" target="_blank">Six</a> has been installed incorrectly, or is outdated.
 
-## The Solution
+## The solution
 
 ```shell
 brew reinstall python

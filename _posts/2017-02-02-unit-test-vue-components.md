@@ -17,7 +17,7 @@ It seems everybody's using Vue.js nowadays, and it's easy to see why. It's <a re
 
 *Note: This tutorial assumes you're familiar with unit testing, webpack, ES6, mocha, chai and karma. If you're not, check out <a rel="noopener" href="http://www.coding123.org/tutorials/unit-test-vue-components-beginners/" target="_blank">How to unit test Vue components for beginners</a>.*
 
-## Testing Vue Components
+## Testing vue components
 
 There's a useful <a rel="noopener" href="https://vuejs.org/v2/guide/unit-testing.html" target="_blank">section on unit testing</a> in the Vue docs. It goes over the basics of unit testing Vue components, and it's worth checking out before we go further.
 
@@ -53,7 +53,7 @@ vm._watcher.run()
 
 To make our lives easier, we can use a <a rel="noopener" href="https://github.com/eddyerburgh/avoriaz" target="_blank">test utility library</a>.
 
-## Testing Vue components using avoriaz
+## Testing vue components using avoriaz
 
 <a rel="noopener" href="https://github.com/eddyerburgh/avoriaz" target="_blank">avoriaz</a> is similar to enzyme (a react testing utils library). It shares methods like find, trigger and contains.
 

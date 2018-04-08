@@ -21,7 +21,7 @@ In this tutorial we are going to make a responsive tic tac toe board with an HTM
 
 Let's go.
 
-## The Problem
+## The problem
 
 There's two parts to make a tic tac toe board -
 1. Create a 3x3 grid with square cells
@@ -29,7 +29,7 @@ There's two parts to make a tic tac toe board -
 
 First we'll make the grid.
 
-## The Grid
+## The grid
 
 We're going to use an HTML table structure for our grid. It's more semantic and is better for accesability - <a rel="noopener" href="https://www.paciellogroup.com/blog/2015/01/basic-screen-reader-commands-for-accessibility-testing/">screen readers treat tables differently from other elements</a>. Most screen readers include shortcuts to navigate the tables with the arrow pad, and the size of the grid will be read out to tell the user the dimensions of the grid.
 
@@ -80,7 +80,7 @@ So because all our widths are set as percentages, we have responsive tic tac toe
 
 <img class="wp-image-296 size-medium aligncenter" src="/assets/2016/04/responsive-tic-tac-toe-300x283.gif" alt="Responsive Tic Tac Toe Board Being Resized" width="300" height="283" />
 
-## Adding the Borders
+## Adding the borders
 
 Adding borders to tables is like adding borders to a normal div, there's just one extra property we need to add. Let's have a look :
 

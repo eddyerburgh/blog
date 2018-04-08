@@ -37,11 +37,11 @@ function checkRgb (rgb) {
 
 Add this function to your code and call it with the color you are testing as a parameter.  If the value is a valid rgb the function will return true.
 
-## What's Happening
+## What's happening
 
 We're testing the value passed to the function using a regular expression (regEx). This is done with the <a rel="noopener" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test" target="_blank">test() </a>method.
 
-## regEx
+## Regex
 
 RegEx is an expression that defines a search pattern. In other words, it is a string of characters that sets out what it is looking for. For example :* /[regex]/i* will match with regex. Explaining all the ins and outs of regex is beyond the scope of this post (learn about it <a rel="noopener" href="http://www.zytrax.com/tech/web/regex.htm" target="_blank">here</a>), but I will explain what is going on in this particular regEx.
 Let's look at that example again - */[regex]/i* . The / / defines the start and end of the expression. The *i* at the end of the expression is a *pattern modifier, *this changes the search parameters and is applied to the entire expression. In this case, it makes our expression case INsensitive (i.e. it doesn't matter whether it's upper or lowercase).

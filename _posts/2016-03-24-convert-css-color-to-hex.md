@@ -16,7 +16,7 @@ comments: true
 ---
 In this short tutorial we'll add a function that lets us convert any css color to hex.
 
-## The Code
+## The code
 
 ```js
 function colorToHex (color) {

@@ -19,11 +19,11 @@ There's a great article by <a rel="noopener" href="http://codoki.com/2015/09/01/
 
 Note: this tutorial assumes you have a basic understanding of what a templating language is.
 
-## The Problem
+## The problem
 
 Common templating languages like <a rel="noopener" href="http://handlebarsjs.com/">Handlebars.js</a> are great, but it's another HTTP request. At 70KB (v 4.0.5) it'd be good to template without loading a library. That's why we're going to look at templating with vanilla js!
 
-## The Theory
+## The theory
 
 Like most templating languages, this trick makes use of <code><script type="text/template"></code>. Content inside the tag is initially ignored by the browser, but can be accessed after rendering with the ID. This means we can put a template of our HTML to be used by JavaScript to render HTML on the page using content supplied in the JS file.
 
@@ -39,9 +39,9 @@ We then go onto the next object in the array and repeat the process. When the lo
 
 Let's look at the code.
 
-## The Code
+## The code
 
-### JavaScript
+### Javascript
 
 ```js
 // Array of objects to pass to template

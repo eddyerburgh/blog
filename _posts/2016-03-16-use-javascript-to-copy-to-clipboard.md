@@ -24,7 +24,7 @@ comments: true
 ---
 In the not too distant past you'd need to use Flash (yuck) to allow the user to copy to clipboard in one click. Thankfully we don't live in the past. Today, with the exception of Safari, all modern browsers let you use JavaScript to copy to clipboard with one easy method.
 
-## The Code
+## The code
 
 ```js
 var elemToCopy = document.getElementById('elem-to-copy')
@@ -62,27 +62,27 @@ function copyText () {
 }
 ```
 
-## What's Happening
+## What's happening
 
 There are four steps to this function: bind the element, select the text, copy the text and record the success/failure of the copy.
 
-### Bind the Element
+### Bind the element
 
 First we assign the copyText function to fire when your element is clicked.
 
-### Select the Text
+### Select the text
 
 When the element is clicked, we select, or highlight the elements text with the <a rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select">select() method</a>. The text content needs to be highlighted in order to be copied in the next step.
 
-### Copy the Text
+### Copy the text
 
 This is easy with the<a rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand"> execCommand() function</a>. We simply pass 'copy' as a parameter and the browser will copy any highlighted text.
 
-### Record the Success/ Failure of the Copy
+### Record the success/ failure of the copy
 
 We want to know if it was successful or not! IE9- and Safari don't support execCommand. It's also nice to fire a function on successful copy to indicate to the user that the copy was successful, as seen on <a rel="noopener" href="https://flatuicolors.com/">flatuicolors.com</a>.
 
-## <a rel="noopener" name="copy-from-non-textfield"></a>Copy From a Non text-field Element
+## <A rel="noopener" name="copy-from-non-textfield"></a>copy from a non text-field element
 
 The select() method only works on textfields, so we have to go about it a bit differently if we want to copy text container in a paragraph, for example.
 
