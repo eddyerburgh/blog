@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: How To Create a Triangular Responsive Background Image
+title: How to create a triangular responsive background image
 description: Learn how to create two fullscreen responsive triangular images with the CSS clip-path property! Easy to copy triangular responsive background image
 author:
   display_name: Edd Yerburgh

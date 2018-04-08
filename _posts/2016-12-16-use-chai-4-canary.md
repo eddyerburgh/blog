@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: How To Use Chai 4 Canary
+title: How to use Chai 4 canary
 description: Use Chai 4 Canary today!
 wordpress_id: 393
 wordpress_url: http://www.coding123.org/?p=393

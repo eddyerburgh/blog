@@ -2,8 +2,8 @@
 layout: post
 status: publish
 published: true
-title: Convert Any CSS Color to Hex with JavaScript
-description: Convert any css color to hex with this simple function. Copy and paste the code into your JavaScript to quickly get the hex value of a CSS color.
+title: Convert any CSS color to hex with JavaScript
+description: Convert any CSS color to hex with this simple function. Copy and paste the code into your JavaScript to quickly get the hex value of a CSS color.
 wordpress_id: 205
 wordpress_url: http://www.eddyerburgh.com/?p=205
 date: '2016-03-24 15:23:51 +0000'

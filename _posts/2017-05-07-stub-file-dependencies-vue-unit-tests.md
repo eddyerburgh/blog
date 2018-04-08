@@ -130,7 +130,7 @@ Run:
 ```shell
 npm install --save-dev babel-plugin-rewire
 ```
-This plugin adds methods to imported modules that let us control what their dependencies return. 
+This plugin adds methods to imported modules that let us control what their dependencies return.
 Let's look at a simple example:
 
 ```js

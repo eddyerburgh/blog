@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: Create a Pure CSS Flip Toggle Switch
+title: Create a pure CSS flip toggle switch
 description: Learn how to create a pure CSS flip toggle switch with the label trick. Just hide the input, and style the checkbox using the CSS3 :checked selector.
 author:
   display_name: Edd Yerburgh

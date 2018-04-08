@@ -2,8 +2,8 @@
 layout: post
 status: publish
 published: true
-title: How to Build a Customizable Responsive Grid with SASS
-description: Create a customizable responsive grid with SASS. Learn the formula for a twelve column grid and how to use calculations to create a customizable grid
+title: How to build a customizable responsive grid with SCSS
+description: Create a customizable responsive grid with SCSS. Learn the formula for a twelve column grid and how to use calculations to create a customizable grid
 wordpress_id: 40
 wordpress_url: http://www.eddyerburgh.com/?p=40
 date: '2016-01-28 22:45:30 +0000'
@@ -22,9 +22,9 @@ Variables and calculations make it easy to create a customizable responsive grid
 
 ## The grid
 
-This SASS will compile to a twelve-column grid
+This SCSS will compile to a twelve-column grid
 
-```
+```scss
 $grid-margin: 6%; // edit to change grid margin
 $column-width: ( 100 - ( $grid-margin * 11 ) ) / 12 ;
 @media (min-width: 700px) {

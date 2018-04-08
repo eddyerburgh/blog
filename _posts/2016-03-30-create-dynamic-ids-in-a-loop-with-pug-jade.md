@@ -2,8 +2,8 @@
 layout: post
 status: publish
 published: true
-title: Create Dynamic IDs in a Loop with Pug/ Jade
-description: Create Dynamic IDs in a loop using Pug. This tutorial shows you how to use Pug to create dynamic ids for DOM elements
+title: Create dynamic ids in a loop with Pug/ Jade
+description: Create dynamic IDs in a loop using Pug. This tutorial shows you how to use Pug to create dynamic ids for DOM elements
 wordpress_id: 236
 wordpress_url: http://www.eddyerburgh.com/?p=236
 date: '2016-03-30 15:36:29 +0000'

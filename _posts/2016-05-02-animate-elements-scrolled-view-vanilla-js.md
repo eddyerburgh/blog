@@ -2,8 +2,8 @@
 layout: post
 status: publish
 published: true
-title: Animate Elements When Scrolled into View with Native JS
-description: It's easy to animate your HTML as it's scrolled into view. In this tutorial we will see how to animate elements when scrolled into view with native js.
+title: Animate elements when scrolled into view with native JavaScript
+description: In this tutorial we see how to animate elements when they are scrolled into view using native JavaScript.
 wordpress_id: 303
 wordpress_url: http://www.coding123.org/?p=303
 date: '2016-05-02 22:28:27 +0000'

@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: Jazz Up Your Code Blocks with Copy on Click!
+title: Jazz up your code blocks with copy on click!
 description: Add copy on click functionality to your code blocks to easily copy code. This tutorial provides the code and walks you through what is happening.
 wordpress_id: 169
 wordpress_url: http://www.eddyerburgh.com/?p=169

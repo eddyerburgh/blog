@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: Templating with Vanilla JS
+title: Templating with vanilla js
 description: It's easy to do templating with Vanilla JS. In this tutorial I will show you how, no need to load Handlbars.js every time you need to template JavaScript.
 wordpress_id: 269
 wordpress_url: http://www.coding123.org/?p=269

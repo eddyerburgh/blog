@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-title: stub $route in Vue unit tests
+title: Stub $route in Vue unit tests
 description: Learn how to stub the $route in Vue unit tests. This tutorial walks through 4 ways of stubbing the vue-router $route object.
 disqus_id: 498
 categories:

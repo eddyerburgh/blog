@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: How to Use Bootstrap 4 Media Query Mixins
+title: How to use Bootstrap 4 media query mixins
 description: If you are working on an SCSS Bootstrap 4 project, you'll need media queries. This snippet shows you how to correctly use Bootstrap 4 media query mixins.
 wordpress_id: 336
 wordpress_url: http://www.coding123.org/?p=336

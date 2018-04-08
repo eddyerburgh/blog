@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: Wrap the Loop Output in a Div on WordPress Archives
+title: Wrap the loop output in a div on WordPress archives
 description: Learn how to wrap the WordPress loop output in divs with a column layout
 wordpress_url: http://www.read-stuff.com/?p=4
 date: '2016-01-10 21:30:45 +0000'

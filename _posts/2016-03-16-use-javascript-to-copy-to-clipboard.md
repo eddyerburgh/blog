@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: Use JavaScript to Copy to Clipboard
+title: Use JavaScript to copy to clipboard
 description: Learn how to copy to clipboard using vanilla JavaScript. This quick snippet shows you how to copy any text from the DOM to your clipboard
 author:
   display_name: Edd Yerburgh

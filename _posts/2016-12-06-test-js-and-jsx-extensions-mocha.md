@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: Test .js and .jsx Extensions with Mocha
+title: Test .js and .jsx extensions with mocha
 description: Out the box .jsx extensions are ignored by mocha. In this short snippet I'll show you how to test .js and .jsx extensions with mocha.
 wordpress_id: 388
 wordpress_url: http://www.coding123.org/?p=388

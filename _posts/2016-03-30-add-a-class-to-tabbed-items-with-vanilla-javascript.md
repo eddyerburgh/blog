@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: Add a Class to Tabbed Items with Vanilla JavaScript
+title: Add a class to tabbed items with vanilla JavaScript
 description: Want to style elements when they are in focus but don't want it styled when elements are active? Copy this vanilla JS snippet to add a class to tabbed items
 wordpress_id: 242
 wordpress_url: http://www.eddyerburgh.com/?p=242

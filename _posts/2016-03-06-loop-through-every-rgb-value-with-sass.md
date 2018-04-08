@@ -2,8 +2,8 @@
 layout: post
 status: publish
 published: true
-title: Loop Through Every RGB Value with Sass
-description: Learn how to loop through every RGB value with Sass. This snippet shows you how to use for loops to print every RGB value as a CSS property.
+title: Loop through every RGB value with SCSS
+description: Learn how to loop through every RGB value with SCSS. This snippet shows you how to use for loops to print every RGB value as a CSS property.
 author:
   display_name: Edd Yerburgh
   login: admin
