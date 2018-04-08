@@ -26,7 +26,7 @@ Click the code block below to see it in action.
 
 Copy and paste this code to add copy on click functionality to your site.
 
-### Javascript
+### JavaScript
 
 Include this on any page you want to add the copy on click functionality
 
@@ -145,9 +145,9 @@ code:hover:after {
 
 That was  a lot of code. If you pasted it into the correct places your site will have copy on click functionality on every *<code>* block. You might want to customize this code to suit your needs, so let's have a look at what's actually happening.
 
-### Javascript
+### JavaScript
 
-The copy on click code is explained <a rel="noopener" href="/javascript/use-javascript-to-copy-to-clipboard/">in this previous article</a>. So we'll just look at the code that isn't explained there :
+The copy on click code is explained <a rel="noopener" href="/JavaScript/use-JavaScript-to-copy-to-clipboard/">in this previous article</a>. So we'll just look at the code that isn't explained there :
 
 ```js
 (function () {
@@ -286,7 +286,7 @@ execCommand( 'copy' ) is supported by ie9+, modern versions of Chrome, Firefox a
 
 You need to add browser prefixes to the CSS for full support.
 
-This won't work on mobiles/ tablets. It would be a good idea to wrap the CSS in a media query and use that CSS to <a rel="noopener" href="/css/run-javascript-when-media-queries-are-active/">only run the Javascript when the media query is active</a>.
+This won't work on mobiles/ tablets. It would be a good idea to wrap the CSS in a media query and use that CSS to <a rel="noopener" href="/css/run-JavaScript-when-media-queries-are-active/">only run the JavaScript when the media query is active</a>.
 
 ## That's all folks!
 

@@ -19,7 +19,7 @@ In this tutorial we're going to make a responsive bar chart using D3.
 
 ## The code
 
-### Javascript
+### JavaScript
 
 ```js
 // Get the margin to width ratio as a percent
