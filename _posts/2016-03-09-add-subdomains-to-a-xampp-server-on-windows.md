@@ -37,14 +37,27 @@ Local subdomains are useful for organizing local projects.  Luckily, it's easy t
 8. Copy the code below, and paste it at the **very bottom** of *http-vhosts.conf*
 
 ```apache
-<VirtualHost test.localhost.com:80>
- ServerAdmin webmaster@test.localhost.com
- DocumentRoot "/xampp/htdocs/test"
- ServerName test.localhost.com
- ServerAlias www.test.localhost.com
- ErrorLog "logs/test.localhost.com-error.log"
- CustomLog "logs/test.localhost.com-access.log" common
-</VirtualHost>
+#main domain
+
+<virtualhost *:80="">
+ServerAdmin webmaster@test.localhost.com
+DocumentRoot "C:/xampp/htdocs/" 
+ServerName localhost 
+ServerAlias www.localhost.com 
+ErrorLog "logs/localhost.com-error.log" 
+CustomLog "logs/localhost.com-access.log" common
+</virtualhost>
+
+#test sub-domain
+
+<virtualhost *:80="">
+ServerAdmin webmaster@test.localhost.com
+DocumentRoot "C:/xampp/htdocs/test" 
+ServerName test.localhost 
+ServerAlias www.test.localhost.com 
+ErrorLog "logs/test.localhost.com-error.log" 
+CustomLog "logs/test.localhost.com-access.log" common
+</virtualhost>
 ```
 
 9. Replace* test* with your chosen string. This will be the name of your subdirectory.
