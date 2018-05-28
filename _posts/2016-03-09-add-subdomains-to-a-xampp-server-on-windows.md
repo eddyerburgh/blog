@@ -26,17 +26,16 @@ Local subdomains are useful for organizing local projects.  Luckily, it's easy t
 
 **Warning**: Although it's easy to add new subdomains,** the files we'll be editing are critical for XAMPP to run, make copies of files before making changes!**
 
-
 1. Choose a string for your subdomain. For this example we'll use'test', which will produce the domain *test.localhost.com*.
 2. Create a new directory in *C:\xampp\htdocs *with the same name as your chosen string. This will be the root of your new subdomain.
 3. Create an index.html in your new directory.
 4. Find your root XAMPP directory. This will probably be *C:\xampp* .
 5. From your xampp root, go to apache >> conf >> extra.  **C:\xampp\apache\conf\extra**
-6. Make a copy of *httpd-vhosts.conf*, as shown below *
+6. Make a copy of *httpd-vhosts.conf*, as shown below:
 <figure><a rel="noopener" href="/assets/2016/03/xampp.apache.png" rel="attachment wp-att-129"><img class="wp-image-129 size-full" src="/assets/2016/03/xampp.apache.png" alt="apache > conf > extra directory" width="925" height="421" /></a> <figcaption>Your extra directory should look something like this</figcaption></figure>
- 
-7. Now open the original file *httpd-vhosts.conf *in a text editor
+7. Now open the original file *httpd-vhosts.conf* in a text editor
 8. Copy the code below, and paste it at the **very bottom** of *http-vhosts.conf*
+
 ```apache
 <VirtualHost test.localhost.com:80>
  ServerAdmin webmaster@test.localhost.com
@@ -47,14 +46,16 @@ Local subdomains are useful for organizing local projects.  Luckily, it's easy t
  CustomLog "logs/test.localhost.com-access.log" common
 </VirtualHost>
 ```
+
 9. Replace* test* with your chosen string. This will be the name of your subdirectory.
 10. Go to *C:\Windows\System32\drivers\etc*, as shown below
 <figure><a rel="noopener" href="/assets/2016/03/xampp.system32.png" rel="attachment wp-att-130"><img class="wp-image-130 size-full" src="/assets/2016/03/xampp.system32.png" alt="C:\ > Windows > System32 > drivers > etc" width="698" height="147" /></a> <figcaption>Your etc directory should look like this after copying hosts</figcaption></figure>
  
 11. Create a copy of hosts
 12. At the bottom of the file, below *127.0.0.1 localhost.com*, add the below code
-<pre><code class="apache">127.0.0.1 test.localhost.com</code>
-</pre>
+```
+127.0.0.1 test.localhost.com
+```
 
 13. Replace *test* with your chosen string
 
