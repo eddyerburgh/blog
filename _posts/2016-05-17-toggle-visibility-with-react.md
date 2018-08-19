@@ -15,32 +15,33 @@ tags: []
 comments: true
 ---
 
-It's easy to toggle an element with <a rel="noopener" href="http://api.jquery.com/toggle/" target="newwindow">jQuery</a>, or <a rel="noopener" href="http://codepen.io/eddyerburgh/pen/PNxyrp" target="newwindow">native JavaScript</a>. If you're new to the framework you might be wondering what the best way to toggle visibility with React is. In this tutorial we'll see how to achieve this using conditional rendering.
+ If you're new to the framework you might be wondering what the best way to toggle visibility with React is. In this tutorial we'll see how to achieve this using conditional rendering.
 
 ## The theory
 
 There are three steps to this:
 
+1. Add an `isHidden` property to the component state
+2. Trigger a function that toggles the `isHidden` value between `true` and `false`
+3. Render the component when `isHidden` is `false`
 
-1. Add a property to state called isHidden
-2. Trigger a function that toggles the isHidden value between true and false
-3. Render the component when isHidden is false
+React re renders a component each time the state changes, so you can add a conditional statement in the render function to display the component if `isHidden` is set to `false`.
 
-Since React runs through a component each time state has been changed, we can add a conditional that will display the component if isHidden is set to false.
+This is done by adding this expression to your JSX:
 
-This is done by adding this lovely expression to our JSX:
+```js
+{!this.state.isHidden && <Child />}
+```
 
-`{!this.state.isHidden && <Child />}`
+This will output the Child component if `this.state.isHidden` is `false`. The expression makes use of the `&&` operator, which won't evaluate the second expression if the first expression returns `false` when evaluated.
 
-This will output the Child component if this.state.isHidden is set to false. The expression makes use of the && property, which won't output the second expresion if the first expression returns false when evaluated. In our case, we're saying if this.state.isHidden is **false**, output . Hey presto - we've outputted the Child component if this.state.isHidden is false.
+After that, all you need is a function to toggle the value of `this.state.isHidden` between `true` and `false`, and an event handler that calls the function.
 
-After that, all we need is a function that toggles the value of this.state.isHidden between true and false, and an event handler that calls on the function.
-
-Let's look at the code:
+Here's a working example in code:
 
 ## The Code
 
-### ES6/7
+### ES2015
 
 ```jsx
 class Parent extends React.Component {
@@ -77,17 +78,17 @@ const app = document.getElementById('app')
 ReactDOM.render(Parent, app)
 ```
 
-**Note:** this code is using ES6 and ES7 features. You'll need to run it through a transpiler like <a rel="noopener" href="https://babeljs.io/" target="newwindow">Babel</a>.
+**Note:** this code is using ES2015 features. You'll need to run it through a transpiler like <a rel="noopener" href="https://babeljs.io/" target="newwindow">Babel</a>.
 
 ## What's going on?
 
-We have two components - a Parent component and a Child component. The Child component is the component we are going to toggle the visibility of.
+You have two components - a Parent component and a Child component. The Child component is the component you are going to toggle the visibility of.
 
-We set the initial state of the Parent component to include the property isHidden, and set the value to true. This means the conditional statement in the render function ill return as false, and the child Component won't be rendered.
+You set the initial state of the Parent component to include the property `isHidden`, and set the value to `true`. The conditional statement in the render function returns `false`, and the Child component isn't rendered.
 
-Then we have a toggleHidden function. It toggles isHidden between true and false. In this example, this function will fire when the button is pressed, but you can attach it to whatever you want. Often you'll need to pass it to a child component as a prop.
+Then you have a `toggleHidden` function. It toggles `isHidden` between `true` and `false`. In this example, thi function will fire when a button is clicked, but you can attach it to whatever you want. Often you'll need to pass it to a child component as a prop.
 
-So once our toggleHidden function is fired, the state will update and render will be rerun. If isHidden is false, the Child component will be output in the JSX and rendered in the DOM.
+Once the `toggleHidden` function is fired, the state will update and the component will re render. If `isHidden` is `false`, the Child component will be output in the JSX and rendered in the DOM.
 
 Pretty simple really.
 
