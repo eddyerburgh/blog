@@ -22,11 +22,11 @@ If you want to run files with a `.jsx` extension, you can use regex:
 mocha 'test/**/*.{js,jsx}'
 ```
 
-You probably need to compile `.jsx`. If you're using babel, install `babel-register`:
+You probably need to compile JSX. If you're using babel, install `babel-register`:
 
 `npm i -D babel-register`
 
-Tell mocha to compile `.js` and `.jsx` files with `babel-register`:
+Tell mocha to compile `.js` and `.jsx` files with `babel-register` and the mocha `require` option:
 
 ```shell
 mocha 'test/**/*.{js,jsx}' --require js:babel-register,jsx:babel-register
