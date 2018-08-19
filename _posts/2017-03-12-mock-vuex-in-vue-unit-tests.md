@@ -9,7 +9,7 @@ categories:
 - Vue
 comments: true
 ---
-Vuex is a great way to manage state in a Vue app. For any serious app, you want tests, so in this tutorial we'll see how to mock Vuex in Vue unit tests.
+In this tutorial you'll learn how to mock Vuex in Vue unit tests.
 
 *Note: This tutorial assumes you understand Vuex and how to unit test Vue components. If you don't, check out <a rel="noopener" target="_blank" href="{% post_url 2017-02-08-unit-test-vue-components-beginners %}">How to unit test Vue components</a>*
 
@@ -19,9 +19,9 @@ Vuex is a great way to manage state in a Vue app. For any serious app, you want 
 
 Let's look at some code.
 
-This is the component we want to test. It calls Vuex actions.
+This is the component you want to test. It calls a Vuex actions.
 
-```vue
+```html
 <template>
 <div class="text-align-center">
     <input type="text" @input="actionInputIfTrue" />
@@ -46,11 +46,11 @@ This is the component we want to test. It calls Vuex actions.
 </script>
 ```
 
-For the purposes of this test, we don't care what the actions do, or what the store looks like. We just need to know that these actions are being fired when they should, and that they are fired with the expected value.
+For the purposes of this test, you don't care what the actions do, or what the store looks like. You just need to know that these actions are being fired when they should, and that they are fired with the expected value.
 
-To test this, we need to pass a mock store to Vue when we mount our component.
+To test this, you need to pass a mock store to Vue when you mount your component.
 
-In this tutorial we will be using <a rel="noopener" href="https://github.com/eddyerburgh/avoriaz">avoriaz</a>, which has a mount method. We can pass the store as an option to mount.
+In this tutorial you'll use <a rel="noopener" href="https://github.com/eddyerburgh/avoriaz">avoriaz</a>, which has a `mount` method. We can pass the store as an option to mount.
 
 Let's see what this looks like:
 
@@ -60,7 +60,6 @@ import { mount } from 'avoriaz'
 import sinon from 'sinon'
 import { expect } from 'chai'
 import Vuex from 'vuex'
-import 'babel-polyfill'
 import Actions from '../../../src/components/Actions'
 
 Vue.use(Vuex)
@@ -68,6 +67,7 @@ Vue.use(Vuex)
 describe('Actions.vue', () => {
   let actions
   let store
+
   beforeEach(() => {
     actions = {
       actionClick: sinon.stub(),
@@ -78,6 +78,7 @@ describe('Actions.vue', () => {
       actions
     })
   })
+
   it('calls store action actionInput when input value is input and an input even is fired', () => {
     const wrapper = mount(Actions, { store })
     const input = wrapper.find('input')[0]
@@ -85,6 +86,7 @@ describe('Actions.vue', () => {
     input.trigger('input')
     expect(actions.actionInput.calledOnce).to.equal(true)
   })
+
   it('does not call store action actionInput when input value is not input and an input even is fired', () => {
     const wrapper = mount(Actions, { store })
     const input = wrapper.find('input')[0]
@@ -92,6 +94,7 @@ describe('Actions.vue', () => {
     input.trigger('input')
     expect(actions.actionInput.calledOnce).to.equal(false)
   })
+
   it('calls store action actionClick when button is clicked', () => {
     const wrapper = mount(Actions, { store })
     wrapper.find('button')[0].trigger('click')
@@ -122,7 +125,7 @@ Mocking getters is similar to mocking actions.
 
 Let's look at another component:
 
-```vue
+```html
 <template>
 <div>
 <p v-if="inputValue">{{inputValue}}
@@ -145,7 +148,6 @@ This is a fairly simple component. It renders the result of the getters clicks a
 Let's see the test:
 
 ```js
-import 'babel-polyfill'
 import Vue from 'vue'
 import { mount } from 'avoriaz'
 import { expect } from 'chai'
@@ -190,7 +192,7 @@ This is great, but what if we want to check our getters are returning the correc
 
 Let's look at our component:
 
-```vue
+```html
 <template>
 <div>
     <button @click="moduleActionClick()">Click</button>
