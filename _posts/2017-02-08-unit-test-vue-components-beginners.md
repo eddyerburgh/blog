@@ -15,9 +15,9 @@ tags: []
 comments: true
 ---
 
-In this tutorial I'll teach you what unit tests are, why you should write them and how to unit test Vue components. You'll learn to write tests using Mocha, Chai and Vue Test Utils.
+In this tutorial I'll teach you what unit tests are, why you should write them, and how to write unit tests for Vue components.
 
-*Note: for this tutorial you need to have node 7 installed, if it's not <a rel="noopener" href="https://nodejs.org/en/download/" target="_blank">download it here</a>. We also use ES6 syntax, so you should brush up on that if you're not familiar with it*
+*Note: for this tutorial you need to have node > 6 installed, if it's not <a rel="noopener" href="https://nodejs.org/en/download/" target="_blank">download it here</a>. We also use ES6 syntax, so you should brush up on that if you're not familiar with it*
 
 ## What are unit tests?
 
@@ -41,7 +41,7 @@ function `testSum` () {
 }
 ```
 
-Now you can run `testSum` to check that `sum` works correctly. If `sum(1, 2)` does not return `3`, `testSum` will throw an error to alert you that the `sum`` function is broken.
+Now you can run `testSum` to check that `sum` works correctly. If `sum(1, 2)` does not return `3`, `testSum` will throw an error to alert you that the `sum` function is broken.
 
 At their simplest, this is what unit tests are. Functions that check the result of the function you are testing.
 
@@ -56,9 +56,14 @@ The benefits of unit tests are:
 
 In large projects there can be thousands of unit tests. With thousands of unit tests you can refactor the codebase, run your test command and be confident that nothing is broken.
 
+Now you know what unit tests are, and why you should write them. Now it's time to learn how.
+
 ## How to unit test vue components
 
-Now it's time to write some tests.
+Unit tests for Vue components are different to normal unit tests. Instead of calling a function and checking it returns the correct result, you *mount* a component, interact with it, and assert that it responds correctly. You'll see what that looks like later on, first you need to do some set up.
+
+
+### Getting started
 
 Create a new directory with the following structure:
 
@@ -75,23 +80,17 @@ Create a new directory with the following structure:
 
 The components directory will hold your components. The test directory will hold the test files, and the build directory will hold the webpack config file.
 
-First, you'll write a simple passing test.
-
-### Getting started
-
 Open the command line and change your current directory to the root of the project. (Note: If you don't know how to change your working directory, check out <a rel="noopener" href="http://askubuntu.com/a/520794" target="_blank">this stackoverflow answer</a> for linux/mac and <a rel="noopener" href="http://www.digitalcitizen.life/command-prompt-how-use-basic-commands" target="_blank">this guide</a> for windows).
 
-When you're in the directory, run:
+When you're in the directory, bootstrap an npm project with the following command:
 
 ```
-npm init
+npm init -y
 ```
 
-And follow the prompt (you can just press enter to each question). This generates a package.json. Make sure it exists in the root of your project before we move on.
+Before you add any tests, you need to learn about Mocha.
 
-### Mocha and chai
-
-Before you add any tests, you need to learn about Mocha and Chai.
+### Mocha
 
 Mocha is a *test framework*. You define tests in a file and run them from the command line with mocha. Mocha detects tests that throw errors and reports them to you.
 
@@ -116,6 +115,8 @@ describe('sum', () => {
 ```
 
 This is great so far, but those if statements aren't very expressive. That's where Chai comes in.
+
+### Chai
 
 Chai is an assertion library. It asserts that a condition is true and throws an error if it does not.
 
@@ -176,15 +177,16 @@ npm run test
 
 You should now see your first passing unit test!
 
-### Vue component
-
 Now that you've got a sanity test written, it's time to write tests for a Vue component.
 
-In the components directory, create a file named Foo.vue.
 
-Add the code below to Foo.vue:
+### Unit testing Vue components
 
-```vue
+As I said, Vue components are different to test than normal functions. To test a Vue component you'll mount a component in memory, interact with it, and make sure it responds correctly.
+
+In the components directory, create a file named Foo.vue. Add the code below to Foo.vue:
+
+```html
 <template>
   <div class="foo">
     <h1>{{ msg }}</h1>
@@ -222,7 +224,7 @@ npm install --save-dev @vue/test-utils babel-core babel-loader babel-preset-env 
 
 Woo boy. That's a lot of dependencies! If you want to know what they do, read the wall of text below!
 
->@vue/test-utils is a vue test utilities library. babel-loader is a webpack loader to transpile JS with babel. babel-core is used by babel-loader to transpile. babel-preset-env lets babel compile es2015. css-loader is a dependency of vue-loader, mocha-webpack compiles files with webpack before running them in mocha. vue-loader is a plugin for webpack that compiles Vue files. vue-template-compiler is a dependency of vue-loader that compiles vue templates into JavaScript. webpack is a build tool that bundles code.
+*@vue/test-utils is a vue test utilities library. babel-loader is a webpack loader to transpile JS with babel. babel-core is used by babel-loader to transpile. babel-preset-env lets babel compile es2015. css-loader is a dependency of vue-loader, mocha-webpack compiles files with webpack before running them in mocha. vue-loader is a plugin for webpack that compiles Vue files. vue-template-compiler is a dependency of vue-loader that compiles vue templates into JavaScript. webpack is a build tool that bundles code.*
 
 Don't worry if you didn't read or understand that. Most of these libraries are used to compile the code.
 
@@ -338,7 +340,7 @@ const wrapper = mount(Foo)
 const p = wrapper.find('p')
 ```
 
-Here, p will be the first tag found in Foo.
+Here, p will be the first &lt;p&gt; tag found in Foo.
 
 You can also pass props to mounted components when you call `mount`. This is done with the `propsData` option:
 
@@ -346,56 +348,59 @@ You can also pass props to mounted components when you call `mount`. This is don
 const wrapper = mount(Foo, { propsData: { propertyA: 'property' }})
 ```
 
-Using find and propsData, we can test whether foo correctly renders passedProp in the p tag:
+Using `find` and `propsData`, you can test whether Foo correctly renders passedProp in the &lt;p&gt; tag:
 
 ```js
 it('sets the prop value', () => {
   const passedProp = 'some text'
   const wrapper = mount(Foo, { propsData: { passedProp }})
-  const p = wrapper.find('p')[0]
+  const p = wrapper.find('p')
   expect(p.text()).to.equal(passedProp)
 })
 ```
 
-Cool! Let's look at one last method - trigger.
+Cool! Let's look at one last method - `trigger`.
 
-trigger dispatches a DOM event to the wrapper root element. In our Foo.vue file, we have a button with id change-message that should change the text of our h1 tag when clicked. Let's write a test to check that it does:
+`trigger` dispatches a DOM event to the wrapper root element. In the Foo component, you have a button with id `change-message` that should change the text of the &lt;h1&gt; tag when clicked. Write a test to check that it does:
 
 ```js
 it('changes h1 text when #change-text is clicked', () => {
   const wrapper = mount(Foo)
-  const changeMessage = wrapper.find('#change-message')[0]
+  const changeMessage = wrapper.find('#change-message')
   changeMessage.trigger('click')
-  const h1 = wrapper.find('h1')[0]
+  const h1 = wrapper.find('h1')
   expect(h1.text()).to.equal('new message')
 })
 ```
 
-This test finds the changeMessage button, dispatches a click event and then asserts that the h1 text has changed.
+This test finds the `changeMessage` button, dispatches a click event and then asserts that the &lt;h1&gt; text has changed.
 Success!
 
 All together now:
 
 ```js
 import { expect } from 'chai'
-import { mount } from 'avoriaz'
+import { mount } from '@vue/test-utils'
 import Foo from '../app/components/Foo.vue'
+
 describe('Foo.vue', () => {
   it('has a root element with class foo', () => {
     const wrapper = mount(Foo)
     expect(wrapper.is('.foo')).to.equal(true)
   })
+
   it('has a root element with class foo', () => {
     const passedProp = 'some text'
     const wrapper = mount(Foo, { propsData: { passedProp }})
-    const p = wrapper.find('p')[0]
+    const p = wrapper.find('p')
     expect(p.text()).to.equal(passedProp)
   })
+
   it('changes h1 text when #change-text is clicked', () => {
     const wrapper = mount(Foo)
-    const changeMessage = wrapper.find('#change-message')[0]
+    const changeMessage = wrapper.find('#change-message')
     changeMessage.trigger('click')
-    const h1 = wrapper.find('h1')[0]
+    const h1 = wrapper.find('h1')
     expect(h1.text()).to.equal('new message')
   })
 })
@@ -405,4 +410,4 @@ That's all the tests we're going to write in this tutorial. To learn more about 
 
 A repo for this tutorial is <a rel="noopener" href="https://github.com/eddyerburgh/how-to-unit-test-vue-components-for-beginners" target="_blank">available here</a>.
 
-Want more? I've written a book on Testing Vue applications. You can [buy it now](https://www.manning.com/books/testing-vuejs-applications?a_aid=eddyerburgh) as part of the eartly release program. The book covers every aspect of testing Vue applications.
+> Want more? I've written a book on Testing Vue applications. You can [buy it now](https://www.manning.com/books/testing-vuejs-applications?a_aid=eddyerburgh) as part of the eartly release program. The book covers every aspect of testing Vue applications.
