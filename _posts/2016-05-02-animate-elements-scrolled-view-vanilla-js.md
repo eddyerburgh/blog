@@ -14,11 +14,11 @@ categories:
 tags: []
 comments: true
 ---
-It seems like every landing page has elements bouncing into view as you scroll down. Most people use <a rel="noopener" href="https://daneden.github.io/animate.css/" target="newwindow">Animate.CSS</a> and <a rel="noopener" href="http://mynameismatthieu.com/WOW/" target="newwindow">Wow.JS</a> to achieve the effect. In this tutorial we'll learn how to animate elements when scrolled into view with native JS and a bit of CSS.
+In this tutorial you'll learn how to animate elements when scrolled into view with native JS and CSS.
+
+*note: this tutorial assumes the user has JavaScript enabled*
 
 <img class="aligncenter wp-image-305 size-full" src="/assets/2016/05/ezgif.com-video-to-gif.gif" alt="Animate on scroll with vanilla JS" width="960" height="347" />
-
-## The Problem
 
 There are two steps to animating on scroll:
 
@@ -27,7 +27,7 @@ There are two steps to animating on scroll:
 
 ## The CSS
 
-For the CSS we use the <a rel="noopener" href="https://developer.mozilla.org/en/docs/Web/CSS/animation" target="newwindow">animation property</a>. This property allows us to animate properties of an element. For example, animating a div from opacity 0 to opacity 1. With the animation property this will transition smoothly from opacity 0 to 1, giving the appearance of fading in.
+For the CSS you can use the <a rel="noopener" href="https://developer.mozilla.org/en/docs/Web/CSS/animation" target="newwindow">animation property</a>. This property allows you to animate properties of an element. For example, animating a div from opacity 0 to opacity 1. With the animation property this will transition smoothly from opacity 0 to 1, giving the appearance of fading in.
 
 <a rel="noopener" href="/assets/2016/05/ezgif.com-crop.gif"><img class="aligncenter size-full wp-image-310" src="/assets/2016/05/ezgif.com-crop.gif" alt="Fade in with CSS animation" width="638" height="268" /></a>
 
@@ -62,31 +62,35 @@ Now we'll need to replace the *hidden* class with the *fade-in* class as the ele
 ## The JavaScript
 
 ```js
-var animateHTML = function () {
-  var elems,
-    windowHeight
-  var init = function () {
-    elems = document.getElementsByClassName('hidden')
-    windowHeight = window.innerHeight
-    _addEventHandlers()
+var animateHTML = function() {
+  var elems;
+  var windowHeight;
+  function init() {
+    elems = document.querySelectorAll('.hidden');
+    windowHeight = window.innerHeight;
+    addEventHandlers();
+    checkPosition();
   }
-  var _addEventHandlers = function () {
-    window.addEventListener('scroll', _checkPosition)
-    window.addEventListener('resize', init)
+  function addEventHandlers() {
+    window.addEventListener('scroll', checkPosition);
+    window.addEventListener('resize', init);
   }
-  var _checkPosition = function () {
+  function checkPosition() {
     for (var i = 0; i < elems.length; i++) {
-      var posFromTop = elems[i].getBoundingClientRect().top
-      if (posFromTop - windowHeight <= 0) {
-        elems[i].className = elems[i].className.replace('hidden', 'fade-in-element')
+      var positionFromTop = elems[i].getBoundingClientRect().top;
+      if (positionFromTop - windowHeight <= 0) {
+        elems[i].className = elems[i].className.replace(
+          'hidden',
+          'fade-in-element'
+        );
       }
     }
   }
   return {
     init: init
-  }
-}
-animateHTML().init()
+  };
+};
+animateHTML().init();
 ```
 
 What this code is doing :
