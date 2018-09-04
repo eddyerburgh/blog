@@ -34,7 +34,7 @@ function sum (a, b) {
 You could write a `testSum` function that throws an error if `sum` does not return the sum of a and b:
 
 ```js
-function `testSum` () {
+function testSum () {
   if (add(1, 2) !== 3) {
     throw new Error('add should return sum of both parameters')
   }
@@ -52,11 +52,11 @@ Now you know what unit tests are, you're probably wondering why you should use t
 The benefits of unit tests are:
 
 * They tell you that your code is behaving correctly
-* They provide living documentation for code
+* They provide documentation for code
 
 In large projects there can be thousands of unit tests. With thousands of unit tests you can refactor the codebase, run your test command and be confident that nothing is broken.
 
-Now you know what unit tests are, and why you should write them. Now it's time to learn how.
+Now you know what unit tests are, and why you should write them. The next step is to learn how.
 
 ## How to unit test vue components
 
@@ -69,16 +69,12 @@ Create a new directory with the following structure:
 
 ```
  .
- ├── app
+ ├── src
  | └── components
- ├── build
- ├── test
- │   └──test.js
- ├──
  └── package.json
 ```
 
-The components directory will hold your components. The test directory will hold the test files, and the build directory will hold the webpack config file.
+The components directory will hold your components and tests.
 
 Open the command line and change your current directory to the root of the project. (Note: If you don't know how to change your working directory, check out <a rel="noopener" href="http://askubuntu.com/a/520794" target="_blank">this stackoverflow answer</a> for linux/mac and <a rel="noopener" href="http://www.digitalcitizen.life/command-prompt-how-use-basic-commands" target="_blank">this guide</a> for windows).
 
@@ -120,7 +116,7 @@ This is great so far, but those if statements aren't very expressive. That's whe
 
 Chai is an assertion library. It asserts that a condition is true and throws an error if it does not.
 
-Using Chai, the `sum`` test function becomes:
+Using Chai, the `sum` test function becomes:
 
 ```js
 describe('sum', () => {
@@ -140,10 +136,10 @@ In the command line, run:
 npm install --save-dev mocha chai
 ```
 
-When that's installed, add a new file test/Foo.spec.js and paste the following code:
+When that's installed, add a new file src/components/Foo.spec.js and add the following code:
 
 ```js
-import { expect } from 'chai'
+const expect = require('chai').expect
 
 describe('first test', () => {
   it('is true', () => {
@@ -152,30 +148,29 @@ describe('first test', () => {
 })
 ```
 
-Now you're going to create an <a rel="noopener" href="https://medium.com/@mxstbr/npm-scripts-explained-f125e85eb378#.8k1r9ok7a" target="_blank">npm script</a> to run the tests. Open up package.json. There will be an existing test script:
-
-```json
-"scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1"
-},
-```
+Now you're going to create an <a rel="noopener" href="https://medium.com/@mxstbr/npm-scripts-explained-f125e85eb378#.8k1r9ok7a" target="_blank">npm script</a> to run the tests. Open package.json, and replace the script field with the following test script:
 
 Edit the test script to look like this:
-```json
-"scripts": {
-  "test": "mocha test/**/*.spec.js --recursive"
-},
+```js
+// package.json
+{
+  // ..
+  "scripts": {
+    "test": "mocha src/**/*.spec.js"
+  },
+  // ..
+}
 ```
 
-This command runs mocha and tells it to look in the test directory recursively for any file with a .spec.js extension.
+This command runs mocha and tells it to look in all directories for any file with a .spec.js extension.
 
 Now, from the command line type:
 
 ```
-npm run test
+npm test
 ```
 
-You should now see your first passing unit test!
+If everything is set up correctly, you will see your first passing unit test.
 
 Now that you've got a sanity test written, it's time to write tests for a Vue component.
 
@@ -184,13 +179,13 @@ Now that you've got a sanity test written, it's time to write tests for a Vue co
 
 As I said, Vue components are different to test than normal functions. To test a Vue component you'll mount a component in memory, interact with it, and make sure it responds correctly.
 
-In the components directory, create a file named Foo.vue. Add the code below to Foo.vue:
+In the components directory, create a file named Foo.vue (src/components/Foo.vue). Add the following code to Foo.vue:
 
 ```html
 <template>
   <div class="foo">
     <h1>{{ msg }}</h1>
-    <button id="change-message" @click="changeMessage">Change message</button>
+    <button id="change-message" v-on:click="changeMessage">Change message</button>
 	  <p>{{ passedProp }}</p>
   </div>
 </template>
@@ -213,24 +208,25 @@ export default {
 </script>
 ```
 
-Something to note about Single File Components (SFCs) is that you can't run them natively. You need to compile them into JavaScript first. To do that, you can use webpack and Vue Loader.
+Something to note about single-file components (SFCs) is that you can't run them in node. You need to compile them to JavaScript first. To do that, you can use webpack and Vue Loader.
 
 As well as webpack and Vue Loader, there are a few other dependencies to add. In the command line, enter:
 
 ```shell
 npm install --save vue &&
-npm install --save-dev @vue/test-utils babel-core babel-loader babel-preset-env chai css-loader mocha mocha-webpack vue-loader vue-template-compiler webpack
+npm install --save-dev @vue/test-utils babel-loader @babel/core chai mocha mocha-webpack vue-loader@12 vue-template-compiler webpack@3
 ```
 
+*Note this examples uses Webpack 3 and Vue Loader 12 because mocha-webpack
 Woo boy. That's a lot of dependencies! If you want to know what they do, read the wall of text below!
 
-*@vue/test-utils is a vue test utilities library. babel-loader is a webpack loader to transpile JS with babel. babel-core is used by babel-loader to transpile. babel-preset-env lets babel compile es2015. css-loader is a dependency of vue-loader, mocha-webpack compiles files with webpack before running them in mocha. vue-loader is a plugin for webpack that compiles Vue files. vue-template-compiler is a dependency of vue-loader that compiles vue templates into JavaScript. webpack is a build tool that bundles code.*
+*@vue/test-utils is a vue test utilities library. babel-loader is a webpack loader to transpile JS with babel. @babel/core is used by babel-loader to transpile. css-loader is a dependency of vue-loader, mocha-webpack compiles files with webpack before running them in mocha. vue-loader is a plugin for webpack that compiles Vue files. vue-template-compiler is a dependency of vue-loader that compiles vue templates into JavaScript. webpack is a build tool that bundles code.*
 
 Don't worry if you didn't read or understand that. Most of these libraries are used to compile the code.
 
-In this tutorial, webpack is doing the heavy lifting. Webpack is a module bundler that takes multiple JavaScript files (modules) and compiles them into a JavaScript file. It can also process files, and you'll use it to process Vue SFCs into JavaScript.
+In this tutorial, webpack is doing the heavy lifting. webpack is a module bundler that takes multiple JavaScript files (modules) and compiles them into a single JavaScript file. It can also process files, and you'll use it to process Vue SFCs into JavaScript.
 
-In the build directory create a file named webpack.test.config.js, and paste in the code below:
+In the root directory create a file named webpack.config.js, and add the following code:
 
 ```js
 const path = require('path')
@@ -244,43 +240,38 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015']
-        },
-        include: [
-          path.resolve(__dirname, '../')
-        ],
-        exclude: /node_modules/
+        loader: 'babel-loader'
       }
     ]
-  },
-  resolve: {
-    extensions: ['.js', '.vue']
   }
 }
 ```
 
-*If this config file feels like a black box, don't worry. You don't need to know exactly what each option does, just that it compiles Vue SFCs into browser-friendly code.*
+Now in package.json, edit the `test` script to use mocha-webpack:
 
-Now in package.json, we need to edit the test script to use mocha-webpack:
-
-```json
-"scripts": {
-  "test": "mocha-webpack --webpack-config build/webpack.test.config.js test --recursive"
-},
+```js
+// package.json
+{
+  // ..
+  "scripts": {
+    "test": "mocha-webpack src/**/*.spec.js"
+  },
+  // ..
+}
 ```
 
-mocha-webpack compiles code with webpack before calling mocha to run tests this means.
+mocha-webpack compiles code with webpack before running the compiled code in mocha.
 
 Run `npm run test` to make sure everything is working.
 
-Now after that setup, it's finally time to write the test. Open Foo.spec.js and paste this over the previous code:
+After that setup, it's finally time to write a test for a single-file component. Open Foo.spec.js and replace the existing code with the code below:
 
 ```js
+// src/components/Foo.spec.js
+
 import { expect } from 'chai'
 import { mount } from '@vue/test-utils'
-import Foo from '../app/components/Foo.vue'
+import Foo from './Foo.vue'
 
 describe('Foo.vue', () => {
   it('has a root element with class foo', () => {
@@ -292,31 +283,37 @@ describe('Foo.vue', () => {
 
 This test asserts that the root element of Foo has the className `foo`.
 
-Now run `npm run test`. You will see an error - '@vue/test-utils must be run in a browser environment'.
+Now run `npm run test`. You will see an error - `[vue-test-utils]: window is undefined`.
 
-Vue Test Utils is the library that gives you the `mount` method, and it must be run in a browser environment. You could run the tests in a real browser like Chrome, but opening and closing a browser adds a lot of overhead to tests. Instead, you can use JSDOM to create and run a JavaScript DOM environment in Node.
+Vue Test Utils is the library that exports the `mount` method, and it must be run in a browser environment. You could run the tests in a real browser like Chrome, but opening and closing a browser adds a lot of overhead to tests. Instead, you can use JSDOM to create and run a JavaScript DOM environment in Node.
 
 In the command line, run:
 
-```shel
+```shell
 npm install --save-dev jsdom jsdom-global
 ```
 
-Now add a file named .setup.js in the test directory, and paste in the following code:
+Now add a file named test-setup.js to the root directory, and paste in the following code:
 
 ```js
+// test-setup.js
 require('jsdom-global')()
 ```
 
-This function creates a `window` object and adds it to the Node global object. You need to run it before we run your tests. To do that you need to edit your test script again (last time I promise!):
+This function creates a `window` object and adds it to the Node `global` object. You need to run it before you run the tests that use Vue Test Utils. To do that you need to edit your test script again:
 
-```json
-"scripts": {
-  "test": "mocha-webpack --webpack-config build/webpack.test.config.js test --recursive --require test/.setup"
-},
+```js
+// package.json
+{
+  // ..
+  "scripts": {
+    "test": "mocha-webpack src/**/*.spec.js --require test-setup"
+  },
+  // ..
+}
 ```
 
-Now mocha will run the .setup file before running the tests.
+Now mocha will run the test-setup file before running the tests.
 
 If you run `npm run test`, you should have a passing test. Hooray!
 
@@ -331,7 +328,7 @@ expect(wrapper.is('.foo')).to.equal(true)
 
 You're using the `mount` method imported from Vue Test Utils, and then calling `isz on the wrapper.
 
-Under the hood, `mount` mounts the Vue component and creates a wrapper class with methods to test the Vue component. Above you use the <a rel="noopener" href="https://vue-test-utils.vuejs.org/api/#mount" target="_blank">`is` method</a>, but there are loads more to choose from. Have a look through <a rel="noopener" href="https://www.google.co.uk/search?q=vue+test+utls&oq=vue+test+utls&aqs=chrome..69i57.2190j0j1&sourceid=chrome&ie=UTF-8" target="_blank">the docs</a> for the full list.
+Under the hood, `mount` mounts the Vue component and creates a wrapper class with methods to test the Vue component. Above you use the <a rel="noopener" href="https://vue-test-utils.vuejs.org/api/#mount" target="_blank">`is` method</a>, but there are loads more to choose from. Have a look through <a rel="noopener" href="https://vue-test-utils.vuejs.org/" target="_blank">the docs</a> for the full list.
 
 A useful method is `find`. `find` searches the wrapper for elements matching a selector and returns a new wrapper of the first matching node:
 
@@ -345,7 +342,11 @@ Here, p will be the first &lt;p&gt; tag found in Foo.
 You can also pass props to mounted components when you call `mount`. This is done with the `propsData` option:
 
 ```js
-const wrapper = mount(Foo, { propsData: { propertyA: 'property' }})
+const wrapper = mount(Foo, {
+  propsData: {
+    propertyA: 'property'
+  }
+})
 ```
 
 Using `find` and `propsData`, you can test whether Foo correctly renders passedProp in the &lt;p&gt; tag:
@@ -353,7 +354,9 @@ Using `find` and `propsData`, you can test whether Foo correctly renders passedP
 ```js
 it('sets the prop value', () => {
   const passedProp = 'some text'
-  const wrapper = mount(Foo, { propsData: { passedProp }})
+  const wrapper = mount(Foo, {
+    propsData: { passedProp }
+  })
   const p = wrapper.find('p')
   expect(p.text()).to.equal(passedProp)
 })
@@ -379,9 +382,11 @@ Success!
 All together now:
 
 ```js
+// src/components/Foo.spec.js
+
 import { expect } from 'chai'
 import { mount } from '@vue/test-utils'
-import Foo from '../app/components/Foo.vue'
+import Foo from './Foo.vue'
 
 describe('Foo.vue', () => {
   it('has a root element with class foo', () => {
@@ -389,9 +394,11 @@ describe('Foo.vue', () => {
     expect(wrapper.is('.foo')).to.equal(true)
   })
 
-  it('has a root element with class foo', () => {
+  it('sets the prop value', () => {
     const passedProp = 'some text'
-    const wrapper = mount(Foo, { propsData: { passedProp }})
+    const wrapper = mount(Foo, {
+      propsData: { passedProp }
+    })
     const p = wrapper.find('p')
     expect(p.text()).to.equal(passedProp)
   })
