@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg content='<mxfile userAgent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36" version="9.1.8" editor="www.draw.io" type="google"><diagram id="948df44d-838a-620e-fbcd-660a194f3028" name="Page-1">7Zldb5swFIZ/TS6LMAYDl23abpM2aVIn7doDB7wazMBpkv36HYMhfCT9iNoulchN4OX4HOzz2D5OFniZbT+VtEi/yZiJhWPH2wW+XjgOQqENX1rZNQrxwkZISh4bo71wx/8yI5p2yZrHrBoYKimF4sVQjGSes0gNNFqWcjM0W0kxjFrQhE2Eu4iKqfqTxypt1MDx9/pnxpO0jYyI6V9GW2PTkyqlsdz0JHyzwMtSStVcZdslE3rw2nFp2t0eedq9WMly9ZwG2PWw64eU4F/EIcS98Mx7qV3bWRZD382tLFUqE5lTcbNXr0q5zmOmPdpwl6pMwCWCy0rRUl3qAQchlzlrtVsuhDFnedxa/BIyuv+R8ryRjZF29JsptTMc0LWSIO1f5auUhbFbyVzd0owLDZYsWK67QvOqjlvK+y5dXqcspZBl3VOMPTf0Yu0GIvd0YtMQ+aA3Y6MH5Ohwoy6JQD+TGVPlDkxKJqjiD8N21GCYdHZd0++Sg0fHNlMGh6GFA98Oie+7KIQXbTyY+eMgxwpdhHzi+rYXBA4eBqjkuoyY8dmnYRTGDXyLICe0seN4gU1eFgUSmzA1iQIXvaHYSzWJz6TSDNgDFWszhBNMhxBuUq7YXUEj/XQDq9AIzHbaadtIZjwy10MmOmT76KApIK59FQQY9KSkMQcWRg4ewdJ0jJWKbV8KVdvAtwd5QsTcb/ZrE6xBliEnqEEy8zztL1O2Z+mseo7JMjmO6SC5L8mkM2fyeCY9yEAz8Tyk5+HHSSue03piWiF1Vn9NbZf2c8yyO2f5+cvwR0psMFd9Z1j1EcCjX415w3IswFYHhWZsBMZzi77Ho2BMrI5gHc19v6IPzVSeIZWPHxJc27d6tCDfP43KJ048T4V5SywPlbBEKJPy+meHNl3kz1qf5CFZeFV/+hJJzHfdtipoPoC9NdROL6qat0swgBRvp15WTEXpF8WyqvUH/WpcDsOA3LxlK49mGOx/ajxxDuzFfSqNRAVPYLZcR8AfA/1K76Y8ouLSPMh4HNdz9FBVMJy3RwuDt93CASurV6fZeFiAh1DG9Q/A0w3dH7V3pvs5Hjlx3mI/R4fq8VMYPZXHiqkxjTN2R88HPpR4/cXuw2J36IDwrtgpqpjFZ/JehTwchNaB3/vOETzvP4MX86oQdDevea+z1Z4LeXC7/y+mKR73/2jhm38=</diagram></mxfile>' version="1.1" viewBox="0 0 548 301" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(.5 .5)">
+<path d="m229.39 52.94h71.63" fill="none" pointer-events="none" stroke="#35495d" stroke-miterlimit="10" stroke-width="5"/>
+<path d="m312.02 52.94l-11 3.67v-7.34z" fill="#35495d" pointer-events="none" stroke="#35495d" stroke-miterlimit="10" stroke-width="5"/>
+<rect width="211.74" height="105.88" fill="#40b883" pointer-events="none"/>
+<rect x="335.26" width="211.74" height="105.88" fill="#40b883" pointer-events="none"/>
+<rect x="335.26" y="194.12" width="211.74" height="105.88" fill="#40b883" pointer-events="none"/>
+<rect y="194.12" width="211.74" height="105.88" fill="#40b883" pointer-events="none"/>
+<path d="m441.13 123.53v36.35" fill="none" pointer-events="none" stroke="#35495d" stroke-miterlimit="10" stroke-width="5"/>
+<path d="m441.13 170.88l-3.67-11h7.34z" fill="#35495d" pointer-events="none" stroke="#35495d" stroke-miterlimit="10" stroke-width="5"/>
+<path d="m317.61 247.06h-71.63" fill="none" pointer-events="none" stroke="#35495d" stroke-miterlimit="10" stroke-width="5"/>
+<path d="m234.98 247.06l11-3.67v7.34z" fill="#35495d" pointer-events="none" stroke="#35495d" stroke-miterlimit="10" stroke-width="5"/>
+<g transform="translate(56.5,41.5)">
+<switch>
+<foreignObject width="98" height="22" overflow="visible" pointer-events="all" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+<div color="rgb(0, 0, 0)" display="inline-block" font-family='"open sans"' font-size="12px" text-align="center" style="line-height:1.2;overflow-wrap:normal;vertical-align:top;white-space:nowrap;width:100px" xmlns="http://www.w3.org/1999/xhtml">
+<div display="inline-block" text-align="inherit" text-decoration="inherit" xmlns="http://www.w3.org/1999/xhtml">
+<font color="#ffffff">
+<span font-size="20px">fetchItems</span>
+</font>
+</div>
+</div>
+</foreignObject>
+<text x="49" y="17" fill="#000000" font-family="open sans" font-size="12px" text-anchor="middle">[Not supported by viewer]</text>
+</switch>
+</g>
+<g transform="translate(401.5,41.5)">
+<switch>
+<foreignObject width="79" height="22" overflow="visible" pointer-events="all" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+<div color="rgb(0, 0, 0)" display="inline-block" font-family='"open sans"' font-size="12px" text-align="center" style="line-height:1.2;overflow-wrap:normal;vertical-align:top;white-space:nowrap;width:81px" xmlns="http://www.w3.org/1999/xhtml">
+<div display="inline-block" text-align="inherit" text-decoration="inherit" xmlns="http://www.w3.org/1999/xhtml">
+<font color="#ffffff" font-size="20px">setItems</font>
+</div>
+</div>
+</foreignObject>
+<text x="40" y="17" fill="#000000" font-family="open sans" font-size="12px" text-anchor="middle">[Not supported by viewer]</text>
+</switch>
+</g>
+<g transform="translate(389.5,235.5)">
+<switch>
+<foreignObject width="102" height="22" overflow="visible" pointer-events="all" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+<div color="rgb(0, 0, 0)" display="inline-block" font-family='"open sans"' font-size="12px" text-align="center" style="line-height:1.2;overflow-wrap:normal;vertical-align:top;white-space:nowrap;width:104px" xmlns="http://www.w3.org/1999/xhtml">
+<div display="inline-block" text-align="inherit" text-decoration="inherit" xmlns="http://www.w3.org/1999/xhtml">
+<font color="#ffffff" font-size="20px">state.items</font>
+</div>
+</div>
+</foreignObject>
+<text x="51" y="17" fill="#000000" font-family="open sans" font-size="12px" text-anchor="middle">[Not supported by viewer]</text>
+</switch>
+</g>
+<g transform="translate(46.5,235.5)">
+<switch>
+<foreignObject width="118" height="22" overflow="visible" pointer-events="all" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+<div color="rgb(0, 0, 0)" display="inline-block" font-family='"open sans"' font-size="12px" text-align="center" style="line-height:1.2;overflow-wrap:normal;vertical-align:top;white-space:nowrap;width:118px" xmlns="http://www.w3.org/1999/xhtml">
+<div display="inline-block" text-align="inherit" text-decoration="inherit" xmlns="http://www.w3.org/1999/xhtml">
+<font color="#ffffff" font-size="20px">displayItems</font>
+</div>
+</div>
+</foreignObject>
+<text x="59" y="17" fill="#000000" font-family="open sans" font-size="12px" text-anchor="middle">[Not supported by viewer]</text>
+</switch>
+</g>
+</g>
+</svg>
