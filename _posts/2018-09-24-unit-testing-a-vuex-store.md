@@ -14,8 +14,6 @@ tags: []
 comments: true
 ---
 
-## How to test a Vuex store
-
 This article will teach you two different approaches for unit testing a Vuex store. You'll learn how to test each of the store parts separately, and how to test a running store instance.
 
 *Note:I'm assuming that you have some experience writing unit tests with <a href="https://jestjs.io/docs/en/getting-started.html" target="_blank" rel="noopener noreferrer">Jest</a> and storing state with <a href="https://vuex.vuejs.org/" target="_blank" rel="noopener noreferrer">Vuex</a>.*
