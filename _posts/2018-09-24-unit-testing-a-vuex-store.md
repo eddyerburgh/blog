@@ -24,8 +24,6 @@ I'll teach you the two approaches by writing tests for a store in an example app
 
 In the reddit app, you have a `fetchItems` action that fetches data from the reddit API and commits a `setItems` mutation. The `setItems` mutation updates the `state.items` value. The app then uses a `displayItems` getter to calculate which items should be rendered.
 
-<img class="aligncenter" src="/assets/2018/store.svg" alt="Diagram of example app store" />
-
 The first technique I'll teach you is how to test each of these store parts separately.
 
 ## Testing store parts separately
