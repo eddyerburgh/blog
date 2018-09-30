@@ -2,8 +2,8 @@
 layout: post
 status: publish
 published: true
-title: Unit testing a Vuex store
-description: Learn how to unit test a Vuex store. Tutorial on how two approaches to unit testing a Vuex store.
+title: How to unit test a Vuex store
+description: Learn how to unit test a Vuex store. Tutorial on how two different approaches to unit testing a Vuex store.
 date: '2018-09-25 17:46:34 +0000'
 date_gmt: '2017-09-17 17:46:34 +0000'
 categories:
