@@ -26,7 +26,6 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then(function(cache) {
-                console.log('Opened cache');
                 return cache.addAll(urlsToCache);
             })
     );
@@ -42,7 +41,6 @@ self.addEventListener('fetch', function(event) {
                     });
             });
         }).catch(function() {
-            console.log('asdasds')
             // Fallback to the offline page if not available in the cache.
             return caches.match('/offline');
         })
@@ -58,7 +56,6 @@ self.addEventListener('fetch', function(event) {
             });
         }).catch(function() {
             // Fallback to the offline page if not available in the cache.
-            console.log('asdasds')
             return caches.match('/offline');
         })
     );
