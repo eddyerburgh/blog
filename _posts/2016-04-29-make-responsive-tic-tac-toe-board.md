@@ -23,6 +23,7 @@ The final board looks like this:
 table {
   width: 100%;
   border-collapse: collapse;
+  max-width: 300px;
 }
 
 td {
@@ -123,9 +124,7 @@ td:after {
 }
 ```
 
-Because all the widths are set as percentages, the tic tac toe board is responsive:
-
-![Responsive tic tac toe board being resized](../assets/2016/04/responsive-tic-tac-toe-300x283.gif)
+Because all the widths are set as percentages, the tic tac toe board is responsive.
 
 ## Adding the borders
 
