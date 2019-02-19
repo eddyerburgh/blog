@@ -112,7 +112,7 @@ Then add the CSS to style the checkbox:
 }
 ```
 
-The problem with this approach is that you can't hide the `<input>` with `display` `none` or `hidden`, because the element will become invisible to screen readers. This causes an issue where toggling the button sometimes selects the area around the `<input>`.
+The problem with this approach is that you can't hide the `<input>` with `display` `none` or `hidden`, because the `<input>` will be invisible to screen readers. This means the `<input>` is only hidden with `opacity`, which causes an issue where toggling the checkbox sometimes selects the area around the hidden `<input>`.
 
 Because of this problem, most CSS frameworks now rely on native styling for tricky `<input>` elements. They decided that accessibility comes before design—and so should you.
 
