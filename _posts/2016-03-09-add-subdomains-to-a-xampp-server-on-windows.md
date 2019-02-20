@@ -12,9 +12,9 @@ In this post you'll learn how to add subdomains to a XAMPP Server.
 
 1. Choose a subdomain. For this example I'll use `test`, which will produce the URL `test.localhost.com`
 2. Create a new directory in `C:\xampp\htdocs` with the name of your subdomain (e.g. `C:\xampp\htdocs\test`)
-3. Create an index.html in the new directory. This is your subdomain index page
+3. Create an `index.html` file in the new directory. This is your subdomain index page
 4. Find your root XAMPP directory. This will probably be `C:\xampp`
-5. From your XAMPP root, go to `apache\conf\extra`.  (e.g. `C:\xampp\apache\conf\extra`)
+5. From your XAMPP root, go to `apache\conf\extra`  (e.g. `C:\xampp\apache\conf\extra`)
 6. Make a copy of `httpd-vhosts.conf`, as shown below:
 
 <figure><a rel="noopener" href="/assets/2016/03/xampp.apache.png" rel="attachment wp-att-129"><img class="wp-image-129 size-full" src="/assets/2016/03/xampp.apache.png" alt="apache > conf > extra directory" width="925" height="421" /></a> <figcaption>Your extra directory should look something like this</figcaption></figure>
@@ -46,7 +46,7 @@ CustomLog "logs/test.localhost.com-access.log" common
 </virtualhost>
 ```
 
-9. Replace `test` with your subdomain name.
+9. Replace `test` with your subdomain name
 10. Go to `C:\Windows\System32\drivers\etc`, as shown below
 <figure><a rel="noopener" href="/assets/2016/03/xampp.system32.png" rel="attachment wp-att-130"><img class="wp-image-130 size-full" src="/assets/2016/03/xampp.system32.png" alt="C:\ > Windows > System32 > drivers > etc" width="698" height="147" /></a> <figcaption>Your etc directory should look like this after copying hosts</figcaption></figure>
 
