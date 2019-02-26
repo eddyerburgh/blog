@@ -3,108 +3,78 @@ layout: post
 status: publish
 published: true
 title: Use JavaScript to copy to clipboard
-description: Learn how to copy to clipboard using vanilla JavaScript. This quick snippet shows you how to copy any text from the DOM to your clipboard
-author:
-  display_name: Edd Yerburgh
-  login: admin
-  email: edward.yerburgh@gmail.com
-  url: ''
-author_login: admin
-author_email: edward.yerburgh@gmail.com
-wordpress_id: 142
-wordpress_url: http://www.eddyerburgh.com/?p=142
+description: Learn how to copy to clipboard using vanilla JavaScript. This quick snippet shows you how to copy any text to the clipboard
 date: '2016-03-16 16:37:09 +0000'
-date_gmt: '2016-03-16 16:37:09 +0000'
-categories:
-- JavaScript
-tags:
-- copy to clipboard
-- vanilla JavaScript
 comments: true
 ---
-In the not too distant past you'd need to use Flash (yuck) to allow the user to copy to clipboard in one click. Thankfully we don't live in the past. Today, with the exception of Safari, all modern browsers let you use JavaScript to copy to clipboard with one easy method.
 
-## The code
+In this post you'll learn how to copy to the clipboard with `document.execCommand`.
 
-```js
-var elemToCopy = document.getElementById('elem-to-copy')
-// Bind Event
-elemToCopy.onclick = copyText
-function copyText () {
-  this.select()
-  try {
-        // Now that we've selected the text, execute the copy command
-    var successful = document.execCommand('copy')
-    successful ? console.log('success') : console.log("didn't work")
-  } catch (err) {
-    window.alert('Unable to copy, update your browser')
-  }
-}
-```
+`document.execCommand` runs commands, like `cut` and `copy`, that manipulate the current editable region, such as `<input>` elements.
 
-Use this code to copy from an input or textarea. Replace 'elem-to-copy' with the id of the element you wish to copy. If you want to dynamically copy all instances of a textfield, use the code below. If you want to copy from a non text-field element, click <a rel="noopener" href="#copy-from-non-textfield">here</a>.
+You can copy _currently selected_ text with the `copy` command:
 
 ```js
-var elemsToCopy = document.getElementsByClassName('elem-to-copy')
-for (var i = 0; i < elemsToCopy.length; i++) {
-  elemsToCopy[i].onclick = copyText
-}
-// Bind Event
-function copyText () {
-  this.select()
-  try {
-        // Now that we've selected the text, execute the copy command
-    var successful = document.execCommand('copy')
-    successful ? console.log('success') : console.log("didn't work")
-  } catch (err) {
-    window.alert('Unable to copy, update your browser')
-  }
-}
+document.execCommand('copy')
 ```
 
-## What's happening
+I'll show you how to copy text from an input element, then I'll show you how to copy arbitrary values.
 
-There are four steps to this function: bind the element, select the text, copy the text and record the success/failure of the copy.
+## Copying text from `<input>` elements
 
-### Bind the element
+The easiest way to copy text is from a visible `<input>` element.
 
-First we assign the copyText function to fire when your element is clicked.
+You can select text in an `<input>` element with the `select` method. For example, with the following HTML:
 
-### Select the text
+```html
+<input type="text" />
+```
 
-When the element is clicked, we select, or highlight the elements text with the <a rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select">select() method</a>. The text content needs to be highlighted in order to be copied in the next step.
-
-### Copy the text
-
-This is easy with the<a rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand"> execCommand() function</a>. We simply pass 'copy' as a parameter and the browser will copy any highlighted text.
-
-### Record the success/ failure of the copy
-
-We want to know if it was successful or not! IE9- and Safari don't support execCommand. It's also nice to fire a function on successful copy to indicate to the user that the copy was successful, as seen on <a rel="noopener" href="https://flatuicolors.com/">flatuicolors.com</a>.
-
-## <A rel="noopener" name="copy-from-non-textfield"></a>copy from a non text-field element
-
-The select() method only works on textfields, so we have to go about it a bit differently if we want to copy text container in a paragraph, for example.
+You could set the value of the element, select the text, and copy it with `execCommand`:
 
 ```js
-var elemsToCopy = document.getElementsByTagName('p')
-for (var i = 0; i < elemsToCopy.length; i++) {
-  elemsToCopy[i].onclick = copyText
-}
-// Bind Event
-function copyText () {
-    // Create Range to select text that is normally unselectable
-  var range = document.createRange()
-  range.selectNode(this)
-  window.getSelection().addRange(range)
-  try {
-        // Now that we've selected the text, execute the copy command
-    var successful = document.execCommand('copy')
-    successful ? console.log('success') : console.log("didn't work")
-  } catch (err) {
-    alert('Unable to copy, update your browser')
-  }
-}
+const input = document.querySelector('input')
+input.value = 'Text to copy'
+input.select()
+document.execCommand('copy')
 ```
 
-This code copies text from any element. Instead of using select() we create a <a rel="noopener" href="https://developer.mozilla.org/en/docs/Web/API/Range">range</a> that includes our target element. We then use the selectNode() method to select the content of the paragraph tag. Easy.
+## Copying a value
+
+Rather than using an existing `<input>` element, you can use DOM APIs to select and copy an arbitrary value.
+
+The steps to copy a value are:
+
+1. Add an element to the document
+2. Set the element `textContent`
+3. Select the element
+4. Call `document.execCommand` to copy the value.
+
+You can select text in an element with the [`Range`](https://developer.mozilla.org/en-US/docs/Web/API/Range) API and [`getSelection`](https://developer.mozilla.org/en-US/docs/Web/API/Window/getSelection) method.
+
+The following code copies a value to the clipboard:
+
+```js
+const el = document.createElement('span')
+
+el.textContent = 'Text to copy'
+
+// styles to prevent scrolling to the end of the page
+el.style.position = 'fixed'
+el.style.top = 0
+el.style.clip = 'rect(0, 0, 0, 0)'
+
+document.body.appendChild(el)
+
+// select the element by creating a range
+const range = document.createRange()
+range.selectNode(el)
+const selection = document.getSelection()
+selection.addRange(range)
+
+document.execCommand('copy')
+```
+
+_Note: There are a few more styles you should set to make sure your code is bullet-proof. Take a look at [the copy-to-clipboard source code](https://github.com/sudodoki/copy-to-clipboard/blob/v3.0.8/index.js#L23), which I based the example code on._
+
+Thanks for reading. If you have any questions, please leave a comment.
