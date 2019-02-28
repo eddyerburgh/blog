@@ -1,0 +1,21 @@
+#chart {
+  overflow: visible;
+}
+
+#chart rect {
+  fill: steelblue;
+}
+
+#chart rect:hover {
+  fill: brown;
+}
+
+#chart .axis text {
+  font: 14px sans-serif;
+}
+
+#chart .axis path,
+#chart .axis line {
+  fill: none;
+  stroke: #000;
+}
