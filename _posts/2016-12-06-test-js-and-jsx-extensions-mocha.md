@@ -29,11 +29,11 @@ You probably need to compile JSX. If you're using babel, install `babel-register
 Tell mocha to compile `.js` and `.jsx` files with `babel-register` and the mocha `require` option:
 
 ```shell
-mocha 'test/**/*.{js,jsx}' --require js:babel-register,jsx:babel-register
+mocha 'test/**/*.{js,jsx}' --require babel-register
 ```
 
 Your full command will look something like this:
 
 ```shell
-mocha 'test/**/*.{js,jsx}' --recursive --require js:babel-register,jsx:babel-register
+mocha 'test/**/*.{js,jsx}' --recursive --require babel-register
 ```
