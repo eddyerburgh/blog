@@ -3,7 +3,7 @@ layout: post
 status: publish
 published: true
 title: Animate elements when scrolled into view with native JavaScript
-description: In this tutorial we see how to animate elements when they are scrolled into view using native JavaScript.
+description: Learn how to animate elements when they are scrolled into view using native JavaScript.
 wordpress_id: 303
 wordpress_url: http://www.coding123.org/?p=303
 date: '2016-05-02 22:28:27 +0000'
@@ -14,24 +14,21 @@ categories:
 tags: []
 comments: true
 ---
-In this tutorial you'll learn how to animate elements when scrolled into view with native JS and CSS.
 
-*note: this tutorial assumes the user has JavaScript enabled*
+In this tutorial, you'll learn how to animate elements as they are scrolled into view using native JavaScript and CSS.
 
-<img class="aligncenter wp-image-305 size-full" src="/assets/2016/05/ezgif.com-video-to-gif.gif" alt="Animate on scroll with vanilla JS" width="960" height="347" />
+*Note: this approach assumes the user has JavaScript enabled.*
 
 There are two steps to animating on scroll:
 
-1. Create the animation with CSS
-2. Apply the animation when the element is scrolled into view
+1. Creating the CSS animation
+2. Applying the animation when an element is scrolled into view
 
-## The CSS
+## Creating the animation
 
-For the CSS you can use the <a rel="noopener" href="https://developer.mozilla.org/en/docs/Web/CSS/animation" target="newwindow">animation property</a>. This property allows you to animate properties of an element. For example, animating a div from opacity 0 to opacity 1. With the animation property this will transition smoothly from opacity 0 to 1, giving the appearance of fading in.
+For the animation you can use the `animation` CSS property. `animation` applies an animation between CSS styles. For example, animating an element from opacity 0 to opacity 1.
 
-<a rel="noopener" href="/assets/2016/05/ezgif.com-crop.gif"><img class="aligncenter size-full wp-image-310" src="/assets/2016/05/ezgif.com-crop.gif" alt="Fade in with CSS animation" width="638" height="268" /></a>
-
-For our example, let's look at fading the element in and making it appear to grow.
+The following `fade-in` animation fades an element in and makes it appear to grow:
 
 ```css
 @keyframes fade-in {
@@ -43,11 +40,16 @@ For our example, let's look at fading the element in and making it appear to gro
 }
 ```
 
-First, we declare an animation called *fade-in*. This will animate the element it is applied to from opacity 0 and a scale of 0.7 to opacity 1 and a scale of 1.
+<figure>
+    <img src="/assets/2016/05/animate-on-scroll.gif" alt="" />
+    <figcaption><h4>The fade-in animation applied to an element</h4></figcaption>
+</figure>
 
-We then assign this animation to the element *fade-in-element*. Now the element will fade in once the document's opened. This is great for anything <a rel="noopener" href="http://www.webvanta.com/post/2014-07-06/responsive-design-above-the-fold" target="newwindow">above the fold</a>, but everything that isn't on screen when the page loads will also animate instantly.
+All elements with the class `fade-in-element` will fade in once the page is loaded. This is great for elements that are in the viewport initially, but it means users won't see the animation for elements that aren't.
 
-What we need to do is add the class *fade-in-element* to the elements as they scroll into view. The problem with this is that before they are given the class they will have full opacity. This will look glitchy as the element jumps from 1 to 0 opacity without a transition, so we're going to add an extra class to these elements.
+The solution is to add the class `fade-in-element` to elements as they appear in the viewport during a scroll. You can do this with JavaScript.
+
+Before elements have the `fade-in-element` class, they will have full opacity. This will look glitchy as the element jumps from 1 to 0 opacity without a transition, so you need to set the opacity of these elements to 0:
 
 ```css
 .hidden {
@@ -55,55 +57,52 @@ What we need to do is add the class *fade-in-element* to the elements as they sc
 }
 ```
 
-Now we can add the class *hidden* to each element we wish to animate. This means the element's opacity starts off at 0.
+You should add the `hidden` class to each element you want to animate.
 
-Now we'll need to replace the *hidden* class with the *fade-in* class as the element appears on screen.
+The next step is to remove the `hidden` class and add a `fade-in-element` class when an element scrolls into view.
 
-## The JavaScript
+## Applying the animation
+
+You need to apply the animation when an element is scrolled into view.
+
+The following JavaScript calls `init` to build a NodeList (`elements`) of elements with the `hidden` class.
+
+It then calls `checkPosition` to loop through the `elements` and calculate whether they are visible. If an element is visible, `checkPosition` removes the `hidden` class and adds the `fade-in-element` class.
+
+The code adds `checkPosition` as a `scroll` event listener, and `init` as a `resize` event listener.
 
 ```js
-var animateHTML = function() {
-  var elems;
+(function() {
+  var elements;
   var windowHeight;
+
   function init() {
-    elems = document.querySelectorAll('.hidden');
+    elements = document.querySelectorAll('.hidden');
     windowHeight = window.innerHeight;
-    addEventHandlers();
-    checkPosition();
   }
-  function addEventHandlers() {
-    window.addEventListener('scroll', checkPosition);
-    window.addEventListener('resize', init);
-  }
+
   function checkPosition() {
-    for (var i = 0; i < elems.length; i++) {
-      var positionFromTop = elems[i].getBoundingClientRect().top;
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      var positionFromTop = elements[i].getBoundingClientRect().top;
+
       if (positionFromTop - windowHeight <= 0) {
-        elems[i].className = elems[i].className.replace(
-          'hidden',
-          'fade-in-element'
-        );
+        element.classList.add('fade-in-element');
+        element.classList.remove('hidden');
       }
     }
   }
-  return {
-    init: init
-  };
-};
-animateHTML().init();
+
+  window.addEventListener('scroll', checkPosition);
+  window.addEventListener('resize', init);
+
+  init();
+  checkPosition();
+})();
 ```
-
-What this code is doing :
-
-1. Getting every element that has the class `hidden`
-2. Running a function when the window is scrolled</li>
-3. Inside the function, calculating the height relative to the viewport
-4. If the element is inside the viewport, add the class `fading-in`
-
-Each time the page is scrolled, _checkPosition runs for every element with the class name `hidden`. It checks whether it's position from the viewport minus the window height is less than or equal to zero. If it is, the element will be in view and the classname is replaced by *fade-in-element*, which will animate the element.
 
 And that's how you animate elements when scrolled into view with native JS.
 
 You can edit the animate classes to create all kinds of cool effects, give it a go!
 
-Any questions, leave a comment.
+If you have any questions, leave a comment.
