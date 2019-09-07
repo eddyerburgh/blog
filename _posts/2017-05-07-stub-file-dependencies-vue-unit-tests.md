@@ -24,7 +24,7 @@ In this tutorial we will see how to stub file dependencies in vue unit tests.
 To answer the question we need to define dependencies and stubs.
 
 A dependency is a file or function our code relies on. In .js or .vue files `import` and `require` statements are dependencies.
- 
+
 For example:
 
 ```js
@@ -164,11 +164,11 @@ Open .babelrc and add it in the env.test.plugins array:
 }
 ```
 
-Why in the test plugins array? If we add it to the top level plugins array it would add the methods to all compiled code. We don't want our production code to have these methods, so we tell babel to only run it when the <a rel="noopener" href="http://stackoverflow.com/a/16979503/4939630" target="_blank">NODE_ENV environment variable</a> is set to test.
+Why in the test plugins array? If we add it to the top level plugins array it would add the methods to all compiled code. We don't want our production code to have these methods, so we tell babel to only run it when the <a rel="noopener" href="https://stackoverflow.com/a/16979503/4939630" target="_blank">NODE_ENV environment variable</a> is set to test.
 Now babel will add the methods when we run our tests. Time to get our tests passing.
 Open /test/unit/specs/Component.spec.js
 
-All we need to do to get the test passing is use the __Rewire__ method we just saw. 
+All we need to do to get the test passing is use the __Rewire__ method we just saw.
 
 In our test, it will look like this:
 
@@ -176,7 +176,7 @@ In our test, it will look like this:
 Component.__Rewire__('dependency', () => false)
 ```
 
-This method replaces dependency in Component with a function that returns false. 
+This method replaces dependency in Component with a function that returns false.
 The first argument is the dependency inside the module that you want to stub, and the second argument is the stub to use.
 It's always good to clean up after editing a function. For that, there is the __ResetDependency__ method:
 

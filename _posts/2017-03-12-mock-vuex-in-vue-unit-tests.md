@@ -107,7 +107,7 @@ What's happening here? First we tell Vue to use Vuex with <a rel="noopener" href
 
 We then make a mock store by calling new Vuex.store with our mock values. We only pass it the actions, since that's all we care about.
 
-The actions are <a rel="noopener" href="http://sinonjs.org/" target="_blank">sinon stubs</a>. The stubs give us methods to assert whether the actions were called or not.
+The actions are <a rel="noopener" href="https://sinonjs.org/" target="_blank">sinon stubs</a>. The stubs give us methods to assert whether the actions were called or not.
 
 We can then assert in our tests that the action stub was called when expected.
 

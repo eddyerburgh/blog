@@ -5,7 +5,6 @@ published: true
 title: How to toggle visibility with React
 description: It's easy to toggle visibility using React. This tutorial shows you how to toggle the visibility of a DOM element using React
 wordpress_id: 319
-wordpress_url: http://www.coding123.org/?p=319
 date: '2016-05-17 14:44:03 +0000'
 date_gmt: '2016-05-17 14:44:03 +0000'
 categories:

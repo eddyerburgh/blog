@@ -5,7 +5,6 @@ published: true
 title: Test .js and .jsx extensions with mocha
 description: Out the box .jsx extensions are ignored by mocha. In this short snippet I'll show you how to test .js and .jsx extensions with mocha.
 wordpress_id: 388
-wordpress_url: http://www.coding123.org/?p=388
 date: '2016-12-06 17:17:09 +0000'
 date_gmt: '2016-12-06 17:17:09 +0000'
 categories:

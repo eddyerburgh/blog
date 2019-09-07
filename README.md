@@ -2,5 +2,5 @@
 
 My personal blog
 
-http://www.eddyerburgh.me
+https://www.eddyerburgh.me
 

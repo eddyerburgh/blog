@@ -5,7 +5,6 @@ published: true
 title: How to unit test Vue components
 description: Learn how to unit test Vue components. This tutorial walks you through how to set up a Vue test environment and how to write tests for Vue components.
 wordpress_id: 404
-wordpress_url: http://www.coding123.org/?p=404
 date: '2017-02-02 12:27:33 +0000'
 date_gmt: '2017-02-02 12:27:33 +0000'
 categories:
@@ -15,7 +14,7 @@ comments: true
 ---
 This tutorial will teach you how to write unit tests for Vue components.
 
-*Note: This tutorial assumes you're familiar with unit testing, webpack, ES6, mocha, chai and karma. If you're not, check out <a rel="noopener" href="http://www.coding123.org/tutorials/unit-test-vue-components-beginners/" target="_blank">How to unit test Vue components for beginners</a>.*
+*Note: This tutorial assumes you're familiar with unit testing, webpack, ES6, mocha, chai and karma. If you're not, check out <a rel="noopener" href="https://eddyerburgh.me/unit-test-vue-components-beginners/" target="_blank">How to unit test Vue components for beginners</a>.*
 
 ## Testing Vue components
 
@@ -23,7 +22,7 @@ Testing Vue components is different to testing a plain old JavaScript function. 
 
 One way to write Vue components is using Single File Component (SFC) format. SFCs use .vue extensions, and they're great to use. There's a downside though—SFCs aren't valid JavaScript. To test Vue SFCs, you need to compile the files before running your tests. You can do this with webpack and vue-loader.
 
-If you're using karma to run your tests, you can use the preProcessors option in the <a rel="noopener" href="http://karma-runner.github.io/1.0/config/configuration-file.html">Karma configuration</a> file. Have a look at <a rel="noopener" href="https://github.com/eddyerburgh/avoriaz-karma-mocha-example" target="_blank">this project</a> to see a working example.
+If you're using karma to run your tests, you can use the preProcessors option in the <a rel="noopener" href="https://karma-runner.github.io/1.0/config/configuration-file.html">Karma configuration</a> file. Have a look at <a rel="noopener" href="https://github.com/eddyerburgh/avoriaz-karma-mocha-example" target="_blank">this project</a> to see a working example.
 
 Alternatively, you can use <a rel="noopener" href="https://www.npmjs.com/package/mocha-webpack" target="_blank">mocha-webpack</a> to compile your tests with webpack before running them with mocha. All you need to do is pass a webpack config to webpack-config in an npm script. For mount to work you need some browser methods, in Karma you have these methods available (since you're running tests in the browser), but running tests in mocha you don't. To solve this, you can use <a rel="noopener" href="https://www.npmjs.com/package/jsdom" target="_blank">JSDOM</a> to add browser globals before running your test suite. <a rel="noopener" href="https://github.com/eddyerburgh/avoriaz-mocha-example" target="_blank">Here's a working example</a>.
 

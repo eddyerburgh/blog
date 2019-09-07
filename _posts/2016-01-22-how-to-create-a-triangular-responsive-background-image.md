@@ -71,11 +71,11 @@ Add a background image to each:
 
 ```css
 .div-one {
-  background: url("http://i.imgur.com/8LgIL7B.jpg") center / cover no-repeat;
+  background: url("https://i.imgur.com/8LgIL7B.jpg") center / cover no-repeat;
 }
 
 .div-two {
-  background: url("http://i.imgur.com/fBL4WC1.jpg") center / cover no-repeat;
+  background: url("https://i.imgur.com/fBL4WC1.jpg") center / cover no-repeat;
 }
 ```
 
@@ -101,12 +101,12 @@ The final code looks like this:
   }
 
   .div-one {
-    background: url("http://i.imgur.com/8LgIL7B.jpg") center / cover no-repeat;
+    background: url("https://i.imgur.com/8LgIL7B.jpg") center / cover no-repeat;
   }
 
   .div-two {
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-    background: url("http://i.imgur.com/fBL4WC1.jpg") center / cover no-repeat;
+    background: url("https://i.imgur.com/fBL4WC1.jpg") center / cover no-repeat;
   }
 </style>
 ```

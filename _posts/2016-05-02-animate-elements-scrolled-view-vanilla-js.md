@@ -5,7 +5,6 @@ published: true
 title: Animate elements when scrolled into view with native JavaScript
 description: Learn how to animate elements when they are scrolled into view using native JavaScript.
 wordpress_id: 303
-wordpress_url: http://www.coding123.org/?p=303
 date: '2016-05-02 22:28:27 +0000'
 date_gmt: '2016-05-02 22:28:27 +0000'
 categories:

@@ -5,7 +5,6 @@ published: true
 title: How to build a customizable responsive grid with SCSS
 description: Create a customizable responsive grid with SCSS. Learn the formula for a twelve column grid and how to use calculations to create a customizable grid
 wordpress_id: 40
-wordpress_url: http://www.eddyerburgh.com/?p=40
 date: '2016-01-28 22:45:30 +0000'
 date_gmt: '2016-01-28 22:45:30 +0000'
 categories:
@@ -66,9 +65,9 @@ width: $column-width + ( ($column-width + $grid-margin) * ( $i - 1 ) )
 The numbers used in the equations are just i - 1. Now we need to add the class name. To do this we make a variable with multiple values:
 
 ```scss
-$column-numbers: (one), (two), (three), (four), (five), (six), (seven), (eight), (nine), (ten), (eleven), (twleve); 
+$column-numbers: (one), (two), (three), (four), (five), (six), (seven), (eight), (nine), (ten), (eleven), (twleve);
 ```
- 
+
 We can loop through these with an @each loop. But we still need the index values. This can be done with the SCSS `'$i: index($column-numbers, $column-number);'`
 
 Check out the full loop:
@@ -82,7 +81,7 @@ $column-numbers: (one), (two), (three), (four), (five), (six), (seven), (eight),
   .#{ $column-number} {
     width: $column-width + ( ($column-width + $grid-margin)  * ( $i - 1 ) )
   }
-} 
+}
 ```
 
 So we loop through each column number value. Then we define $i as the index of our current value. The class name uses the $column-number variable, which is escaped with  #{}. We then add the same calculation that we used in the first example, except instead of hard coding a number we add $i - 1.
@@ -142,7 +141,7 @@ $grid-number: 12;
   }
   .column:first-of-type {
     margin-left: 0;
-  } 
+  }
   $column-width: ( 100 - ( $grid-margin * $grid-number - 1 ) ) / $grid-number ;
   $column-numbers: (one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve);
   @each $column-number in $column-numbers {

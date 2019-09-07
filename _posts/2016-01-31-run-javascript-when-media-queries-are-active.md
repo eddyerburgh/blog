@@ -12,7 +12,6 @@ author:
 author_login: admin
 author_email: edward.yerburgh@gmail.com
 wordpress_id: 37
-wordpress_url: http://www.eddyerburgh.com/?p=37
 date: '2016-01-31 07:00:35 +0000'
 date_gmt: '2016-01-31 07:00:35 +0000'
 categories:
