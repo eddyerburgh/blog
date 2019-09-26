@@ -4,6 +4,10 @@ title: About
 permalink: /about
 ---
 
-Hi, my name is Edd Yerburgh. I'm a programmer, TDD advocate and Vue team member living in London.
+Hey, my name is Edd Yerburgh. I'm a software engineer, author, and occasional speaker.
 
-You can find me on [GitHub](https://github.com/eddyerburgh) and [twitter](https://twitter.com/EddYerburgh)
+I currently live in London, but I'm originally from [Gloucestershire](https://en.wikipedia.org/wiki/Gloucestershire).
+
+<img src="/assets/img/edd-yerburgh.png" alt="" />
+
+You can find me on [GitHub](https://github.com/eddyerburgh) and [Twitter](https://twitter.com/EddYerburgh).
