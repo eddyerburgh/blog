@@ -3,11 +3,10 @@ layout: post
 published: true
 title: How I take notes from technical books
 description: My process for taking notes from technical books.
-date: '2019-09-24'
 comments: true
 ---
 
-I've recently started taking notes when I read technical books (see [Edd’s notes](https://notes.eddyerburgh.me)). Note-taking helps me retain knowledge, shows me what I don’t understand, and creates reference documents I can use in the future.
+Since early 2019, I've been taking notes when I read technical books (see [Edd’s notes](https://notes.eddyerburgh.me)). Note-taking helps me retain knowledge, shows me what I don’t understand, and creates reference documents I can use in the future.
 
 ## My note-taking process
 
