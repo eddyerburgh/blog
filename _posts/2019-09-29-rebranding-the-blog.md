@@ -6,7 +6,7 @@ description: How and why I'm rebranding this blog.
 comments: true
 ---
 
-I'm rebranding this blog for personal content only — no more tutorials. Future posts will just be my thoughts, opinions, and reflections on my interests and on life.
+I'm rebranding this blog for personal content only — no more tutorials. Future posts will just be my personal thoughts, opinions, and reflections.
 
 All my old tutorials have been moved to a new domain, so they're still accessible for people who use them. It's just that this website will be tutorial-free.
 
