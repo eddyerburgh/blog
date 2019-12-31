@@ -10,13 +10,18 @@ I read fifty-nine books this year. Most were great, some were amazing, and three
 
 ## Masters of Doom
 
+<small>ISBN-10: 0812972155</small>
+
 _Masters of Doom_ chronicles the rise and fall of id Software, a company that revolutionized gaming with titles like Commander Keen, Quake, and Doom.
 
 The book focuses on the story of the founders—John Carmack and John Romero. It was inspiring to read about their journey from teenage gamers to legendary game developers.
 
 I finished _Masters of Doom_ in one sitting because I kept wanting to find out what happened next.
 
+
 ## On Writing Well
+
+<small>ISBN-10: 0060006641</small>
 
 _On Writing Well_ begins with the usual advice—use active verbs, avoid clichés, and keep your writing simple. It then goes on to give more specific advice on writing for different genres.
 
@@ -25,6 +30,8 @@ The advice was useful (I especially enjoyed the _Science and technology_ chapter
 Reading _On Writing Well_ sparked my passion not just for writing, but also for life.
 
 ## Ruby under a microscope
+
+<small>ISBN-10: 1593275277</small>
 
 _Ruby under a microscope_ is a technical book about how the reference Ruby interpreter works under the hood. It walks through the lifetime of running Ruby code—from transforming source code into bytecode, to executing bytecode on a virtual machine, to managing Ruby objects in memory.
 
