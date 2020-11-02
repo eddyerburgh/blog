@@ -2,6 +2,7 @@
 gem "jekyll", "~> 3.5"
 gem "jekyll-paginate", "~> 1.1"
 gem "jekyll-seo-tag", "~> 2.2"
-
-# Added at 2017-06-25 10:31:36 +0100 by eyerburgh:
+gem "kramdown-parser-gfm", "~> 1.1.0"
 gem "jekyll-sitemap", "~> 1.1"
+
+source 'https://rubygems.org'
